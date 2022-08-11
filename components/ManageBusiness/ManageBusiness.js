@@ -119,20 +119,20 @@ const ManageBusiness = () => {
     function frame() {
       if (manualClick || !progressBar) return;
 
-      if (height >= 235) {
+      if (height >= 170) {
         clearInterval(id);
         setRunning(false);
       } else {
         setRunning(true);
         height++;
         progressBar.style.height = height + 'px';
-        if (height === 110) {
+        if (height === 80) {
           setClicked(prev => ({
             ...prev,
             2: true,
           }));
         }
-        if (height === 220) {
+        if (height === 160) {
           setClicked(prev => ({
             ...prev,
             3: true,

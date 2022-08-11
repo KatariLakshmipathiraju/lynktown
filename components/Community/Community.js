@@ -9,7 +9,7 @@ import { Instagram } from '../Hero/Icons';
 const Community = () => {
   return (
     <section className='lg:min-h-screen  bg-[#EEECE7]  community_main z-20 '>
-      <div className=' grid md:grid-cols-[42%_42%] md:justify-center md:grid-rows-[300px_300px] lg:grid-rows-[400px_400px]  lg:container   mx-auto gap-4 lg:gap-10 lg:py-20 p-5'>
+      <div className=' grid md:grid-cols-2 md:justify-center md:grid-rows-[300px_300px]  xl:grid-rows-[350px_350px]  2xl:grid-rows-[400px_400px]  lg:container   mx-auto gap-4 lg:gap-10 lg:py-20 p-5'>
         <div
           className='h-[485.7px] md:h-full row-span-full bg-cover w-full  relative rounded-[24px]'
           style={{

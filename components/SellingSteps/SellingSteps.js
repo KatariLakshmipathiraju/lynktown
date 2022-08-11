@@ -123,28 +123,28 @@ const SellingSteps = () => {
     // let height = 0;
 
     function frame() {
-      if (manualClick || !progressBar || !isInView) return setRunning(false);
-      if (height >= 330) {
+      if (manualClick || !progressBar || !isInView) return;
+      if (height >= 250) {
         setRunning(false);
         clearInterval(id);
       } else {
-        height++;
         setRunning(true);
+        height++;
 
         progressBar.style.height = height + 'px';
-        if (height === 110) {
+        if (height === 80) {
           setClicked(prev => ({
             ...prev,
             2: true,
           }));
         }
-        if (height === 215) {
+        if (height === 160) {
           setClicked(prev => ({
             ...prev,
             3: true,
           }));
         }
-        if (height === 315) {
+        if (height === 240) {
           setClicked(prev => ({
             ...prev,
             4: true,

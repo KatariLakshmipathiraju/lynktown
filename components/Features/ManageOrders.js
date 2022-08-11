@@ -8,7 +8,7 @@ const ManageOrders = ({ currentTab }) => {
       {currentTab === 'manageOrders' && (
         <motion.div
           key='alterations'
-          className='grid lg:grid-cols-[65%_35%] gap-28 items-center h-full lg:h-[560px] '
+          className='grid lg:grid-cols-[65%_35%] gap-8 lg:gap-10 items-center h-[900px] lg:h-[500px] xl:h-[560px] '
         >
           <div className='order-2 lg:order-[-1]'>
             <motion.h1
@@ -36,14 +36,17 @@ const ManageOrders = ({ currentTab }) => {
           </div>
           <div>
             <div className='relative'>
-              <svg
-                className='max-w-[500] max-h-[500px] mx-auto 2xl:w-[373px] 2xl:h-[373px]'
+              <motion.svg
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className='lg:max-w-[500] max-w-[292px] max-h-[292px] lg:max-h-[500px] mx-auto 2xl:w-[373px] 2xl:h-[373px]'
                 viewBox='0 0 373 373'
                 fill='none'
                 xmlns='http://www.w3.org/2000/svg'
               >
                 <circle cx='186.5' cy='186.5' r='186.5' fill='#EEECE7' />
-              </svg>
+              </motion.svg>
               <div className='absolute top-2/4 left-2/4 translate-x-[-50%]   translate-y-[-50%]'>
                 <motion.img
                   initial={{ scale: 0 }}
@@ -54,7 +57,7 @@ const ManageOrders = ({ currentTab }) => {
                     ease: 'easeIn',
                   }}
                   alt=''
-                  className='origin-bottom'
+                  className='origin-bottom w-full h-full min-w-[180px] max-w-[203.14px] min-h-[350.58px]  max-h-[439px] lg:min-h-[350.16px] xl:min-h-[466.16px] lg:min-w-[215.43px]'
                 />
               </div>
             </div>

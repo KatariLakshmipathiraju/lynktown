@@ -45,12 +45,12 @@ const Features = () => {
   const [currentTab, setCurrentTab] = React.useState('singleLink');
 
   return (
-    <section className='container mx-auto my-24    '>
-      <div className='w-full  py-10  rounded-[38px] md:border-primaryColor  md:border-[3px]  '>
+    <section className='container mx-auto my-18 md:my-24    '>
+      <div className='w-full  pt-12 md:py-10  rounded-[38px] md:border-primaryColor  md:border-[3px]  '>
         <h1 className='text-2xl md:text-4xl lg:text-[40px] text-primaryColor text-center font-medium'>
           Our intuitive features
         </h1>
-        <header className='py-10 mx-auto flex justify-center text-center Swiper--header'>
+        <header className='pt-10 pb-10 lg:pb-0 mx-auto flex justify-center text-center Swiper--header'>
           <Tabs
             value={value}
             onChange={handleChange}
@@ -137,14 +137,31 @@ const Features = () => {
           </Swiper>
         </header> */}
         {/* <div className='max-w-[80%] mx-auto'>{component}</div> */}
-        <div className='lg:max-w-[80%] px-4 mx-auto relative lg:h-[560px]  '>
-          <SingleLink currentTab={currentTab} />
-          <Measurement currentTab={currentTab} />
-          <Alteration currentTab={currentTab} />
-          <Shipping currentTab={currentTab} />
-          <Payment currentTab={currentTab} />
-          <ManageOrders currentTab={currentTab} />
-          <Exchange currentTab={currentTab} />
+        <div className='lg:max-w-[80%] px-4 mx-auto relative h-[900px] lg:h-[500px] xl:h-[560px]    '>
+          <div className='absolute  top-0'>
+            <SingleLink currentTab={currentTab} />
+          </div>
+          <div className='absolute top-0'>
+            <Measurement currentTab={currentTab} />
+          </div>
+          <div className='absolute top-0'>
+            <Alteration currentTab={currentTab} />
+          </div>
+
+          <div className='absolute top-0'>
+            <Shipping currentTab={currentTab} />
+          </div>
+
+          <div className='absolute top-0'>
+            <Payment currentTab={currentTab} />
+          </div>
+          <div className='absolute top-0'>
+            <ManageOrders currentTab={currentTab} />
+          </div>
+
+          <div className='absolute top-0'>
+            <Exchange currentTab={currentTab} />
+          </div>
 
           {/* 
             {currentTab === 'alterations' && (
