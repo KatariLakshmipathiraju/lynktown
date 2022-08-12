@@ -12,7 +12,7 @@ const AboutUs = () => {
         </header>
         <div className='px-4'>
           <div
-            className=' flex items-center flex-col md:flex-row  gap-5 rounded-[19px]  p-4 md:p-8 bg-white  max-w-[977.5px] w-full mt-[-120px] h-[315.5px]    mx-auto relative'
+            className=' flex items-center flex-col md:flex-row  gap-5 rounded-[19px]  p-4 md:p-8 bg-white  max-w-[977.5px] w-full mt-[-120px]     mx-auto relative'
             style={{
               boxShadow: `2px 10px 28px rgba(75, 0, 129, 0.12)`,
             }}

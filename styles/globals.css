@@ -203,8 +203,16 @@ button {
   justify-content: center !important; */
 }
 
-.itemsContainer:hover .itemText {
-  transform: translateX(10px);
+@media screen and (min-width: 750px) {
+  .itemsContainer:hover .itemText {
+    transform: translateX(10px);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .itemsContainer .itemText {
+    transform: translateX(10px);
+  }
 }
 
 .container {

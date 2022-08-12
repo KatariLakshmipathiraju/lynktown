@@ -29,7 +29,7 @@ const Items = ({ item, index }) => {
           className={`w-full  object-cover`}
         />
       </div>
-      <div className='py-5 peer-hover:px-10 itemText transition-all'>
+      <div className='py-5 itemText transition-all'>
         <h3 className='text-xs text-primaryColor'>{brand}</h3>
         <h2 className='text-sm'>{name}</h2>
         <div className='flex justify-between my-2 items-center pr-5'>

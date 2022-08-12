@@ -12,7 +12,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className='bg-primaryColor px-4 pt-16'>
+    <footer className='bg-primaryColor  pt-16'>
       <div className='container  mx-auto'>
         <div className='grid xl:grid-cols-[850px_1fr_1fr]  xl:justify-items-center gap-4 sm:gap-11'>
           <div className='bg-white flex-col md:flex-row rounded-[20px] relative p-6 gap-10 flex items-center'>
@@ -74,10 +74,10 @@ const Footer = () => {
             </div>
           </div>
           <div className='flex gap-5 sm:hidden  my-4 justify-center  flex-wrap '>
-            <button className='w-[133.88px] h-[40px] sm:w-auto sm:h-auto'>
+            <button className='w-[156.85px] h-[46px] sm:w-auto sm:h-auto'>
               <img src={google.src} alt='' />
             </button>
-            <button className='w-[133.88px] h-[40px] sm:w-auto sm:h-auto'>
+            <button className='w-[156.85px] h-[46px] sm:w-auto sm:h-auto'>
               <img src={apple.src} alt='' />
             </button>
           </div>
@@ -143,10 +143,10 @@ const Footer = () => {
           </div>
         </div>
         <div className=' hidden sm:flex gap-5 my-8 mb-10  items-center flex-wrap '>
-          <button>
+          <button className='w-[186.5px]'>
             <img src={google.src} alt='' />
           </button>
-          <button>
+          <button className='w-[186.5px]'>
             <img src={apple.src} alt='' />
           </button>
         </div>
