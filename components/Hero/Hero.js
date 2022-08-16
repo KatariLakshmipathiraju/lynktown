@@ -10,10 +10,10 @@ const Hero = () => {
     <section className='lg:h-[655px]  pt-5  sm:pt-16 lg:py-4   bg-primaryColor text-white relative'>
       <div className='container mx-auto grid lg:grid-cols-2 items-center h-full px-4'>
         <div>
-          <h1 className='md:text-4xl text-3xl lg:text-5xl xl:text-[56px]  text-center md:text-left leading-normal lg:leading-[70.2px] font-medium lg:max-w-[585px]'>
+          <h1 className=' md:text-4xl text-3xl lg:text-5xl xl:text-[56px]  text-left leading-normal lg:leading-[70.2px] font-medium lg:max-w-[585px]'>
             Grow your business & sell products with ease
           </h1>
-          <p className='my-3 sm:my-8 mx-auto text-center md:text-left'>
+          <p className='my-3 sm:my-8 mx-auto text-left'>
             Lynk Town is trusted by 5000+ fashion designers, artists &{' '}
             <br className='hidden md:block' />
             business owners.

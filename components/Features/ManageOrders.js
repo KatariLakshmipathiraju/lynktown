@@ -15,7 +15,7 @@ const ManageOrders = ({ currentTab }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className='text-3xl text-[#333]'
+              className='text-lg font-medium md:text-xl lg:text-3xl text-[#333]'
             >
               Manage all your orders in one place
             </motion.h1>
@@ -23,7 +23,7 @@ const ManageOrders = ({ currentTab }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className='my-10 leading-[28.61px]'
+              className='my-5 md:my-10 leading-[28.61px] text-sm md:text-base text-[#757575]'
             >
               Ship, track and manage all your orders all in one place so you get
               more time to build your business.

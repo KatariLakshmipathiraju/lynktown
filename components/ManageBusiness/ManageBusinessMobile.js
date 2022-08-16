@@ -12,22 +12,16 @@ const steps = [
     id: 1,
     image: step1,
     title: 'Customer’s request the order from bio ',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ',
   },
   {
     id: 2,
     image: step2,
     title: 'You have to accept the order request',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ',
   },
   {
     id: 3,
     image: step3,
     title: 'Customer will receive order confirmation',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ',
   },
 ];
 
@@ -57,7 +51,7 @@ function move(idx) {
 }
 const ManageBusinessMobile = () => {
   return (
-    <div className='container mx-auto py-16 px-4'>
+    <div className='container mx-auto py-10 sm:py-16 px-4'>
       <h1 className='text-2xl text-primaryColor font-medium text-center md:text-4xl'>
         Manage your online buisness at your finger tips
       </h1>
@@ -65,11 +59,29 @@ const ManageBusinessMobile = () => {
         <div className='absolute top-16 left-2/4 translate-x-[-50%]'>
           <svg
             className='w-[292px] h-[292px] sm:w-[420px] sm:h-[420px] '
-            viewBox='0 0 292 293'
+            viewBox='0 0 474 474'
             fill='none'
             xmlns='http://www.w3.org/2000/svg'
           >
-            <circle cx='146' cy='146.515' r='146' fill='#EEECE7' />
+            <circle
+              cx='237'
+              cy='237'
+              r='237'
+              fill='url(#paint0_linear_930_434)'
+            />
+            <defs>
+              <linearGradient
+                id='paint0_linear_930_434'
+                x1='75.4091'
+                y1='195.705'
+                x2='237'
+                y2='474'
+                gradientUnits='userSpaceOnUse'
+              >
+                <stop stop-color='#857250' />
+                <stop offset='1' stop-color='#C4C4C4' stop-opacity='0' />
+              </linearGradient>
+            </defs>
           </svg>
         </div>
         <Swiper

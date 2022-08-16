@@ -15,7 +15,7 @@ const Payment = ({ currentTab }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className='text-3xl text-[#333]'
+              className='text-lg font-medium md:text-xl lg:text-3xl text-[#333]'
             >
               Get paid safer & faster
             </motion.h1>
@@ -23,7 +23,7 @@ const Payment = ({ currentTab }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className='my-10 leading-[28.61px]'
+              className='my-5 md:my-10 leading-[28.61px] text-sm md:text-base text-[#757575]'
             >
               We use Escrow payment which allows safe payment and easy money
               transfer to your bank.

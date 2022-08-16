@@ -13,29 +13,21 @@ const steps = [
     id: 1,
     image: step1,
     title: 'Add product details',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ',
   },
   {
     id: 2,
     image: step2,
     title: 'Create a link',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ',
   },
   {
     id: 3,
     image: step3,
     title: 'Share on social media',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ',
   },
   {
     id: 4,
     image: step4,
     title: 'Get orders',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ',
   },
 ];
 
@@ -74,19 +66,37 @@ const SLIDE_LENGTH = 3;
 
 const SellingStepMobile = () => {
   return (
-    <div className='container mx-auto py-16 px-4'>
+    <div className='container mx-auto py-10 sm:py-16 px-4'>
       <h1 className='text-2xl text-primaryColor font-medium text-center md:text-4xl'>
-        Sell your products in 4 simple steps
+        Start selling in 4 steps
       </h1>
       <div className='relative my-8'>
         <div className='absolute top-16 left-2/4 translate-x-[-50%]'>
           <svg
             className='w-[292px] h-[292px] sm:w-[420px] sm:h-[420px] '
-            viewBox='0 0 292 293'
+            viewBox='0 0 474 474'
             fill='none'
             xmlns='http://www.w3.org/2000/svg'
           >
-            <circle cx='146' cy='146.515' r='146' fill='#EEECE7' />
+            <circle
+              cx='237'
+              cy='237'
+              r='237'
+              fill='url(#paint0_linear_930_434)'
+            />
+            <defs>
+              <linearGradient
+                id='paint0_linear_930_434'
+                x1='75.4091'
+                y1='195.705'
+                x2='237'
+                y2='474'
+                gradientUnits='userSpaceOnUse'
+              >
+                <stop stop-color='#857250' />
+                <stop offset='1' stop-color='#C4C4C4' stop-opacity='0' />
+              </linearGradient>
+            </defs>
           </svg>
         </div>
         <Swiper

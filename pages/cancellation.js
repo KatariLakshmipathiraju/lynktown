@@ -6,8 +6,7 @@ import { MdExpandMore } from 'react-icons/md';
 export const cancellations = [
   {
     id: 1,
-    question:
-      'How to Cancel an Order on __________________ that has Been Shipped?',
+    question: 'How to Cancel an Order on LynkTown that has Been Shipped?',
     answer: (
       <>
         You cannot cancel the order that is already shipped. If you still raise
@@ -15,8 +14,8 @@ export const cancellations = [
         that the product is already shipped. The buyer still has the option to
         refund the item.
         <br />
-        You can write to our customer support team on ___________ or call us on
-        ___________
+        You can write to our customer support team on lynktown@gmail.com or call
+        us on +91 96635 24882
       </>
     ),
   },
@@ -87,7 +86,7 @@ export const cancellations = [
   },
   {
     id: 6,
-    question: 'Will ____________ cancel the orders?',
+    question: 'Will LynkTown cancel the orders?',
     answer: (
       <>
         We reserve the right to cancel the order if
@@ -139,7 +138,7 @@ const Cancellation = () => {
                 entertain any cancellation requests.
                 <br />
                 <br />
-                You may also send an email on ________________________
+                You may also send an email on lynktown@gmail.com
                 <br />
                 <br />
                 Please be advised that some orders are shipped almost

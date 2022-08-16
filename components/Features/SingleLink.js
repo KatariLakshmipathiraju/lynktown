@@ -15,7 +15,7 @@ const SingleLink = ({ currentTab }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className='text-3xl text-[#333]'
+              className='text-lg font-medium md:text-xl lg:text-3xl text-[#333]'
             >
               Single link for multiple products
             </motion.h1>
@@ -23,7 +23,7 @@ const SingleLink = ({ currentTab }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className='my-10 leading-[28.61px]'
+              className='my-5 md:my-10 leading-[28.61px] text-sm md:text-base text-[#757575]'
             >
               You can create a group of products under a single link and share
               them on multiple platforms and with your customers without

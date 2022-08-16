@@ -170,8 +170,31 @@ const SellingSteps = () => {
                     fill='none'
                     xmlns='http://www.w3.org/2000/svg'
                   >
-                    <circle cx='237' cy='237' r='237' fill='#EEECE7' />
+                    <circle
+                      cx='237'
+                      cy='237'
+                      r='237'
+                      fill='url(#paint0_linear_930_434)'
+                    />
+                    <defs>
+                      <linearGradient
+                        id='paint0_linear_930_434'
+                        x1='75.4091'
+                        y1='195.705'
+                        x2='237'
+                        y2='474'
+                        gradientUnits='userSpaceOnUse'
+                      >
+                        <stop stop-color='#857250' />
+                        <stop
+                          offset='1'
+                          stop-color='#C4C4C4'
+                          stop-opacity='0'
+                        />
+                      </linearGradient>
+                    </defs>
                   </svg>
+
                   <div className='absolute top-2/4 left-2/4  h-[637.5px] w-[340px] -translate-x-2/4 -translate-y-2/4 '>
                     <AnimatePresence>
                       {clicked[1] && !clicked[2] && (

@@ -9,10 +9,9 @@ export const returnNRefundData = [
     question: 'How do I return or refund my order?',
     answer: (
       <>
-        You may request returns for most items you buy listed on
-        __________________. However, you can only return items explicitly
-        identified as returnable on the product detail page within the given
-        period of 14 days.
+        You may request returns for most items you buy listed on LynkTown .
+        However, you can only return items explicitly identified as returnable
+        on the product detail page within the given period of 14 days.
         <p>
           Items are returnable if you have received them in a condition that is
           -
@@ -23,7 +22,7 @@ export const returnNRefundData = [
           <li>Defective</li>
           <li>
             Different from its description on the product detail page on
-            __________________
+            LynkTown
           </li>
         </ul>
       </>
@@ -43,9 +42,9 @@ export const returnNRefundData = [
         returnable and the return window is still active.
         <br />
         If you need to contact the seller, this must be done in line with our
-        return policy mentioned in __________________ Returns Policy. If a
-        seller fails to address your query in three business days, the
-        __________________ is available to you.
+        return policy mentioned in LynkTown Returns Policy. If a seller fails to
+        address your query in three business days, the LynkTown is available to
+        you.
       </>
     ),
   },
@@ -61,9 +60,8 @@ export const returnNRefundData = [
             eligible for a refund.
           </li>
           <li>
-            Once the return is received, you will, in accordance with
-            __________________ Refund Policy, be issued a refund to your
-            original payment method.
+            Once the return is received, you will, in accordance with LynkTown
+            Refund Policy, be issued a refund to your original payment method.
           </li>
           <li>
             When trying on products by designers, please ensure that you are not
@@ -127,7 +125,7 @@ const Cancellation = () => {
       <div className=' pb-24 relative '>
         <header className='bg-primaryColor h-[240px] md:h-[311.7px] py-[60px]'>
           <h1 className='font-dmSerif text-3xl md:text-5xl lg:text-[56px] text-white text-center'>
-            Return and Refund
+            Return & Refund
           </h1>
         </header>
         <div className='px-4'>
@@ -143,7 +141,7 @@ const Cancellation = () => {
                 and feel happy with their purchases, but if something is not
                 right, let us know. You can return if the order is not as
                 expected as what you expected. Once received, the customer care
-                team at ____________ would inspect the product for the need for
+                team at LynkTown would inspect the product for the need for
                 exchange, and based on their jurisdiction, we will refund.
               </h4>
             </div>

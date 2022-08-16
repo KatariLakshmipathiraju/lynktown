@@ -150,19 +150,22 @@ const Footer = () => {
             <img src={apple.src} alt='' />
           </button>
         </div>
-        <div className='md:text-base my-6   flex-col flex xl:hidden text-white text-sm   mx-auto gap-y-4'>
+        <div className='my-6   flex-col flex xl:hidden text-white text-sm   mx-auto gap-y-4'>
           <h3>All Rights Reserved </h3>
           <Link href='/terms-conditions'>
             <span className='underline cursor-pointer'>
-              Terms and Conditions |
+              Terms & Conditions |
             </span>
           </Link>
           <Link href='/cancellation'>
             <span className='underline cursor-pointer'>Cancellation |</span>
           </Link>
           <Link href='/return-and-refund'>
+            <span className='underline cursor-pointer'>Return & Refund |</span>
+          </Link>
+          <Link href='/shipping-and-delivery'>
             <span className='underline cursor-pointer'>
-              Return and Refund |
+              Shipping & Delivery policy |
             </span>
           </Link>
           <Link href='/privacy-policy'>
@@ -216,11 +219,11 @@ const Footer = () => {
           <div>
             <h3>Copyright © 2022 Lynk Town</h3>
           </div>
-          <div className='text-sm md:text-base hidden xl:flex gap-2 items-center'>
+          <div className='text-sm  hidden xl:flex gap-2 items-center'>
             <h3>All Rights Reserved |</h3>{' '}
             <Link href='/terms-conditions'>
               <span className='underline cursor-pointer'>
-                Terms and Conditions
+                Terms & Conditions
               </span>
             </Link>
             |
@@ -229,8 +232,12 @@ const Footer = () => {
             </Link>
             |
             <Link href='/return-and-refund'>
+              <span className='underline cursor-pointer'>Return & Refund</span>
+            </Link>
+            |
+            <Link href='/shipping-and-delivery'>
               <span className='underline cursor-pointer'>
-                Return and Refund
+                Shipping & Delivery policy |
               </span>
             </Link>
             |

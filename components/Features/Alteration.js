@@ -15,7 +15,7 @@ const Alteration = ({ currentTab }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className='text-3xl text-[#333]'
+              className='text-lg font-medium md:text-xl lg:text-3xl text-[#333]'
             >
               Gain customer trust by accepting alteration requests
             </motion.h1>
@@ -23,7 +23,7 @@ const Alteration = ({ currentTab }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className='my-10 leading-[28.61px]'
+              className='my-5 md:my-10 leading-[28.61px] text-sm md:text-base text-[#757575]'
             >
               Accepting alteration request helps your customers get better
               experience.
@@ -41,12 +41,31 @@ const Alteration = ({ currentTab }) => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 className='lg:max-w-[500] max-w-[292px] max-h-[292px] lg:max-h-[500px] mx-auto 2xl:w-[373px] 2xl:h-[373px]'
-                viewBox='0 0 373 373'
+                viewBox='0 0 338 338'
                 fill='none'
                 xmlns='http://www.w3.org/2000/svg'
               >
-                <circle cx='186.5' cy='186.5' r='186.5' fill='#EEECE7' />
+                <circle
+                  cx='168.815'
+                  cy='168.815'
+                  r='168.815'
+                  fill='url(#paint0_linear_930_437)'
+                />
+                <defs>
+                  <linearGradient
+                    id='paint0_linear_930_437'
+                    x1='53.7139'
+                    y1='139.4'
+                    x2='168.815'
+                    y2='337.63'
+                    gradientUnits='userSpaceOnUse'
+                  >
+                    <stop stop-color='#857250' />
+                    <stop offset='1' stop-color='#C4C4C4' stop-opacity='0' />
+                  </linearGradient>
+                </defs>
               </motion.svg>
+
               <div className='absolute top-2/4 left-2/4 translate-x-[-50%]   translate-y-[-50%]'>
                 <motion.img
                   initial={{ scale: 0 }}

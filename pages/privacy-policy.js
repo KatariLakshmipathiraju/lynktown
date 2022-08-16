@@ -171,9 +171,11 @@ const TermsNCondition = () => {
                 customers.
                 <br />
                 <br />
-                The website is a property ___, an Indian company registered
-                under the Companies Act, 2013 having its registered office at
-                ___.
+                The website is a property Dhaatri Naturals Pvt Ltd , an Indian
+                company registered under the Companies Act, 2013 having its
+                registered office at 224, Bannerghatta Main Rd, near Arekere
+                Main Road, Omkar Nagar, Bilekahalli, Bengaluru, Karnataka
+                560076.
               </h4>
             </div>
             <div className='mt-6 '>
@@ -206,8 +208,8 @@ const TermsNCondition = () => {
               <h1 className=' text-lg font-bold '>Cookie Policy</h1>
               <h4 className='mt-4'>
                 A cookie is a small text file that we place on your mobile
-                device to enable various features of ____. ‘Cookies are used to
-                store user preferences and to track user trends, so as to
+                device to enable various features of LynkTown. ‘Cookies are used
+                to store user preferences and to track user trends, so as to
                 enhance your interactive experience and sincerely improve our
                 services. You can change your cookie settings to accept or not
                 accept cookies in your browser settings. If you do accept a
@@ -394,11 +396,11 @@ const TermsNCondition = () => {
                   reorganization, amalgamation, restructuring of business. We
                   have developed this policy to protect your personal/financial
                   information and keep it confidential. By visiting our website
-                  ___, you are accepting and consenting to the practices
+                  LynkTown, you are accepting and consenting to the practices
                   described in this privacy policies. The following Privacy
                   Policy and Cookie Policy outlines the information we may
                   process and how we may use that information to better serve
-                  you while using our website ____.
+                  you while using our website LynkTown.
                 </h4>
               </div>
             </div>
@@ -410,10 +412,10 @@ const TermsNCondition = () => {
                 </h1>
                 <h4>
                   To stop receiving our promotional emails, please email
-                  unsubscribe at ___. It may take about ten days to process your
-                  request. Even if you opt-out of getting marketing messages, we
-                  will still be sending you transactional messages through email
-                  and SMS about your purchases.
+                  unsubscribe at lynktown@gmail.com. It may take about ten days
+                  to process your request. Even if you opt-out of getting
+                  marketing messages, we will still be sending you transactional
+                  messages through email and SMS about your purchases.
                 </h4>
               </div>
             </div>
@@ -435,19 +437,20 @@ const TermsNCondition = () => {
                 In accordance with Information Technology Act 2000 and rules
                 made thereunder, the name and contact details of the Grievance
                 Officer are provided below:
-                <br /> Name: <br /> Phone: <br /> Email: <br /> If you have any
+                <br /> Name: Srikanth Rajjoshi <br /> Phone: +91-7259111787{' '}
+                <br /> Email: lynktown@gmail.com <br /> If you have any
                 questions about this Policy or other privacy concerns, you can
-                also email us at
+                also email us at lynktown@gmail.com.
               </h4>
             </div>
             <div className='mt-6 '>
               <h1 className=' text-lg font-bold '>UPDATES TO THIS POLICY</h1>
 
               <h4 className='my-4'>
-                This Privacy Policy was last updated on ______. From time to
-                time we may change our privacy practices. We will notify you of
-                any material changes to this policy as required by law. We will
-                also post an updated copy on our website. Please check our site
+                This Privacy Policy was last updated on Today. From time to time
+                we may change our privacy practices. We will notify you of any
+                material changes to this policy as required by law. We will also
+                post an updated copy on our website. Please check our site
                 periodically for updates.
               </h4>
             </div>
