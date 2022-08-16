@@ -102,7 +102,7 @@ const SpecialCollection = () => {
           </svg>
         </h1>
       </div>
-      <div className='py-20 '>
+      <div className='py-20 px-1 md:px-5 '>
         <CarouselProvider
           // naturalSlideWidth={100}
           totalSlides={carouselItems.length}
@@ -122,7 +122,7 @@ const SpecialCollection = () => {
               );
             })}
           </Slider>
-          <div className='absolute mt-5  md:mt-0 md:top-[91px] flex gap-6 right-[5%] lg:right-28'>
+          <div className='absolute mt-5  md:mt-0 md:top-[80px] flex gap-6 right-[5%] lg:right-28'>
             <ButtonBack>
               <IconButton size='small'>
                 <svg

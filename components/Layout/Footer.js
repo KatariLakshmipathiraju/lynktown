@@ -65,7 +65,7 @@ const Footer = () => {
               <h1 className='text-center md:text-left text-lg md:text-2xl text-primaryColor'>
                 About Lynk Town
               </h1>
-              <p className='text-center md:text-left py-4 text-base text-[#3B3B3B] leading-[30px]'>
+              <p className='text-left py-4 text-base text-[#3B3B3B] leading-[30px]'>
                 We are a digital platform helping to build an ecosystem that
                 seamlessly connects creatives, business owners, supplires,
                 customers, trading partners, to collaborate, grow businesses and

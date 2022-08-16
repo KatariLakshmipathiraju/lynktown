@@ -84,7 +84,7 @@ const Community = () => {
         </div>
       </div>
       <div className='flex justify-center md:pb-16 py-10 md:py-0'>
-        <Button className='!text-white lg:!h-[61px] !h-[42px] !md:h-[61px] !bg-primaryColor !p-2 !w-[173px] !relative hover:bg-primaryColor !rounded-[10px] !shadow-2xl'>
+        <Button className='!text-white lg:!h-[55px] !h-[42px] !md:h-[61px] !bg-primaryColor !p-2 !w-[173px] !relative hover:bg-primaryColor !rounded-[10px] !shadow-2xl'>
           Know more
           <div className='absolute right-[-25px] md:right-[-50px] md:top-[-10px]'>
             <Instagram />
