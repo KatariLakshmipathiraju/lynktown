@@ -41,11 +41,29 @@ const ManageOrders = ({ currentTab }) => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 className='lg:max-w-[500] max-w-[292px] max-h-[292px] lg:max-h-[500px] mx-auto 2xl:w-[373px] 2xl:h-[373px]'
-                viewBox='0 0 373 373'
+                viewBox='0 0 338 338'
                 fill='none'
                 xmlns='http://www.w3.org/2000/svg'
               >
-                <circle cx='186.5' cy='186.5' r='186.5' fill='#EEECE7' />
+                <circle
+                  cx='168.815'
+                  cy='168.815'
+                  r='168.815'
+                  fill='url(#paint0_linear_930_437)'
+                />
+                <defs>
+                  <linearGradient
+                    id='paint0_linear_930_437'
+                    x1='53.7139'
+                    y1='139.4'
+                    x2='168.815'
+                    y2='337.63'
+                    gradientUnits='userSpaceOnUse'
+                  >
+                    <stop stopColor='#857250' />
+                    <stop offset='1' stopColor='#C4C4C4' stopOpacity='0' />
+                  </linearGradient>
+                </defs>
               </motion.svg>
               <div className='absolute top-2/4 left-2/4 translate-x-[-50%]   translate-y-[-50%]'>
                 <motion.img
