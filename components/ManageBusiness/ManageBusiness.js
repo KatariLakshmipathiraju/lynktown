@@ -245,12 +245,8 @@ const ManageBusiness = () => {
                         y2='474'
                         gradientUnits='userSpaceOnUse'
                       >
-                        <stop stop-color='#857250' />
-                        <stop
-                          offset='1'
-                          stop-color='#C4C4C4'
-                          stop-opacity='0'
-                        />
+                        <stop stopColor='#857250' />
+                        <stop offset='1' stopColor='#C4C4C4' stopOpacity='0' />
                       </linearGradient>
                     </defs>
                   </svg>

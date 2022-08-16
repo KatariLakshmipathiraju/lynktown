@@ -60,8 +60,8 @@ const Alteration = ({ currentTab }) => {
                     y2='337.63'
                     gradientUnits='userSpaceOnUse'
                   >
-                    <stop stop-color='#857250' />
-                    <stop offset='1' stop-color='#C4C4C4' stop-opacity='0' />
+                    <stop stopColor='#857250' />
+                    <stop offset='1' stopColor='#C4C4C4' stopOpacity='0' />
                   </linearGradient>
                 </defs>
               </motion.svg>
