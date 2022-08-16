@@ -19,13 +19,13 @@ const Community = () => {
           <div className='z-10 absolute p-6 md:p-12 text-white w-full'>
             <div className='flex justify-between w-full'>
               <div>
-                <h1 className='lg:text-[28px] xl:text-[32px] font-semibold'>
+                <h1 className='text-lg lg:text-[28px] xl:text-[32px] font-semibold'>
                   Community
                 </h1>
               </div>
             </div>
           </div>
-          <div className='z-10 absolute bottom-0 text-xl lg:text-2xl xl:text-[32px] !leading-[40px] p-6 md:p-12 opacity-70 text-white w-full'>
+          <div className='z-10 absolute bottom-0 md:text-xl lg:text-2xl xl:text-[28px] md:!leading-[40px] p-6 md:p-12 opacity-70 text-white w-full'>
             <h4>
               Be a part of a creative business community to collaborate and grow
               your business
@@ -41,7 +41,7 @@ const Community = () => {
           <div className='z-10 absolute p-6 md:p-12 text-white w-full'>
             <div className='flex justify-between w-full'>
               <div>
-                <h1 className='lg:text-[28px] xl:text-[32px] font-semibold'>
+                <h1 className='text-lg lg:text-[28px] xl:text-[32px] font-semibold'>
                   Helpful Hand
                 </h1>
               </div>
@@ -50,7 +50,7 @@ const Community = () => {
               </div>
             </div>
           </div>
-          <div className='z-10 absolute bottom-0 text-xl lg:text-2xl xl:text-[32px] !leading-[40px] p-6 md:p-12 opacity-70 text-white w-full'>
+          <div className='z-10 absolute bottom-0 md:text-xl lg:text-2xl xl:text-[28px] md:!leading-[40px] p-6 md:p-12 opacity-70 text-white w-full'>
             <h4>
               Get real world insights and daily tips to help you with your
               branding and marketing
@@ -66,7 +66,7 @@ const Community = () => {
           <div className='z-10 absolute p-6 md:p-12 text-white w-full'>
             <div className='flex justify-between w-full'>
               <div>
-                <h1 className='lg:text-[28px] xl:text-[32px] font-semibold'>
+                <h1 className='text-lg lg:text-[28px] xl:text-[32px] font-semibold'>
                   Trustworthy
                 </h1>
               </div>
@@ -75,7 +75,7 @@ const Community = () => {
               </div>
             </div>
           </div>
-          <div className='z-10 absolute bottom-0 text-xl lg:text-2xl xl:text-[32px] !leading-[40px] p-6 md:p-12 opacity-70 text-white w-full'>
+          <div className='z-10 absolute bottom-0 md:text-xl lg:text-2xl xl:text-[28px] md:!leading-[40px] p-6 md:p-12 opacity-70 text-white w-full'>
             <h4>
               Build your business with a platform trusted by 1000s of sellers
               from all over the world
