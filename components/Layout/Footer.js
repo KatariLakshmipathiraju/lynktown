@@ -106,8 +106,8 @@ const Footer = () => {
               <li className='flex items-start gap-3'>
                 <HiOutlineLocationMarker className='!text-xl min-w-[20px]' />
                 <p>
-                  224, Bannerghatta Main Rd, near Arekere Main Road, Omkar
-                  Nagar, Bilekahalli, Bengaluru, Karnataka 560076
+                  33 1 ST MAIN 2 A CROSS SRINIVASA NAGAR BSK I ST BANGALORE URB BANGALORE Bangalore-560050 Karnataka
+
                 </p>
               </li>
             </ul>
