@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
         src='https://www.googletagmanager.com/gtag/js?id=G-TTP5FCW4FD'
       />
       <Head>
-        <title>Lynk Town</title>
+        <title>LynkTown</title>
 
         <meta
           name='google-site-verification'

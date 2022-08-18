@@ -14,7 +14,7 @@ const Hero = () => {
             Grow your business & sell products with ease
           </h1>
           <p className='my-3 sm:my-8 mx-auto text-left'>
-            Lynk Town is trusted by 5000+ fashion designers, artists &{' '}
+            LynkTown is trusted by 5000+ fashion designers, artists &{' '}
             <br className='hidden md:block' />
             business owners.
           </p>

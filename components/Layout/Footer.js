@@ -63,7 +63,7 @@ const Footer = () => {
             </div>
             <div>
               <h1 className='text-center md:text-left text-lg md:text-2xl text-primaryColor'>
-                About Lynk Town
+                About LynkTown
               </h1>
               <p className='text-left py-4 text-base text-[#3B3B3B] leading-[30px]'>
                 We are a digital platform helping to build an ecosystem that
@@ -106,8 +106,8 @@ const Footer = () => {
               <li className='flex items-start gap-3'>
                 <HiOutlineLocationMarker className='!text-xl min-w-[20px]' />
                 <p>
-                  33 1 ST MAIN 2 A CROSS SRINIVASA NAGAR BSK I ST BANGALORE URB BANGALORE Bangalore-560050 Karnataka
-
+                  33 1 ST MAIN 2 A CROSS SRINIVASA NAGAR BSK I ST BANGALORE URB
+                  BANGALORE Bangalore-560050 Karnataka
                 </p>
               </li>
             </ul>
@@ -123,7 +123,7 @@ const Footer = () => {
                 <RiTwitterFill className='text-xl' />
               </a>
               <a
-                href='http://www.instagram.com'
+                href='https://www.instagram.com/lynktown'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -217,7 +217,7 @@ const Footer = () => {
         <hr />
         <div className='flex flex-col lg:flex-row items-center text-white py-5  justify-between'>
           <div>
-            <h3>Copyright © 2022 Lynk Town</h3>
+            <h3>Copyright © 2022 LynkTown</h3>
           </div>
           <div className='text-sm  hidden xl:flex gap-2 items-center'>
             <h3>All Rights Reserved |</h3>{' '}

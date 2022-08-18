@@ -64,7 +64,7 @@ const AboutUs = () => {
             </div>
             <div>
               <h1 className='text-center md:text-left text-lg md:text-2xl text-primaryColor'>
-                About Lynk Town
+                About LynkTown
               </h1>
               <p className='text-left py-4 text-base text-[#3B3B3B] leading-[30px]'>
                 We are a digital platform helping to build an ecosystem that

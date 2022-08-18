@@ -17,7 +17,7 @@ const Faq = () => {
     {
       id: 1,
       question: 'How do I start Selling on my social media using LynkTown?',
-      ans: 'You upload the product details, pictures and all the needed details and craete a link with the help of Lynk Town app. You can then share that link on multiple social platforms and with your customers to get orders.',
+      ans: 'You upload the product details, pictures and all the needed details and craete a link with the help of LynkTown app. You can then share that link on multiple social platforms and with your customers to get orders.',
     },
     {
       id: 2,
@@ -27,12 +27,12 @@ const Faq = () => {
     {
       id: 3,
       question: 'Do I need to ship orders on my own?',
-      ans: `No. You don't have to worry about any shipping at all. Lynk Town has its own vendors who take care of all the shipping process. `,
+      ans: `No. You don't have to worry about any shipping at all. LynkTown has its own vendors who take care of all the shipping process. `,
     },
     {
       id: 4,
       question: 'How can I track all my orders?',
-      ans: 'You can track all your orders from the dashboard of Lynk Town app in one go. You will be able to see the vendor details and track the shipment orders as well.',
+      ans: 'You can track all your orders from the dashboard of LynkTown app in one go. You will be able to see the vendor details and track the shipment orders as well.',
     },
     {
       id: 5,
@@ -42,7 +42,7 @@ const Faq = () => {
     {
       id: 6,
       question: 'What happens if my customers ask for alteration or exchange?',
-      ans: 'Everything is handled by the Lynk Town app. Measurements are uploaded by the customers for custom orders. For the exchange or alteration order requests, our shipping vendors take care of everything starting from picking the orders to delivering the order back to the customer.',
+      ans: 'Everything is handled by the LynkTown app. Measurements are uploaded by the customers for custom orders. For the exchange or alteration order requests, our shipping vendors take care of everything starting from picking the orders to delivering the order back to the customer.',
     },
     {
       id: 7,

@@ -58,7 +58,7 @@ const Community = () => {
           </div>
         </div>
         <div
-          className='bg-cover w-full h-[250.7px] md:h-full  rounded-[24px] relative  cursor-pointer community__img--3'
+          className='bg-cover w-full h-[250.7px] md:h-full  rounded-[24px] relative  community__img--3'
           style={{
             backgroundImage: `linear-gradient(0deg, #4A3E26 2%, rgba(106, 91, 64, 0) 78.78%), linear-gradient(180deg, rgba(74, 62, 38, 0.55) 19.45%, rgba(0, 0, 0, 0) 35.81%), url(${image3.src})`,
           }}
@@ -84,12 +84,18 @@ const Community = () => {
         </div>
       </div>
       <div className='flex justify-center md:pb-16 py-10 md:py-0'>
-        <Button className='!text-white lg:!h-[55px] !h-[42px] !md:h-[61px] !bg-primaryColor !p-2 !w-[173px] !relative hover:bg-primaryColor !rounded-[10px] !shadow-2xl'>
-          Know more
-          <div className='absolute right-[-25px] md:right-[-50px] md:top-[-10px]'>
-            <Instagram />
-          </div>
-        </Button>
+        <a
+          href='https://www.instagram.com/lynktown'
+          target='_blank'
+          rel='noreferrer'
+        >
+          <Button className='!text-white lg:!h-[55px] !h-[42px] !md:h-[61px] !bg-primaryColor !p-2 !w-[173px] !relative hover:bg-primaryColor !rounded-[10px] !shadow-2xl'>
+            Know more
+            <div className='absolute right-[-25px] md:right-[-50px] md:top-[-10px]'>
+              <Instagram />
+            </div>
+          </Button>
+        </a>
       </div>
     </section>
   );
