@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Items = ({ item, index }) => {
+const Items = ({ item, index,displayRazorpay }) => {
   const { image, height, brand, name, price, id } = item;
   return (
     <div
@@ -33,8 +33,10 @@ const Items = ({ item, index }) => {
         <h3 className='text-xs text-primaryColor'>{brand}</h3>
         <h2 className='text-sm'>{name}</h2>
         <div className='flex justify-between my-2 items-center pr-5'>
-          <h1 className='text-lg font-semibold  '>{price}</h1>
-          <button className='w-[80px] text-xs h-[30px] bg-primaryColor text-white rounded-[6px]'>
+          <h1 className='text-lg font-semibold  '>₹{parseFloat(price)}</h1>
+          <button
+           onClick={()=>displayRazorpay(price)}
+          className='w-[80px] text-xs h-[30px] bg-primaryColor text-white rounded-[6px]'>
             {' '}
             Buy Now
           </button>

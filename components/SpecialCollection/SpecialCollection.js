@@ -7,6 +7,7 @@ import {
   ButtonNext,
   DotGroup,
 } from 'pure-react-carousel';
+import axios from 'axios'
 import { Button, IconButton, useMediaQuery } from '@mui/material';
 import Items from './Items';
 import img1 from '/public/assets/images/collections/1.jpg';
@@ -20,7 +21,7 @@ const carouselItems = [
     id: 1,
     brand: 'Allen solly',
     name: 'Blue jean jacket',
-    price: '₹500.00',
+    price: '500.00',
     image: img1.src,
     height: '436.39px',
   },
@@ -28,7 +29,7 @@ const carouselItems = [
     id: 2,
     brand: 'Allen solly',
     name: 'Short yellow shirt',
-    price: '₹600.00',
+    price: '600.00',
     image: img2.src,
     height: '335px',
   },
@@ -36,7 +37,7 @@ const carouselItems = [
     id: 3,
     brand: 'Allen solly',
     name: 'Blue fur jacket',
-    price: '₹800.00',
+    price: '800.00',
     image: img3.src,
     height: '335px',
   },
@@ -44,7 +45,7 @@ const carouselItems = [
     id: 4,
     brand: 'Allen solly',
     name: 'white & black formals',
-    price: '₹900.00',
+    price: '900.00',
 
     image: img4.src,
     height: '436.39px',
@@ -53,18 +54,68 @@ const carouselItems = [
     id: 5,
     brand: 'Allen solly',
     name: 'Grey long dress',
-    price: '₹1000.00',
+    price: '1000.00',
     image: img5.src,
     height: '335px',
   },
 ];
-
+function loadScript(src) {
+  return new Promise(resolve => {
+    const script = document.createElement('script');
+    script.src = src;
+    script.onload = () => {
+      resolve(true);
+    };
+    script.onerror = () => {
+      resolve(false);
+    };
+    document.getElementById('__next').appendChild(script);
+  });
+}
 const SpecialCollection = () => {
   const match = useMediaQuery('(max-width:630px)');
   const iPade = useMediaQuery('(max-width:1000px)');
   const tab = useMediaQuery('(max-width:890px)');
   const mobile = useMediaQuery('(max-width:479px)');
   const large = useMediaQuery('(max-width:1430px)');
+
+
+  async function displayRazorpay(total) {
+    const res = await loadScript(
+      'https://checkout.razorpay.com/v1/checkout.js'
+    );
+
+    if (!res) {
+      alert('Razorpay SDK failed to load. Are you online?');
+      return;
+    }
+
+
+  
+
+    const  {data} = await axios.get(`https://us-central1-u2-lynk.cloudfunctions.net/createorderApi?total=${total}`).then((res)=>res).catch((err)=>{console.log(err)}) 
+
+    
+
+    const options = {
+      key: 'rzp_live_SlUwiRcpOMKIzd',
+      currency: data.currency,
+      amount: data.amount,
+      order_id: data.id,
+      name: 'U2Lynks',
+      description: 'Thank you for Shoping With Us',
+      handler: function (response) {
+       Alert("Thank you for Shoping With Us")
+      },
+     
+    };
+    
+    const paymentObject = new window.Razorpay(options);
+    paymentObject.open();
+  }
+
+
+
   return (
     <div className='py-12 md:py-20 relative overflow-hidden '>
       <div className='container mx-auto'>
@@ -117,7 +168,7 @@ const SpecialCollection = () => {
             {carouselItems.map((item, index) => {
               return (
                 <Slide index={index} key={index}>
-                  <Items item={item} index={index} />
+                  <Items item={item} index={index} displayRazorpay={displayRazorpay}/>
                 </Slide>
               );
             })}
