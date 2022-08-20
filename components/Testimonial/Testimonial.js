@@ -3,44 +3,46 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination, Autoplay } from 'swiper';
-import image1 from '/public/assets/images/testimonial/1.png';
+import image1 from '/public/assets/images/testimonial/1.jpg';
+import image2 from '/public/assets/images/testimonial/2.jpg';
+import image3 from '/public/assets/images/testimonial/3.jpg';
+import image4 from '/public/assets/images/testimonial/4.jpg';
 
 const carosuelPoint = [
   {
     id: 1,
     review:
-      '“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis “',
+      '“Trusted app that can make me sell my products globally. I am very excited with the way we can process our order through LynkTown app. Looking forward to their new features “',
     img: image1,
     stars: 5,
-    name: 'Anna Lemon',
+    name: 'Akash Gupta',
     role: 'Fashion Designer',
   },
 
   {
     id: 2,
-    review:
-      '“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis “',
-    img: image1,
-    stars: 4,
-    name: 'Anna Lemon',
+    review: `“I would highly recommend this app for someone passionate about starting a small business. It's one of the quickest and easiest ways to start selling on the go. “`,
+    img: image2,
+    stars: 5,
+    name: 'Shwetha',
     role: 'Fashion Designer',
   },
   {
     id: 3,
     review:
-      '“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis “',
-    img: image1,
-    stars: 2,
-    name: 'Anna Lemon',
-    role: 'Fashion Designer',
+      '“A real social commerce app that I have recently come across. Easiest mode of selling products online. The awesome thing about this app is we can add any number of products in a single order link. “',
+    img: image3,
+    stars: 5,
+    name: 'Maniratna ',
+    role: 'Retail seller',
   },
   {
     id: 4,
     review:
-      '“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis “',
-    img: image1,
-    stars: 3,
-    name: 'Anna Lemon',
+      '“This is indeed a revolutionary way of social selling. Hassle free payment and shipping, we just have to concentrate on creating amazing products rest everything will be taken care of by LynkTown. I am a final year fashion tech student and I must say LynkTown is my buddy now.“',
+    img: image4,
+    stars: 5,
+    name: 'Twinka ',
     role: 'Fashion Designer',
   },
 ];
@@ -66,13 +68,16 @@ const Testimonial = () => {
 
             return (
               <SwiperSlide key={id}>
-                <div className='max-w-[767px] mx-auto flex justify-center flex-col items-center'>
+                <div className='max-w-[900px] mx-auto flex justify-center flex-col items-center'>
                   <img
                     src={img.src}
                     alt=''
-                    className='w-[101px] h-[101px] md:w-48 md:h-48'
+                    className='w-[101px] h-[101px] rounded-full object-cover md:w-[200.43px] md:h-[200.43px]'
+                    style={{
+                      objectPosition: 'top center',
+                    }}
                   />
-                  <div className='flex justify-center my-8 gap-3'>
+                  <div className='flex justify-center my-6 md:my-8 gap-3'>
                     {Array.from({ length: stars }).map((star, idx) => (
                       <svg
                         key={idx}
@@ -89,12 +94,12 @@ const Testimonial = () => {
                       </svg>
                     ))}
                   </div>
-                  <h3 className='text-base md:text-2xl text-center'>
+                  <h3 className='text-sm sm:text-base md:text-2xl text-center'>
                     {review}
                   </h3>
                   <div className='py-4 text-sm md:text-base text-center text-[#6A5B40]'>
                     <h2>{name}</h2>
-                    <h3>{role}</h3>
+                    <h3 className='my-2'>{role}</h3>
                   </div>
                 </div>
               </SwiperSlide>
