@@ -1,9 +1,6 @@
 import React from 'react';
-import google from '/public/assets/images/google.png';
-import apple from '/public/assets/images/apple.png';
 import person from '/public/assets/images/person.png';
 import { Chart, Facebook, Instagram, WhatsApp } from './Icons';
-import { Button } from '@mui/material';
 
 const Hero = () => {
   return (
@@ -18,14 +15,14 @@ const Hero = () => {
             <br className='hidden md:block' />
             business owners.
           </p>
-          <div className='flex gap-5  flex-wrap justify-center md:justify-start'>
+          {/* <div className='flex gap-5  flex-wrap justify-center md:justify-start'>
             <button className='w-[133.88px] h-[40px] sm:w-auto sm:h-auto'>
               <img src={google.src} alt='' />
             </button>
             <button className='w-[133.88px] h-[40px] sm:w-auto sm:h-auto'>
               <img src={apple.src} alt='' />
             </button>
-          </div>
+          </div> */}
         </div>
         <div className='justify-self-center lg:justify-self-end mt-20 lg:mt-14   md:scale-100'>
           <div className='relative '>

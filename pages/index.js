@@ -18,7 +18,7 @@ export default function Home() {
       <ManageBusiness />
       <Community />
       <Features />
-      <SpecialCollection />
+      {/* <SpecialCollection /> */}
       <Testimonial />
       <MadeFor />
       <Faq />

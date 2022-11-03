@@ -6,9 +6,10 @@ import step2 from '/public/assets/images/sellingSteps/2.png';
 import step3 from '/public/assets/images/sellingSteps/3.png';
 import step4 from '/public/assets/images/sellingSteps/4.png';
 import Tick from './Tick';
-import { useMediaQuery } from '@mui/material';
+import { Button, IconButton, useMediaQuery } from '@mui/material';
 import { AnimatePresence, motion, useInView } from 'framer-motion';
 import SellingStepMobile from './SellingStepMobile';
+import { MdArrowForwardIos, MdOutlineArrowBackIos } from 'react-icons/md';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -116,43 +117,43 @@ const SellingSteps = () => {
     once: true,
   });
 
-  useEffect(() => {
-    if (manualClick || largeScreen) return setRunning(false);
-    const progressBar = document.querySelector('#progressBar');
-    var id = setInterval(frame, 60);
-    // let height = 0;
+  // useEffect(() => {
+  //   if (manualClick || largeScreen) return setRunning(false);
+  //   const progressBar = document.querySelector('#progressBar');
+  //   var id = setInterval(frame, 60);
+  //   // let height = 0;
 
-    function frame() {
-      if (manualClick || !progressBar || !isInView) return;
-      if (height >= 250) {
-        setRunning(false);
-        clearInterval(id);
-      } else {
-        setRunning(true);
-        height++;
+  //   function frame() {
+  //     if (manualClick || !progressBar || !isInView) return;
+  //     if (height >= 250) {
+  //       setRunning(false);
+  //       clearInterval(id);
+  //     } else {
+  //       setRunning(true);
+  //       height++;
 
-        progressBar.style.height = height + 'px';
-        if (height === 80) {
-          setClicked(prev => ({
-            ...prev,
-            2: true,
-          }));
-        }
-        if (height === 160) {
-          setClicked(prev => ({
-            ...prev,
-            3: true,
-          }));
-        }
-        if (height === 240) {
-          setClicked(prev => ({
-            ...prev,
-            4: true,
-          }));
-        }
-      }
-    }
-  }, [manualClick, largeScreen, isInView]);
+  //       progressBar.style.height = height + 'px';
+  //       if (height === 80) {
+  //         setClicked(prev => ({
+  //           ...prev,
+  //           2: true,
+  //         }));
+  //       }
+  //       if (height === 160) {
+  //         setClicked(prev => ({
+  //           ...prev,
+  //           3: true,
+  //         }));
+  //       }
+  //       if (height === 240) {
+  //         setClicked(prev => ({
+  //           ...prev,
+  //           4: true,
+  //         }));
+  //       }
+  //     }
+  //   }
+  // }, [manualClick, largeScreen, isInView]);
 
   return (
     <>
@@ -190,6 +191,16 @@ const SellingSteps = () => {
                       </linearGradient>
                     </defs>
                   </svg>
+                  <div className='absolute top-2/4 left-[-15%] z-10 '>
+                    <IconButton>
+                      <MdOutlineArrowBackIos className='text-3xl' />
+                    </IconButton>
+                  </div>
+                  <div className='absolute top-2/4 right-[-15%] z-10 '>
+                    <IconButton>
+                      <MdArrowForwardIos className='text-3xl' />
+                    </IconButton>
+                  </div>
 
                   <div className='absolute top-2/4 left-2/4  h-[637.5px] w-[340px] -translate-x-2/4 -translate-y-2/4 '>
                     <AnimatePresence>
