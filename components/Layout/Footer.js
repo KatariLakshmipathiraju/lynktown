@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <footer className='bg-primaryColor  pt-16'>
       <div className='container  mx-auto'>
-        <div className='grid xl:grid-cols-[850px_1fr_1fr]  xl:justify-items-center gap-4 sm:gap-11'>
+        <div className='grid xl:grid-cols-[850px_1fr_1fr] mb-10  xl:justify-items-center gap-4 sm:gap-11'>
           <div className='bg-white flex-col md:flex-row rounded-[20px] relative p-6 gap-10 flex items-center'>
             <div className='absolute top-[-15px] md:top-[-25px] shadow-lg right-[-8px]  md:right-[-15px] w-8 h-8 md:w-12 md:h-12 lg:w-16 lg:h-16 bg-white rounded-full grid place-items-center'>
               <svg
