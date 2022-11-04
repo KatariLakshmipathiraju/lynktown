@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section className='lg:h-[655px]  pt-5  sm:pt-16 lg:py-4   bg-primaryColor text-white relative'>
       <div className='container mx-auto grid lg:grid-cols-2 items-center h-full px-4'>
-        <div>
+        <div className='z-10'>
           <h1 className=' md:text-4xl text-3xl lg:text-5xl xl:text-[56px]  text-left leading-normal lg:leading-[70.2px] font-medium lg:max-w-[585px]'>
             Grow your business & sell products with ease
           </h1>
@@ -27,17 +27,9 @@ const Hero = () => {
               </a>
             </Link>
           </div>
-          {/* <div className='flex gap-5  flex-wrap justify-center md:justify-start'>
-            <button className='w-[133.88px] h-[40px] sm:w-auto sm:h-auto'>
-              <img src={google.src} alt='' />
-            </button>
-            <button className='w-[133.88px] h-[40px] sm:w-auto sm:h-auto'>
-              <img src={apple.src} alt='' />
-            </button>
-          </div> */}
         </div>
 
-        <div className='justify-self-center lg:justify-self-end mt-20 lg:mt-14   md:scale-100'>
+        <div className='justify-self-center lg:justify-self-end mt-20 lg:mt-14    md:scale-100'>
           <div className='relative '>
             <svg
               // className='w-[279.63px] h-[340px] sm:w-[350px] sm:h-[400px] md:w-[495px] md:h-[495px]'
@@ -72,7 +64,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className='absolute left-0 bottom-16 hidden lg:block'>
+      <div className='absolute left-0  bottom-16 hidden lg:block'>
         <svg
           width='129'
           height='228'
