@@ -1,6 +1,5 @@
 import React from 'react';
-import google from '/public/assets/images/google.png';
-import apple from '/public/assets/images/apple.png';
+
 import {
   HiOutlineMail,
   HiOutlinePhone,
@@ -73,14 +72,7 @@ const Footer = () => {
               </p>
             </div>
           </div>
-          {/* <div className='flex gap-5 sm:hidden  my-4 justify-center  flex-wrap '>
-            <button className='w-[156.85px] h-[46px] sm:w-auto sm:h-auto'>
-              <img src={google.src} alt='' />
-            </button>
-            <button className='w-[156.85px] h-[46px] sm:w-auto sm:h-auto'>
-              <img src={apple.src} alt='' />
-            </button>
-          </div> */}
+
           <div className='text-white'>
             <h1 className='font-semibold text-lg'>Company</h1>
             <ul className='flex flex-col gap-4 my-6'>
@@ -142,14 +134,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className=' hidden sm:flex gap-5 my-8 mb-10  items-center flex-wrap '>
-          <button className='w-[186.5px]'>
-            <img src={google.src} alt='' />
-          </button>
-          <button className='w-[186.5px]'>
-            <img src={apple.src} alt='' />
-          </button>
-        </div>
+
         <div className='my-6   flex-col flex xl:hidden text-white text-sm   mx-auto gap-y-4'>
           <h3>All Rights Reserved </h3>
           <Link href='/terms-conditions'>
