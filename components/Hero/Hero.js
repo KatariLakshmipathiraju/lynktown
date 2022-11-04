@@ -1,6 +1,8 @@
 import React from 'react';
 import person from '/public/assets/images/person.png';
 import { Chart, Facebook, Instagram, WhatsApp } from './Icons';
+import { Button } from '@mui/material';
+import Link from 'next/link';
 
 const Hero = () => {
   return (
@@ -10,11 +12,21 @@ const Hero = () => {
           <h1 className=' md:text-4xl text-3xl lg:text-5xl xl:text-[56px]  text-left leading-normal lg:leading-[70.2px] font-medium lg:max-w-[585px]'>
             Grow your business & sell products with ease
           </h1>
+
           <p className='my-3 sm:my-8 mx-auto text-left'>
             LynkTown is trusted by 5000+ fashion designers, artists &{' '}
             <br className='hidden md:block' />
             business owners.
           </p>
+          <div>
+            <Link href='/contact-us'>
+              <a>
+                <button className='bg-white rounded-lg font-medium max-w-[200px]  w-full text-primaryColor md:text-lg p-3.5 px-5'>
+                  Contact Us
+                </button>
+              </a>
+            </Link>
+          </div>
           {/* <div className='flex gap-5  flex-wrap justify-center md:justify-start'>
             <button className='w-[133.88px] h-[40px] sm:w-auto sm:h-auto'>
               <img src={google.src} alt='' />
@@ -24,6 +36,7 @@ const Hero = () => {
             </button>
           </div> */}
         </div>
+
         <div className='justify-self-center lg:justify-self-end mt-20 lg:mt-14   md:scale-100'>
           <div className='relative '>
             <svg

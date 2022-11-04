@@ -72,6 +72,12 @@ const SellingSteps = () => {
     3: false,
     4: false,
   });
+  console.log(
+    '🚀 ~ file: SellingSteps.js ~ line 75 ~ SellingSteps ~ clicked',
+    clicked
+  );
+
+  const [currentImg, setCurrentImage] = useState(1);
 
   useEffect(() => {
     const progress = document.querySelector('.progressLine');
@@ -155,6 +161,22 @@ const SellingSteps = () => {
   //   }
   // }, [manualClick, largeScreen, isInView]);
 
+  const nextImg = () => {
+    if (currentImg === 4) return;
+    setCurrentImage(currentImg + 1);
+    setClicked(prev => ({
+      ...prev,
+      [currentImg + 1]: true,
+    }));
+  };
+  const prevImg = () => {
+    if (currentImg === 1) return;
+    setCurrentImage(currentImg - 1);
+    setClicked(prev => ({
+      ...prev,
+      [currentImg]: !clicked[currentImg],
+    }));
+  };
   return (
     <>
       {largeScreen ? (
@@ -192,12 +214,12 @@ const SellingSteps = () => {
                     </defs>
                   </svg>
                   <div className='absolute top-2/4 left-[-15%] z-10 '>
-                    <IconButton>
+                    <IconButton onClick={prevImg}>
                       <MdOutlineArrowBackIos className='text-3xl' />
                     </IconButton>
                   </div>
                   <div className='absolute top-2/4 right-[-15%] z-10 '>
-                    <IconButton>
+                    <IconButton onClick={nextImg}>
                       <MdArrowForwardIos className='text-3xl' />
                     </IconButton>
                   </div>
@@ -341,6 +363,8 @@ const SellingSteps = () => {
                           if (!clicked[id - 1]) return;
                           if (clicked[id + 1]) return;
                           setManualClick(true);
+
+                          setCurrentImage(id === 4 ? 3 : id);
 
                           setClicked(prev => ({
                             ...prev,
