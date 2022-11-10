@@ -5,9 +5,10 @@ import step1 from '/public/assets/images/manageBusiness/1.png';
 import step2 from '/public/assets/images/manageBusiness/2.png';
 import step3 from '/public/assets/images/manageBusiness/3.png';
 import Tick from './Tick';
-import { useMediaQuery } from '@mui/material';
+import { IconButton, useMediaQuery } from '@mui/material';
 import { AnimatePresence, motion, useInView } from 'framer-motion';
 import ManageBusinessMobile from './ManageBusinessMobile';
+import { MdArrowForwardIos, MdOutlineArrowBackIos } from 'react-icons/md';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -110,37 +111,90 @@ const ManageBusiness = () => {
     once: true,
   });
 
+  // useEffect(() => {
+  //   if (manualClick || largeScreen || !isInView) return setRunning(false);
+  //   const progressBar = document.querySelector('#progressBarManage');
+  //   const id = setInterval(frame, 60);
+  //   // let height = 0;
+
+  //   function frame() {
+  //     if (manualClick || !progressBar) return;
+
+  //     if (height >= 170) {
+  //       clearInterval(id);
+  //       setRunning(false);
+  //     } else {
+  //       setRunning(true);
+  //       height++;
+  //       progressBar.style.height = height + 'px';
+  //       if (height === 80) {
+  //         setClicked(prev => ({
+  //           ...prev,
+  //           2: true,
+  //         }));
+  //       }
+  //       if (height === 160) {
+  //         setClicked(prev => ({
+  //           ...prev,
+  //           3: true,
+  //         }));
+  //       }
+  //     }
+  //   }
+  // }, [manualClick, largeScreen, isInView]);
+
+  const [currentImg, setCurrentImage] = useState(1);
+  console.log(
+    '🚀 ~ file: ManageBusiness.js ~ line 147 ~ ManageBusiness ~ currentImg',
+    currentImg
+  );
+
   useEffect(() => {
-    if (manualClick || largeScreen || !isInView) return setRunning(false);
-    const progressBar = document.querySelector('#progressBarManage');
-    const id = setInterval(frame, 60);
-    // let height = 0;
-
-    function frame() {
-      if (manualClick || !progressBar) return;
-
-      if (height >= 170) {
-        clearInterval(id);
-        setRunning(false);
-      } else {
-        setRunning(true);
-        height++;
-        progressBar.style.height = height + 'px';
-        if (height === 80) {
-          setClicked(prev => ({
-            ...prev,
-            2: true,
-          }));
-        }
-        if (height === 160) {
-          setClicked(prev => ({
-            ...prev,
-            3: true,
-          }));
-        }
-      }
+    if (currentImg === 4) {
+      setCurrentImage(1);
+      setClicked(prev => ({
+        1: true,
+        2: false,
+        3: false,
+      }));
     }
-  }, [manualClick, largeScreen, isInView]);
+    if (currentImg === 0) {
+      setCurrentImage(3);
+      setClicked(prev => ({
+        1: true,
+        2: true,
+        3: true,
+      }));
+    }
+  }, [currentImg]);
+
+  const nextImg = () => {
+    if (currentImg === 4) {
+      setClicked(prev => ({
+        1: true,
+        2: false,
+        3: false,
+      }));
+      setCurrentImage(1);
+      return;
+    }
+
+    setCurrentImage(currentImg + 1);
+    setClicked(prev => ({
+      ...prev,
+      [currentImg + 1]: true,
+    }));
+  };
+  const prevImg = () => {
+    if (currentImg === 0) {
+      setCurrentImage(3);
+    }
+    setCurrentImage(currentImg - 1);
+    setClicked(prev => ({
+      ...prev,
+      [currentImg]: !clicked[currentImg],
+    }));
+  };
 
   return (
     <>
@@ -177,26 +231,28 @@ const ManageBusiness = () => {
                         //   id !== 1 ? 'h-[28px]' : 'h-[140px]'
                         // } transition-all`}
                         className={`flex gap-5 step_${id} !text-right `}
-                        style={{
-                          // height: clicked[id] ? '100%' : '20px',
-                          cursor:
-                            clicked[id - 1] && !clicked[id + 1] && !running
-                              ? 'pointer'
-                              : '',
-                        }}
-                        onClick={e => {
-                          if (id === 1) return;
-                          if (running) return;
+                        // style={{
+                        //   // height: clicked[id] ? '100%' : '20px',
+                        //   cursor:
+                        //     clicked[id - 1] && !clicked[id + 1] && !running
+                        //       ? 'pointer'
+                        //       : '',
+                        // }}
+                        // onClick={e => {
+                        //   if (id === 1) return;
+                        //   if (running) return;
 
-                          if (!clicked[id - 1]) return;
-                          if (clicked[id + 1]) return;
+                        //   if (!clicked[id - 1]) return;
+                        //   if (clicked[id + 1]) return;
 
-                          setManualClick(true);
-                          setClicked(prev => ({
-                            ...prev,
-                            [id]: !prev[id],
-                          }));
-                        }}
+                        //   setManualClick(true);
+                        //   setCurrentImage(id);
+
+                        //   setClicked(prev => ({
+                        //     ...prev,
+                        //     [id]: !prev[id],
+                        //   }));
+                        // }}
                       >
                         <div>
                           <Tick fill={clicked[id] && true} />
@@ -250,6 +306,16 @@ const ManageBusiness = () => {
                       </linearGradient>
                     </defs>
                   </svg>
+                  <div className='absolute top-2/4 left-[-10%] z-10 '>
+                    <IconButton onClick={prevImg}>
+                      <MdOutlineArrowBackIos className='text-3xl' />
+                    </IconButton>
+                  </div>
+                  <div className='absolute top-2/4 right-[-10%] z-10 '>
+                    <IconButton onClick={nextImg}>
+                      <MdArrowForwardIos className='text-3xl' />
+                    </IconButton>
+                  </div>
                   <div className='absolute top-2/4 left-2/4  h-[637.5px] w-[340px] -translate-x-2/4 -translate-y-2/4 '>
                     <AnimatePresence>
                       {clicked[1] && !clicked[2] && (

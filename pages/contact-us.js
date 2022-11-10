@@ -54,7 +54,6 @@ const ContactUs = () => {
       setLoading(false);
     } catch (error) {
       setLoading(false);
-      console.log('🚀 ~ file: Contact.js ~ line 25 ~ Contact ~ error', error);
       alert('Form submission failed. Please try again later.');
     }
   };

@@ -72,10 +72,6 @@ const SellingSteps = () => {
     3: false,
     4: false,
   });
-  console.log(
-    '🚀 ~ file: SellingSteps.js ~ line 75 ~ SellingSteps ~ clicked',
-    clicked
-  );
 
   const [currentImg, setCurrentImage] = useState(1);
 
@@ -161,8 +157,28 @@ const SellingSteps = () => {
   //   }
   // }, [manualClick, largeScreen, isInView]);
 
+  useEffect(() => {
+    if (currentImg === 5) {
+      setCurrentImage(1);
+      setClicked(prev => ({
+        1: true,
+        2: false,
+        3: false,
+        4: false,
+      }));
+    }
+    if (currentImg === 0) {
+      setCurrentImage(4);
+      setClicked(prev => ({
+        1: true,
+        2: true,
+        3: true,
+        4: true,
+      }));
+    }
+  }, [currentImg]);
+
   const nextImg = () => {
-    if (currentImg === 4) return;
     setCurrentImage(currentImg + 1);
     setClicked(prev => ({
       ...prev,
@@ -170,7 +186,6 @@ const SellingSteps = () => {
     }));
   };
   const prevImg = () => {
-    if (currentImg === 1) return;
     setCurrentImage(currentImg - 1);
     setClicked(prev => ({
       ...prev,
@@ -213,12 +228,12 @@ const SellingSteps = () => {
                       </linearGradient>
                     </defs>
                   </svg>
-                  <div className='absolute top-2/4 left-[-15%] z-10 '>
+                  <div className='absolute top-2/4 left-[-10%] z-10 '>
                     <IconButton onClick={prevImg}>
                       <MdOutlineArrowBackIos className='text-3xl' />
                     </IconButton>
                   </div>
-                  <div className='absolute top-2/4 right-[-15%] z-10 '>
+                  <div className='absolute top-2/4 right-[-10%] z-10 '>
                     <IconButton onClick={nextImg}>
                       <MdArrowForwardIos className='text-3xl' />
                     </IconButton>
@@ -349,28 +364,28 @@ const SellingSteps = () => {
                         //   id !== 1 ? 'h-[28px]' : 'h-[140px]'
                         // } transition-all`}
                         className={`flex gap-5 step_${id} `}
-                        style={{
-                          // height: clicked[id] ? '100%' : '20px',
-                          cursor:
-                            clicked[id - 1] && !clicked[id + 1] && !running
-                              ? 'pointer'
-                              : '',
-                        }}
-                        onClick={e => {
-                          if (id === 1) return;
-                          if (running) return;
+                        // style={{
+                        //   // height: clicked[id] ? '100%' : '20px',
+                        //   cursor:
+                        //     clicked[id - 1] && !clicked[id + 1] && !running
+                        //       ? 'pointer'
+                        //       : '',
+                        // }}
+                        // onClick={e => {
+                        //   if (id === 1) return;
+                        //   if (running) return;
 
-                          if (!clicked[id - 1]) return;
-                          if (clicked[id + 1]) return;
-                          setManualClick(true);
+                        //   if (!clicked[id - 1]) return;
+                        //   if (clicked[id + 1]) return;
+                        //   setManualClick(true);
 
-                          setCurrentImage(id === 4 ? 3 : id);
+                        //   setCurrentImage(id);
 
-                          setClicked(prev => ({
-                            ...prev,
-                            [id]: !prev[id],
-                          }));
-                        }}
+                        //   setClicked(prev => ({
+                        //     ...prev,
+                        //     [id]: !prev[id],
+                        //   }));
+                        // }}
                       >
                         <div>
                           <Tick fill={clicked[id] && true} />
