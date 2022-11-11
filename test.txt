@@ -1,6 +1,6 @@
 {
   "projects": {
-    "default": "u2-lynk"
+    "default": "u2-lynks"
   },
   "targets": {
     "u2-lynks": {
@@ -23,6 +23,5 @@
         ]
       }
     }
-  },
-  "etags": {}
+  }
 }

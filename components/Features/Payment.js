@@ -28,11 +28,6 @@ const Payment = ({ currentTab }) => {
               We use Escrow payment which allows safe payment and easy money
               transfer to your bank.
             </motion.p>
-            <div className='flex justify-center md:justify-start'>
-              <button className='bg-primaryColor rounded-[12px] max-w-[212px] h-[45px] w-full md:h-[61px] text-white'>
-                Download App
-              </button>
-            </div>
           </div>
           <div>
             <div className='relative'>

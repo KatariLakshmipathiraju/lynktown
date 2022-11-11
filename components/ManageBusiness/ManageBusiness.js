@@ -144,10 +144,6 @@ const ManageBusiness = () => {
   // }, [manualClick, largeScreen, isInView]);
 
   const [currentImg, setCurrentImage] = useState(1);
-  console.log(
-    '🚀 ~ file: ManageBusiness.js ~ line 147 ~ ManageBusiness ~ currentImg',
-    currentImg
-  );
 
   useEffect(() => {
     if (currentImg === 4) {

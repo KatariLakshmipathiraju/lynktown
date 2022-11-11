@@ -28,11 +28,6 @@ const Exchange = ({ currentTab }) => {
               Help your customers get the best experience by letting them
               exchange products without any shipping hassle.
             </motion.p>
-            <div className='flex justify-center md:justify-start'>
-              <button className='bg-primaryColor rounded-[12px] max-w-[212px] h-[45px] w-full md:h-[61px] text-white'>
-                Download App
-              </button>
-            </div>
           </div>
           <div>
             <div className='relative'>
