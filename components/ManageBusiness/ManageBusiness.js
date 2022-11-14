@@ -198,7 +198,7 @@ const ManageBusiness = () => {
         <ManageBusinessMobile />
       ) : (
         <div ref={ref} className='wrapper relative pt-36  pb-28 px-4'>
-          <div className='selling-steps xl:container  mx-auto h-full   '>
+          <div className='selling-steps xl:container   mx-auto h-full   '>
             <div className='flex lg:grid-cols-2  item-container items-center justify-center  '>
               <div className='flex-[1.5] xl:flex-1  ml-20 '>
                 <h1 className='text-[40px] text-primaryColor font-medium mb-24  '>

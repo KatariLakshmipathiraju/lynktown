@@ -6,7 +6,10 @@ import step4 from '/public/assets/images/sellingSteps/4.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Pagination, Autoplay } from 'swiper';
+import { Pagination, Autoplay, Navigation } from 'swiper';
+import 'swiper/css/navigation';
+import { IconButton } from '@mui/material';
+import { MdArrowForwardIos, MdOutlineArrowBackIos } from 'react-icons/md';
 
 const steps = [
   {
@@ -66,7 +69,7 @@ const SLIDE_LENGTH = 3;
 
 const SellingStepMobile = () => {
   return (
-    <div className='container mx-auto py-10 sm:py-16 px-4'>
+    <div className='container overflow-hidden mx-auto py-10 sm:py-16 px-4'>
       <h1 className='text-2xl text-primaryColor font-medium text-center md:text-4xl'>
         Start selling in 4 steps
       </h1>
@@ -100,14 +103,18 @@ const SellingStepMobile = () => {
           </svg>
         </div>
         <Swiper
-          modules={[Pagination, Autoplay]}
+          modules={[Pagination, Autoplay, Navigation]}
           // pagination={{
           //   clickable: true,
           // }}
-
           pagination={{
             clickable: true,
           }}
+          navigation={{
+            nextEl: '.swiper-btn-next',
+            prevEl: '.swiper-btn-prev',
+          }}
+          loop={true}
           autoplay={{
             delay: 5000,
             disableOnInteraction: false,
@@ -119,6 +126,16 @@ const SellingStepMobile = () => {
           // }}
           className='!pb-14  seller-steps'
         >
+          <div className='   z-10'>
+            <div className=' flex gap-5'>
+              <IconButton className='swiper-btn-prev z-10 top-[40%] translate-y-[-50%] absolute left-0 sm:left-10       disabled:pointer-events-none disabled:opacity-60     cursor-pointer  '>
+                <MdOutlineArrowBackIos className='text-3xl' />
+              </IconButton>
+              <IconButton className='swiper-btn-next  z-10 top-[40%] translate-y-[-50%]  absolute right-0 sm:right-10     disabled:pointer-events-none  disabled:opacity-60  cursor-pointer  '>
+                <MdArrowForwardIos className='text-3xl' />
+              </IconButton>
+            </div>
+          </div>
           {steps.map(item => {
             const { id, image, title, description } = item;
 

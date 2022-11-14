@@ -5,7 +5,9 @@ import step3 from '/public/assets/images/manageBusiness/3.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Pagination, Autoplay } from 'swiper';
+import { Pagination, Autoplay, Navigation } from 'swiper';
+import { IconButton } from '@mui/material';
+import { MdArrowForwardIos, MdOutlineArrowBackIos } from 'react-icons/md';
 
 const steps = [
   {
@@ -51,7 +53,7 @@ function move(idx) {
 }
 const ManageBusinessMobile = () => {
   return (
-    <div className='container mx-auto py-10 sm:py-16 px-4'>
+    <div className='container mx-auto overflow-hidden py-10 sm:py-16 px-4'>
       <h1 className='text-2xl text-primaryColor font-medium text-center md:text-4xl'>
         Manage your online buisness at your finger tips
       </h1>
@@ -85,11 +87,14 @@ const ManageBusinessMobile = () => {
           </svg>
         </div>
         <Swiper
-          modules={[Pagination, Autoplay]}
+          modules={[Pagination, Autoplay, Navigation]}
           // pagination={{
           //   clickable: true,
           // }}
-
+          navigation={{
+            nextEl: '.swiper-btn-next',
+            prevEl: '.swiper-btn-prev',
+          }}
           pagination={{
             clickable: true,
           }}
@@ -97,6 +102,7 @@ const ManageBusinessMobile = () => {
             delay: 5000,
             disableOnInteraction: false,
           }}
+          loop={true}
           slidesPerView={1}
           // onSlideChange={e => move(e.activeIndex)}
           // onSwiper={swiper => {
@@ -104,6 +110,16 @@ const ManageBusinessMobile = () => {
           // }}
           className='!pb-14  seller-steps'
         >
+          <div className='   z-10'>
+            <div className=' flex gap-5'>
+              <IconButton className='swiper-btn-prev z-10 top-[40%] translate-y-[-50%] absolute left-0 sm:left-10       disabled:pointer-events-none disabled:opacity-60     cursor-pointer  '>
+                <MdOutlineArrowBackIos className='text-3xl' />
+              </IconButton>
+              <IconButton className='swiper-btn-next  z-10 top-[40%] translate-y-[-50%]  absolute right-0 sm:right-10    disabled:pointer-events-none  disabled:opacity-60  cursor-pointer  '>
+                <MdArrowForwardIos className='text-3xl' />
+              </IconButton>
+            </div>
+          </div>
           {steps.map(item => {
             const { id, image, title, description } = item;
 
@@ -127,36 +143,6 @@ const ManageBusinessMobile = () => {
             );
           })}
         </Swiper>
-        {/* <div className='pagination flex items-center gap-4 max-w-2xl'>
-          <div className='relative bg-[#D9D9D9] h-2 flex-1 rounded-full'>
-            <div
-              data-index={0}
-              id='progressBar--0'
-              className='absolute progressBar transition-all h-full  bg-primaryColor rounded-full'
-            ></div>
-          </div>
-          <div className='relative  bg-[#D9D9D9] h-2 flex-1 rounded-full'>
-            <div
-              data-index={1}
-              id='progressBar--1'
-              className='absolute progressBar transition-all h-full  bg-primaryColor rounded-full'
-            ></div>
-          </div>
-          <div className='relative bg-[#D9D9D9] h-2 flex-1 rounded-full'>
-            <div
-              data-index={2}
-              id='progressBar--2'
-              className='absolute progressBar transition-all h-full  bg-primaryColor rounded-full'
-            ></div>
-          </div>
-          <div className='relative bg-[#D9D9D9] h-2 flex-1 rounded-full'>
-            <div
-              data-index={3}
-              id='progressBar--3'
-              className='absolute progressBar transition-all h-full  bg-primaryColor rounded-full'
-            ></div>
-          </div>
-        </div> */}
       </div>
     </div>
   );

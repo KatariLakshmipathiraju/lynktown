@@ -50,7 +50,7 @@ const carosuelPoint = [
 const Testimonial = () => {
   return (
     <div className='bg-[#EEECE7] '>
-      <div className='container mx-auto py-24 lg:py-28 xl:py-36  px-4'>
+      <div className='container mx-auto overflow-hidden py-24 lg:py-28 xl:py-36  px-4'>
         <Swiper
           modules={[Pagination, Autoplay]}
           pagination={{

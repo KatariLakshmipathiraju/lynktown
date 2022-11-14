@@ -247,3 +247,13 @@ button {
     width: 1410px;
   }
 } */
+
+.swiper {
+  user-select: none;
+  overflow: visible !important;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  content: '' !important;
+}

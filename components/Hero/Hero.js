@@ -114,7 +114,7 @@ const Hero = () => {
         </svg>
       </div>
       <div className='md:hidden absolute bottom-5 right-[2%]'>
-        <button className='bg-white text-primaryColor flex font-medium items-center gap-1 text-[8px] sm:text-[11px]  p-1 sm:p-2 rounded-[5.52px]'>
+        <button className='bg-white text-primaryColor flex font-medium items-center gap-1 text-[8px] sm:text-[11px]  p-1.5 sm:p-2 rounded-[5.52px]'>
           <svg
             width='20'
             height='20'
