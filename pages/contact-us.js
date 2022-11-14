@@ -47,10 +47,10 @@ const ContactUs = () => {
         }
       );
 
-      if (res.data.success === 'true') {
+      // if (res.data.success === 'true') {
         setLoading(false);
         router.push('/thankyou');
-      }
+      // }
       setLoading(false);
     } catch (error) {
       setLoading(false);
