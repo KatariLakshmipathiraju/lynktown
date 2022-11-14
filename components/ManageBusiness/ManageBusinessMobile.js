@@ -108,18 +108,15 @@ const ManageBusinessMobile = () => {
           // onSwiper={swiper => {
           //   move(swiper.activeIndex);
           // }}
-          className='!pb-14  seller-steps'
+          className='!pb-14  seller-steps relative'
         >
-          <div className='   z-10'>
-            <div className=' flex gap-5'>
-              <IconButton className='swiper-btn-prev z-10 top-[40%] translate-y-[-50%] absolute left-0 sm:left-10       disabled:pointer-events-none disabled:opacity-60     cursor-pointer  '>
-                <MdOutlineArrowBackIos className='text-3xl' />
-              </IconButton>
-              <IconButton className='swiper-btn-next  z-10 top-[40%] translate-y-[-50%]  absolute right-0 sm:right-10    disabled:pointer-events-none  disabled:opacity-60  cursor-pointer  '>
-                <MdArrowForwardIos className='text-3xl' />
-              </IconButton>
-            </div>
-          </div>
+          <IconButton className='swiper-btn-prev z-10 top-[40%] translate-y-[-50%] absolute left-0 sm:left-10       disabled:pointer-events-none disabled:opacity-60     cursor-pointer  '>
+            <MdOutlineArrowBackIos className='text-3xl' />
+          </IconButton>
+          <IconButton className='swiper-btn-next  z-10 top-[40%] translate-y-[-50%]  absolute right-0 sm:right-10    disabled:pointer-events-none  disabled:opacity-60  cursor-pointer  '>
+            <MdArrowForwardIos className='text-3xl' />
+          </IconButton>
+
           {steps.map(item => {
             const { id, image, title, description } = item;
 
