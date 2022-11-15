@@ -8,7 +8,7 @@ const ThankYou = () => {
       <div
         className='flex justify-center '
         style={{
-          height: `calc(100vh - 300px)`,
+          height: `calc(100vh - 96px)`,
         }}
       >
         <div className='min-h-full pt-4 pb-12 flex flex-col justify-center items-center bg-white'>

@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import person from '/public/assets/images/person.png';
 import { Chart, Facebook, Instagram, WhatsApp } from './Icons';
 import { Button } from '@mui/material';
 import Link from 'next/link';
+import DemoVideo from '../DemoVideo';
 
 const Hero = () => {
+  const [openModal, setOpenModal] = useState(false);
+
+  const toggleModal = () => {
+    setOpenModal(openModal => !openModal);
+  };
   return (
     <section className='lg:h-[655px]  pt-5  sm:pt-16 lg:py-4   bg-primaryColor text-white relative'>
+      <DemoVideo open={openModal} toggleModal={toggleModal} />
       <div className='container mx-auto grid lg:grid-cols-2 items-center h-full px-4'>
         <div className='z-10'>
           <h1 className=' md:text-4xl text-3xl lg:text-5xl xl:text-[56px]  text-left leading-normal lg:leading-[70.2px] font-medium lg:max-w-[585px]'>
@@ -114,7 +121,10 @@ const Hero = () => {
         </svg>
       </div>
       <div className='md:hidden absolute bottom-5 right-[2%]'>
-        <button className='bg-white text-primaryColor flex font-medium items-center gap-1 text-[8px] sm:text-[11px]  p-1.5 sm:p-2 rounded-[5.52px]'>
+        <button
+          className='bg-white text-primaryColor flex font-medium items-center gap-1 text-[8px] sm:text-[11px]  p-1.5 sm:p-2 rounded-[5.52px]'
+          onClick={toggleModal}
+        >
           <svg
             width='20'
             height='20'
@@ -129,7 +139,7 @@ const Hero = () => {
               fill='white'
             />
           </svg>{' '}
-          Watch Demo
+          Watch Video
         </button>
       </div>
     </section>

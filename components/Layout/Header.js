@@ -1,12 +1,20 @@
 import { Button } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import DemoVideo from '../DemoVideo';
 
 const Header = () => {
   const { pathname } = useRouter();
+  const [openModal, setOpenModal] = useState(false);
+
+  const toggleModal = () => {
+    setOpenModal(openModal => !openModal);
+  };
   return (
     <header className='bg-white pt-5 pb-4 sm:pt-0 sm:pb-0 sm:h-24'>
+      {/* {openModal && <DemoVideo open={openModal} toggleModal={toggleModal} />} */}
+      <DemoVideo open={openModal} toggleModal={toggleModal} />
       <div className='container mx-auto flex h-full items-center justify-center md:justify-between'>
         <div>
           <Link href='/' className=''>
@@ -62,6 +70,7 @@ const Header = () => {
         {pathname === '/' && (
           <div className='hidden md:block'>
             <Button
+              onClick={toggleModal}
               className=' !bg-primaryColor !text-white !p-2 !w-[173px] !hover:bg-white !rounded-xl'
               startIcon={
                 <svg
@@ -79,7 +88,7 @@ const Header = () => {
                 </svg>
               }
             >
-              Watch Demo
+              Watch Video
             </Button>
           </div>
         )}
