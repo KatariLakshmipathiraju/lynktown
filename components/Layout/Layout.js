@@ -12,11 +12,6 @@ const Layout = ({ children }) => {
       <Head>
         <title>LynkTown</title>
 
-        {/* <meta
-          name='google-site-verification'
-          content='2yo2OS7PnxSDhBmhGnE54wC83Lsl4doztBNsbMaxpds'
-        /> */}
-
         <meta
           name='description'
           content='A Revolutionary way of social Buying & Selling'
