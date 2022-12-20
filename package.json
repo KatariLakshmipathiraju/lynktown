@@ -17,6 +17,7 @@
     "framer-motion": "^6.5.1",
     "gsap": "^3.10.4",
     "next": "12.2.2",
+    "next-gtag": "^0.2.0",
     "pure-react-carousel": "^1.29.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
