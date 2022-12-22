@@ -163,7 +163,7 @@ const TermsNCondition = () => {
           >
             <div>
               <h4 className='text-sm md:text-base'>
-                This policy applies to the website www.u2store.com and to the
+                This policy applies to the website www.lynktown.com and to the
                 business symbolized therein. The company recognizes the
                 importance of maintaining your privacy. We value your privacy
                 and appreciate your trust in us. This applies to current and

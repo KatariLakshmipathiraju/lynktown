@@ -10,11 +10,14 @@ const Layout = ({ children }) => {
   return (
     <>
       <Head>
-        <title>LynkTown</title>
+        <title>
+          LynkTown - Best Social Commerce Platform for buying and selling
+          products.
+        </title>
 
         <meta
           name='description'
-          content='A Revolutionary way of social Buying & Selling'
+          content='LynkTown is an easy-to-use Social Commerce Platform for buying and selling. Create one link for multiple products. Stay organized & easily manage your orders.'
         />
         <link rel='icon' href='/favicon.ico' />
       </Head>
