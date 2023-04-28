@@ -1,10 +1,10 @@
 import '../styles/globals.css';
-import { NextGtag } from 'next-gtag';
+// import { NextGtag } from 'next-gtag';
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <NextGtag trackingId='GTM-MF5LB4V' />
+//       <NextGtag trackingId='GTM-MF5LB4V' />
       <Component {...pageProps} />
     </>
   );
