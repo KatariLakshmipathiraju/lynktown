@@ -14,8 +14,8 @@ export const cancellations = [
         that the product is already shipped. The buyer still has the option to
         refund the item.
         <br />
-        You can write to our customer support team on lynktown@gmail.com or call
-        us on +91 96639 89996
+        You can write to our customer support team on support@lynktown.com or
+        call us on +91 96639 89996
       </>
     ),
   },
@@ -138,7 +138,7 @@ const Cancellation = () => {
                 entertain any cancellation requests.
                 <br />
                 <br />
-                You may also send an email on lynktown@gmail.com
+                You may also send an email on support@lynktown.com
                 <br />
                 <br />
                 Please be advised that some orders are shipped almost

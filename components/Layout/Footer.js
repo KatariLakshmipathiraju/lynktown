@@ -96,7 +96,7 @@ const Footer = () => {
             <ul className="flex flex-col gap-4 my-6">
               <li className="flex items-center gap-3">
                 <HiOutlineMail className="text-xl" />
-                <a href="mailto:lynktown@gmail.com">lynktown@gmail.com</a>
+                <a href="mailto:support@lynktown.com">support@lynktown.com</a>
               </li>
               <li className="flex items-center gap-3">
                 <HiOutlinePhone className="text-xl" />

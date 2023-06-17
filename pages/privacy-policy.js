@@ -1,5 +1,5 @@
-import React from 'react';
-import Layout from '../components/Layout/Layout';
+import React from "react";
+import Layout from "../components/Layout/Layout";
 
 const infoWeCollect = [
   {
@@ -94,48 +94,48 @@ const infoUses = [
       <>
         We use the information collected through this website as described in
         this policy and we may use your information to:
-        <ol className='ml-3 lg:ml-5 xl:ml-7 list-decimal '>
-          <li className='my-5'>
+        <ol className="ml-3 lg:ml-5 xl:ml-7 list-decimal ">
+          <li className="my-5">
             We use the information we collect primarily to provide, maintain,
             protect and improve our current products and services.
           </li>
-          <li className='my-5'>
+          <li className="my-5">
             Understand and enhance your experience using our Site, products, and
             services.
           </li>
-          <li className='my-5'>
+          <li className="my-5">
             Personalize our products or services and make recommendations.
           </li>
-          <li className='my-5'>
+          <li className="my-5">
             Provide and deliver products and services you request.
           </li>
-          <li className='my-5'>
+          <li className="my-5">
             Process, manage, complete, and account for transactions.
           </li>
-          <li className='my-5'>
+          <li className="my-5">
             Provide customer support and respond to your requests, comments, and
             inquiries.
           </li>
-          <li className='my-5'>
+          <li className="my-5">
             Create and manage the online accounts you manage on our website.
           </li>
-          <li className='my-5'>
+          <li className="my-5">
             Send you related information, including confirmations, invoices,
             technical notices, updates, security alerts, and support and
             administrative messages.
           </li>
-          <li className='my-5'>
+          <li className="my-5">
             Communicate with you about promotions, upcoming events, and news
             about products and services.
           </li>
-          <li className='my-5'>
+          <li className="my-5">
             We may process your personal information without your knowledge or
             consent where required by applicable law or regulation for the
             purposes of verification of identity or for prevention, detection,
             or investigation, including of cyber incidents, prosecution, and
             punishment of offenses.
           </li>
-          <li className='my-5'>
+          <li className="my-5">
             Protect, investigate and deter against fraudulent, unauthorized, or
             illegal activity.
           </li>
@@ -148,21 +148,21 @@ const infoUses = [
 const TermsNCondition = () => {
   return (
     <Layout>
-      <div className=' pb-24 relative '>
-        <header className='bg-primaryColor  h-[240px] md:h-[311.7px] py-[60px]'>
-          <h1 className='font-dmSerif text-3xl md:text-5xl lg:text-[56px] text-white text-center'>
+      <div className=" pb-24 relative ">
+        <header className="bg-primaryColor  h-[240px] md:h-[311.7px] py-[60px]">
+          <h1 className="font-dmSerif text-3xl md:text-5xl lg:text-[56px] text-white text-center">
             Privacy Policy
           </h1>
         </header>
-        <div className='px-4'>
+        <div className="px-4">
           <div
-            className='gap-5 rounded-[19px]  xl:p-12  px-4 py-8 md:p-8 bg-white  max-w-[950px] w-full mt-[-120px]    mx-auto relative text-[#3B3B3B]'
+            className="gap-5 rounded-[19px]  xl:p-12  px-4 py-8 md:p-8 bg-white  max-w-[950px] w-full mt-[-120px]    mx-auto relative text-[#3B3B3B]"
             style={{
               boxShadow: `2px 10px 28px rgba(75, 0, 129, 0.12)`,
             }}
           >
             <div>
-              <h4 className='text-sm md:text-base'>
+              <h4 className="text-sm md:text-base">
                 This policy applies to the website www.lynktown.com and to the
                 business symbolized therein. The company recognizes the
                 importance of maintaining your privacy. We value your privacy
@@ -178,35 +178,35 @@ const TermsNCondition = () => {
                 560076.
               </h4>
             </div>
-            <div className='mt-6 '>
-              <h1 className=' text-lg font-bold '> Information We Collect</h1>
-              <ul className='list-disc ml-3 lg:ml-5 xl:ml-7'>
-                {infoWeCollect.map(item => {
+            <div className="mt-6 ">
+              <h1 className=" text-lg font-bold "> Information We Collect</h1>
+              <ul className="list-disc ml-3 lg:ml-5 xl:ml-7">
+                {infoWeCollect.map((item) => {
                   const { id, point } = item;
                   return (
-                    <li key={id} className='my-6'>
+                    <li key={id} className="my-6">
                       {point}
                     </li>
                   );
                 })}
               </ul>
             </div>
-            <div className='mt-6 '>
-              <h1 className=' text-lg font-bold '>How We Use Information</h1>
-              <ul className='list-disc ml-3 lg:ml-5 xl:ml-7'>
-                {infoUses.map(item => {
+            <div className="mt-6 ">
+              <h1 className=" text-lg font-bold ">How We Use Information</h1>
+              <ul className="list-disc ml-3 lg:ml-5 xl:ml-7">
+                {infoUses.map((item) => {
                   const { id, point } = item;
                   return (
-                    <li key={id} className='my-6'>
+                    <li key={id} className="my-6">
                       {point}
                     </li>
                   );
                 })}
               </ul>
             </div>
-            <div className='mt-6 '>
-              <h1 className=' text-lg font-bold '>Cookie Policy</h1>
-              <h4 className='mt-4'>
+            <div className="mt-6 ">
+              <h1 className=" text-lg font-bold ">Cookie Policy</h1>
+              <h4 className="mt-4">
                 A cookie is a small text file that we place on your mobile
                 device to enable various features of LynkTown. ‘Cookies are used
                 to store user preferences and to track user trends, so as to
@@ -217,9 +217,9 @@ const TermsNCondition = () => {
                 information collected by us using that cookie.
               </h4>
             </div>
-            <div className='mt-6 '>
-              <h1 className=' text-lg font-bold '>Third-Party</h1>
-              <h4 className='mt-4'>
+            <div className="mt-6 ">
+              <h1 className=" text-lg font-bold ">Third-Party</h1>
+              <h4 className="mt-4">
                 At times we may collaborate with third parties, brand owners, or
                 other partners and make available certain offers, events, or
                 special schemes. In such instances, your personal information
@@ -230,12 +230,12 @@ const TermsNCondition = () => {
                 parties.
               </h4>
             </div>
-            <div className='mt-6 '>
-              <h1 className=' text-lg font-bold '>
+            <div className="mt-6 ">
+              <h1 className=" text-lg font-bold ">
                 WAYS OF COLLECTING INFORMATION
               </h1>
-              <div className='my-5 ml-3 lg:ml-5 xl:ml-7'>
-                <h1 className='font-semibold mb-2'>
+              <div className="my-5 ml-3 lg:ml-5 xl:ml-7">
+                <h1 className="font-semibold mb-2">
                   Directly from the customer
                 </h1>
                 <h4>
@@ -245,8 +245,8 @@ const TermsNCondition = () => {
                   email.
                 </h4>
               </div>
-              <div className='my-5 ml-3 lg:ml-5 xl:ml-7'>
-                <h1 className='font-semibold mb-2'>
+              <div className="my-5 ml-3 lg:ml-5 xl:ml-7">
+                <h1 className="font-semibold mb-2">
                   Passively from the customer
                 </h1>
                 <h4>
@@ -255,8 +255,8 @@ const TermsNCondition = () => {
                   about your usage of our website.
                 </h4>
               </div>
-              <div className='my-5 ml-3 lg:ml-5 xl:ml-7'>
-                <h1 className='font-semibold mb-2'>
+              <div className="my-5 ml-3 lg:ml-5 xl:ml-7">
+                <h1 className="font-semibold mb-2">
                   Information sourced from third-parties
                 </h1>
                 <h4>
@@ -267,12 +267,12 @@ const TermsNCondition = () => {
                 </h4>
               </div>
             </div>
-            <div className='mt-6 '>
-              <h1 className=' text-lg font-bold '>
+            <div className="mt-6 ">
+              <h1 className=" text-lg font-bold ">
                 USE OF YOUR PERSONAL INFORMATION
               </h1>
-              <div className='my-5 ml-3 lg:ml-5 xl:ml-7'>
-                <h1 className='font-semibold mb-2'>
+              <div className="my-5 ml-3 lg:ml-5 xl:ml-7">
+                <h1 className="font-semibold mb-2">
                   We use the information to contact you
                 </h1>
                 <h4>
@@ -281,8 +281,8 @@ const TermsNCondition = () => {
                   promotional purposes.
                 </h4>
               </div>
-              <div className='my-5 ml-3 lg:ml-5 xl:ml-7'>
-                <h1 className='font-semibold mb-2'>
+              <div className="my-5 ml-3 lg:ml-5 xl:ml-7">
+                <h1 className="font-semibold mb-2">
                   We use the information to respond to your requests or
                   questions
                 </h1>
@@ -291,8 +291,8 @@ const TermsNCondition = () => {
                   an event or contest.
                 </h4>
               </div>
-              <div className='my-5 ml-3 lg:ml-5 xl:ml-7'>
-                <h1 className='font-semibold mb-2'>
+              <div className="my-5 ml-3 lg:ml-5 xl:ml-7">
+                <h1 className="font-semibold mb-2">
                   We use the information to look at site trends and customer
                   interests
                 </h1>
@@ -302,8 +302,8 @@ const TermsNCondition = () => {
                   information about you we get from third parties.
                 </h4>
               </div>
-              <div className='my-5 ml-3 lg:ml-5 xl:ml-7'>
-                <h1 className='font-semibold mb-2'>
+              <div className="my-5 ml-3 lg:ml-5 xl:ml-7">
+                <h1 className="font-semibold mb-2">
                   We use the information for security purposes
                 </h1>
                 <h4>
@@ -311,8 +311,8 @@ const TermsNCondition = () => {
                   customers, or our websites.
                 </h4>
               </div>
-              <div className='my-5 ml-3 lg:ml-5 xl:ml-7'>
-                <h1 className='font-semibold mb-2'>
+              <div className="my-5 ml-3 lg:ml-5 xl:ml-7">
+                <h1 className="font-semibold mb-2">
                   We use the information for marketing purposes
                 </h1>
                 <h4>
@@ -322,8 +322,8 @@ const TermsNCondition = () => {
                   offers or products we think you might find interesting.
                 </h4>
               </div>
-              <div className='my-5 ml-3 lg:ml-5 xl:ml-7'>
-                <h1 className='font-semibold mb-2'>
+              <div className="my-5 ml-3 lg:ml-5 xl:ml-7">
+                <h1 className="font-semibold mb-2">
                   We use the information to send you transactional
                   communications
                 </h1>
@@ -334,12 +334,12 @@ const TermsNCondition = () => {
                 </h4>
               </div>
             </div>
-            <div className='mt-6 '>
-              <h1 className=' text-lg font-bold '>
+            <div className="mt-6 ">
+              <h1 className=" text-lg font-bold ">
                 SHARING OF INFORMATION WITH THIRD-PARTIES
               </h1>
-              <div className='my-5 ml-3 lg:ml-5 xl:ml-7'>
-                <h1 className='font-semibold mb-2'>
+              <div className="my-5 ml-3 lg:ml-5 xl:ml-7">
+                <h1 className="font-semibold mb-2">
                   We will share information with third parties who perform
                   services on our behalf
                 </h1>
@@ -350,8 +350,8 @@ const TermsNCondition = () => {
                   outside of India.
                 </h4>
               </div>
-              <div className='my-5 ml-3 lg:ml-5 xl:ml-7'>
-                <h1 className='font-semibold mb-2'>
+              <div className="my-5 ml-3 lg:ml-5 xl:ml-7">
+                <h1 className="font-semibold mb-2">
                   We will share information with the event organizers
                 </h1>
                 <h4>
@@ -361,8 +361,8 @@ const TermsNCondition = () => {
                   we give them as described in their privacy policies.
                 </h4>
               </div>
-              <div className='my-5 ml-3 lg:ml-5 xl:ml-7'>
-                <h1 className='font-semibold mb-2'>
+              <div className="my-5 ml-3 lg:ml-5 xl:ml-7">
+                <h1 className="font-semibold mb-2">
                   We may share information if we think we have to in order to
                   comply with the law or to protect ourselves
                 </h1>
@@ -373,8 +373,8 @@ const TermsNCondition = () => {
                   information when we are investigating potential fraud.
                 </h4>
               </div>
-              <div className='my-5 ml-3 lg:ml-5 xl:ml-7'>
-                <h1 className='font-semibold mb-2'>
+              <div className="my-5 ml-3 lg:ml-5 xl:ml-7">
+                <h1 className="font-semibold mb-2">
                   We may share information with any successor to all or part of
                   our business
                 </h1>
@@ -383,8 +383,8 @@ const TermsNCondition = () => {
                   customer list as part of that transaction.
                 </h4>
               </div>
-              <div className='my-5 ml-3 lg:ml-5 xl:ml-7'>
-                <h1 className='font-semibold mb-2'>
+              <div className="my-5 ml-3 lg:ml-5 xl:ml-7">
+                <h1 className="font-semibold mb-2">
                   We may share your information for reasons not described in
                   this policy
                 </h1>
@@ -404,25 +404,25 @@ const TermsNCondition = () => {
                 </h4>
               </div>
             </div>
-            <div className='mt-6 '>
-              <h1 className=' text-lg font-bold '>EMAIL OPT-OUT</h1>
-              <div className='my-5 ml-3 lg:ml-5 xl:ml-7'>
-                <h1 className='font-semibold mb-2'>
+            <div className="mt-6 ">
+              <h1 className=" text-lg font-bold ">EMAIL OPT-OUT</h1>
+              <div className="my-5 ml-3 lg:ml-5 xl:ml-7">
+                <h1 className="font-semibold mb-2">
                   You can opt-out of receiving our marketing emails
                 </h1>
                 <h4>
                   To stop receiving our promotional emails, please email
-                  unsubscribe at lynktown@gmail.com. It may take about ten days
-                  to process your request. Even if you opt-out of getting
+                  unsubscribe at support@lynktown.com. It may take about ten
+                  days to process your request. Even if you opt-out of getting
                   marketing messages, we will still be sending you transactional
                   messages through email and SMS about your purchases.
                 </h4>
               </div>
             </div>
-            <div className='mt-6 '>
-              <h1 className=' text-lg font-bold '>THIRD-PARTY SITES</h1>
+            <div className="mt-6 ">
+              <h1 className=" text-lg font-bold ">THIRD-PARTY SITES</h1>
 
-              <h4 className='my-4'>
+              <h4 className="my-4">
                 If you click on one of the links to third-party websites, you
                 may be taken to websites we do not control. This policy does not
                 apply to the privacy practices of those websites. You may read
@@ -430,23 +430,23 @@ const TermsNCondition = () => {
                 elicitations.
               </h4>
             </div>
-            <div className='mt-6 '>
-              <h1 className=' text-lg font-bold '>GRIEVANCE OFFICER</h1>
+            <div className="mt-6 ">
+              <h1 className=" text-lg font-bold ">GRIEVANCE OFFICER</h1>
 
-              <h4 className='my-4'>
+              <h4 className="my-4">
                 In accordance with Information Technology Act 2000 and rules
                 made thereunder, the name and contact details of the Grievance
                 Officer are provided below:
-                <br /> Name: Srikanth Rajjoshi <br /> Phone: +91-7259111787{' '}
-                <br /> Email: lynktown@gmail.com <br /> If you have any
+                <br /> Name: Srikanth Rajjoshi <br /> Phone: +91-7259111787{" "}
+                <br /> Email: support@lynktown.com <br /> If you have any
                 questions about this Policy or other privacy concerns, you can
-                also email us at lynktown@gmail.com.
+                also email us at support@lynktown.com.
               </h4>
             </div>
-            <div className='mt-6 '>
-              <h1 className=' text-lg font-bold '>UPDATES TO THIS POLICY</h1>
+            <div className="mt-6 ">
+              <h1 className=" text-lg font-bold ">UPDATES TO THIS POLICY</h1>
 
-              <h4 className='my-4'>
+              <h4 className="my-4">
                 This Privacy Policy was last updated on Today. From time to time
                 we may change our privacy practices. We will notify you of any
                 material changes to this policy as required by law. We will also
@@ -454,10 +454,10 @@ const TermsNCondition = () => {
                 periodically for updates.
               </h4>
             </div>
-            <div className='mt-6 '>
-              <h1 className=' text-lg font-bold '>JURISDICTION</h1>
+            <div className="mt-6 ">
+              <h1 className=" text-lg font-bold ">JURISDICTION</h1>
 
-              <h4 className='my-4'>
+              <h4 className="my-4">
                 If you choose to visit the website, your visit and any dispute
                 over privacy are subject to this policy and the website’s terms
                 of use. In addition to the foregoing, any disputes arising under
