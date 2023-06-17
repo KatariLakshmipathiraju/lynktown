@@ -1,15 +1,19 @@
 import { AiFillEye, AiFillHeart } from "react-icons/ai";
+import { IoIosShareAlt } from "react-icons/io";
 import Image from "next/image";
+import Link from "next/link";
 
-export default function Blog() {
+export default function BlogSection() {
   return (
     <>
-      <section className="w-full mb-28">
+      <section className="w-full mb-20  md:mt-16 pb-6 ">
         <div className="container mx-auto">
-          <h1 className="text-[2rem] text-center tracking-wider text-[#857250]">
+          <h1 className="text-2xl md:text-4xl text-center font-medium tracking-wider text-primaryColor md:mb-4">
             BLOG POSTS
           </h1>
-          <h2 className="text-center text-[3rem] mb-6">Our latest news.</h2>
+          <h2 className="text-center text-lg md:text-2xl mb-3 md:mb-8">
+            Our latest news.
+          </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="mx-auto w-full md:w-[340px] lg:w-[300px] xl:w-[380px] shadow-md space-y-8 pb-5 rounded-md overflow-hidden hover:border border-[#4F597B] cursor-pointer">
@@ -34,9 +38,14 @@ export default function Blog() {
                 <div className="flex gap-4">
                   <div className="flex gap-2">
                     <p className="py-1">
-                      <AiFillEye />
+                      <AiFillHeart />
                     </p>
-                    <p className="text-[14px]"></p>
+                    <p className="text-[14px] flex items-center font-medium">
+                      32
+                    </p>
+                  </div>
+                  <div className="ml-4 flex items-center">
+                    <IoIosShareAlt size={23} />
                   </div>
                 </div>
 
@@ -70,9 +79,14 @@ export default function Blog() {
                 <div className="flex gap-4">
                   <div className="flex gap-2">
                     <p className="py-1">
-                      <AiFillEye />
+                      <AiFillHeart />
                     </p>
-                    <p className="text-[14px]"></p>
+                    <p className="text-[14px] flex items-center font-medium">
+                      11
+                    </p>
+                  </div>
+                  <div className="ml-4 flex items-center">
+                    <IoIosShareAlt size={23} />
                   </div>
                 </div>
 
@@ -106,9 +120,14 @@ export default function Blog() {
                 <div className="flex gap-4">
                   <div className="flex gap-2">
                     <p className="py-1">
-                      <AiFillEye />
+                      <AiFillHeart />
                     </p>
-                    <p className="text-[14px]"></p>
+                    <p className="text-[14px] flex items-center font-medium">
+                      6
+                    </p>
+                  </div>
+                  <div className="ml-4 flex items-center">
+                    <IoIosShareAlt size={23} />
                   </div>
                 </div>
 
@@ -121,17 +140,12 @@ export default function Blog() {
             </div>
           </div>
 
-          <div className="float-right m-6">
-            <a
-              href="blog"
-              target="_self"
-              className="btn btn-style1 btn-style12 inline-block bg-[#857250] hover:bg-[#857250] text-white font-bold py-2 px-4 rounded transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-            >
-              <span>View all articles</span>
-              <svg className="inline-block ml-2" width="11.4" height="9.2">
-                <use xlinkHref="#arrow"></use>
-              </svg>
-            </a>
+          <div className="float-left md:float-right mr-3">
+            <Link href="/blogs" legacyBehavior>
+              <a className="bg-[#6A5B40] block my-6 hover:bg-[#6A5B40] text-white font-bold py-2 px-4 rounded">
+                View all articals
+              </a>
+            </Link>
           </div>
         </div>
       </section>

@@ -423,6 +423,7 @@ const ThankYou = () => {
                 </p>
                 <div className='my-10'>
                   <Link
+                    
                     href='/'
                     className='text-base font-medium text-indigo-600 hover:text-indigo-500'
                   >

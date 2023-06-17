@@ -9,20 +9,22 @@ import ManageBusiness from "../components/ManageBusiness/ManageBusiness";
 import SellingSteps from "../components/SellingSteps/SellingSteps";
 import SpecialCollection from "../components/SpecialCollection/SpecialCollection";
 import Testimonial from "../components/Testimonial/Testimonial";
-import Blog from "../components/Blog/blog";
+import CustomizedStore from "../components/CustomizedStore/CustomizedStore";
+import BlogSection from "../components/Blog/BlogSection";
 
 export default function Home() {
   return (
     <Layout>
       <Hero />
       <SellingSteps />
+      <CustomizedStore />
       <ManageBusiness />
       <Community />
       <Features />
-      <Blog />
       {/* <SpecialCollection /> */}
       <Testimonial />
       <MadeFor />
+      <BlogSection />
       <Faq />
     </Layout>
   );

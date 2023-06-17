@@ -7,7 +7,7 @@ import image5 from '/public/assets/images/madefor/5.png';
 import image6 from '/public/assets/images/madefor/6.png';
 const MadeFor = () => {
   return (
-    <section className='min-h-[70vh] sm:h-[80vh] md:h-full md:py-40 container mx-auto gap-10 flex flex-col md:flex-row md:justify-center items-center pb-56 pt-10 sm:py-20 md:pt-0'>
+    <section className='min-h-[70vh] sm:h-[80vh] md:h-full md:py-28 container mx-auto gap-10 flex flex-col md:flex-row md:justify-center items-center pb-56 pt-10 sm:py-20 md:pt-0'>
       <div className='relative flex-1 w-full h-full md:h-[794px] hidden md:block'>
         <img
           src={image1.src}

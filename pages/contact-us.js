@@ -133,7 +133,7 @@ const ContactUs = () => {
                               label='Your Message'
                               multiline
                               rows={4}
-                              maxRows={4}
+                              // maxRows={4}
                             />
                           </div>
                         </div>

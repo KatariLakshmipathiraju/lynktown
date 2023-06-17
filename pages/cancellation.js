@@ -1,12 +1,12 @@
-import React from 'react';
-import Layout from '../components/Layout/Layout';
-import { Accordion, AccordionDetails, AccordionSummary } from '@mui/material';
-import { MdExpandMore } from 'react-icons/md';
+import React from "react";
+import Layout from "../components/Layout/Layout";
+import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
+import { MdExpandMore } from "react-icons/md";
 
 export const cancellations = [
   {
     id: 1,
-    question: 'How to Cancel an Order on LynkTown that has Been Shipped?',
+    question: "How to Cancel an Order on LynkTown that has Been Shipped?",
     answer: (
       <>
         You cannot cancel the order that is already shipped. If you still raise
@@ -15,14 +15,14 @@ export const cancellations = [
         refund the item.
         <br />
         You can write to our customer support team on lynktown@gmail.com or call
-        us on +91 96635 24882
+        us on +91 96639 89996
       </>
     ),
   },
   {
     id: 2,
     question:
-      'You can cancel your order before the processing i.e 2 hours before your order. The refund of the canceled order will be credited to your account. ',
+      "You can cancel your order before the processing i.e 2 hours before your order. The refund of the canceled order will be credited to your account. ",
     answer: (
       <>
         You can cancel your order before the processing i.e 2 hours before your
@@ -30,7 +30,7 @@ export const cancellations = [
         account.
         <br />
         Here is how to cancel your order:
-        <ul className='list-disc'>
+        <ul className="list-disc">
           <li>Log in to your account and go to My Account</li>
           <li>Select the appropriate order from Recent Orders</li>
           <li>
@@ -47,14 +47,14 @@ export const cancellations = [
   },
   {
     id: 3,
-    question: 'When will I receive the refund for the canceled order?',
+    question: "When will I receive the refund for the canceled order?",
     answer: (
       <>
         Ensure that the order is canceled before the brand/designer has
         processed the order.
-        <ul className='list-disc'>
+        <ul className="list-disc">
           <li>
-            For{' '}
+            For{" "}
             <b> payments done through credit/debit cards or net banking ,</b> we
             will refund the payment to the source account within 24-48 business
             hours of receiving the products back. It may take 2-3 additional
@@ -74,23 +74,23 @@ export const cancellations = [
   },
   {
     id: 4,
-    question: 'What does non-cancellation policy mean?',
+    question: "What does non-cancellation policy mean?",
     answer:
-      'Customized orders once shipped by the seller cannot be cancelled. The vendor can charge a return or a cancellation fee based on the cancellation made by the buyer.',
+      "Customized orders once shipped by the seller cannot be cancelled. The vendor can charge a return or a cancellation fee based on the cancellation made by the buyer.",
   },
   {
     id: 5,
-    question: 'Why are the cancel links disabled?',
+    question: "Why are the cancel links disabled?",
     answer:
       "That means the products from your order have already been shipped and you can't make any cancellations now.",
   },
   {
     id: 6,
-    question: 'Will LynkTown cancel the orders?',
+    question: "Will LynkTown cancel the orders?",
     answer: (
       <>
         We reserve the right to cancel the order if
-        <ul className='list-disc'>
+        <ul className="list-disc">
           <li>
             We have insufficient stock to deliver the goods you have ordered;
           </li>
@@ -116,21 +116,21 @@ export const cancellations = [
 const Cancellation = () => {
   return (
     <Layout>
-      <div className=' pb-24 relative '>
-        <header className='bg-primaryColor h-[240px] md:h-[311.7px] py-[60px]'>
-          <h1 className='font-dmSerif text-3xl md:text-5xl lg:text-[56px] text-white text-center'>
+      <div className=" pb-24 relative ">
+        <header className="bg-primaryColor h-[240px] md:h-[311.7px] py-[60px]">
+          <h1 className="font-dmSerif text-3xl md:text-5xl lg:text-[56px] text-white text-center">
             Cancellation
           </h1>
         </header>
-        <div className='px-4'>
+        <div className="px-4">
           <div
-            className='gap-5 rounded-[19px]  xl:p-12  px-4 py-8 py-8 md:p-8 bg-white  max-w-[950px] w-full mt-[-120px]    mx-auto relative text-[#3B3B3B]'
+            className="gap-5 rounded-[19px]  xl:p-12  px-4 py-8 py-8 md:p-8 bg-white  max-w-[950px] w-full mt-[-120px]    mx-auto relative text-[#3B3B3B]"
             style={{
               boxShadow: `2px 10px 28px rgba(75, 0, 129, 0.12)`,
             }}
           >
             <div>
-              <h4 className='text-sm md:text-base'>
+              <h4 className="text-sm md:text-base">
                 We are well aware that you are all excited to receive your
                 products ASAP. Regrettably, when you change your mind and choose
                 to cancel your orders, please note that you can cancel the order
@@ -145,8 +145,8 @@ const Cancellation = () => {
                 immediately, and it may not always be possible to cancel.
               </h4>
             </div>
-            <div className='mt-6'>
-              <h1 className='underline text-lg font-bold '>
+            <div className="mt-6">
+              <h1 className="underline text-lg font-bold ">
                 Frequently asked questions
               </h1>
               <div className={`support--pages__accordion--styles my-10`}>
@@ -154,9 +154,9 @@ const Cancellation = () => {
                   return (
                     <Accordion key={index}>
                       <AccordionSummary
-                        expandIcon={<MdExpandMore className='text-2xl' />}
-                        aria-controls='panel1a-content'
-                        id='panel1a-header'
+                        expandIcon={<MdExpandMore className="text-2xl" />}
+                        aria-controls="panel1a-content"
+                        id="panel1a-header"
                       >
                         <h1>{faq.question}</h1>
                       </AccordionSummary>

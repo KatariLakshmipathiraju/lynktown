@@ -1,18 +1,18 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap, { Bounce, Power3 } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import step1 from "/public/assets/images/manageBusiness/1.png";
+import step1 from "/public/assets/images/customizedStore/1.png";
 import step2 from "/public/assets/images/manageBusiness/2.png";
 import step3 from "/public/assets/images/manageBusiness/3.png";
 import Tick from "./Tick";
 import { IconButton, useMediaQuery } from "@mui/material";
 import { AnimatePresence, motion, useInView } from "framer-motion";
-import ManageBusinessMobile from "./ManageBusinessMobile";
+import CustomizedStoreMobile from "./CustomizedStoreMobile";
 import { MdArrowForwardIos, MdOutlineArrowBackIos } from "react-icons/md";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ManageBusiness = () => {
+const CustomizedStore = () => {
   const scrollTl = gsap.timeline({
     defaults: {
       ease: Power3.easeIn,
@@ -42,19 +42,19 @@ const ManageBusiness = () => {
   const steps = [
     {
       id: 1,
-      title: "Create multiple product links",
+      title: "Launch Your Free Store",
       description:
         " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
     },
     {
       id: 2,
-      title: "Manage orders with ease",
+      title: "Customize your store",
       description:
         " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
     },
     {
       id: 3,
-      title: "Ship & track all your orders at one place",
+      title: "Custom Orders",
       description:
         " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
     },
@@ -195,15 +195,91 @@ const ManageBusiness = () => {
   return (
     <>
       {largeScreen ? (
-        <ManageBusinessMobile />
+        <CustomizedStoreMobile />
       ) : (
-        <div ref={ref} className="wrapper relative pt-36  pb-28 px-4">
+        <div
+          ref={ref}
+          className="wrapper relative pt-36 bg-[#EEECE7] mt-20 pb-28 px-4"
+        >
           <div className="selling-steps xl:container   mx-auto h-full   ">
-            <div className="flex lg:grid-cols-2  item-container items-center justify-center ">
-             
-             {/* start of Image content    */}
-             <div className="flex-1 ml-[40px] justify-end xl:justify-center flex mt-">
-                <div className="relative mt-">
+            <div className="flex lg:grid-cols-2  item-container items-center justify-center  ">
+              <div className="flex-[1.5] xl:flex-1  ml-20">
+                <h1 className="text-[40px] text-primaryColor font-medium mb-24  ">
+                  Create and manage your <br /> customized store
+                </h1>
+                <div className="relative  flex flex-col gap-4 h-full mt-10">
+                  <div
+                    className="w-[2px]  h-full bg-[#D9D9D9] absolute left-3 z-[-1]"
+                    style={{
+                      height: `calc(100% - 35px)`,
+                    }}
+                  ></div>
+                  <div
+                    id="progressBarManage"
+                    className="w-[2px] progressLine transition-all   bg-[#6A5B40] absolute left-3 z-[-1]"
+                  ></div>
+
+                  {steps.map((step) => {
+                    const { id, description, title } = step;
+                    return (
+                      <motion.div
+                        key={id}
+                        variants={variantsHeight}
+                        animate={clicked[id] ? "show" : "hide"}
+                        // className={`flex gap-5 step_${id}  ${
+                        //   id !== 1 ? 'h-[28px]' : 'h-[140px]'
+                        // } transition-all`}
+                        className={`flex gap-5 step_${id} !text-right `}
+                        // style={{
+                        //   // height: clicked[id] ? '100%' : '20px',
+                        //   cursor:
+                        //     clicked[id - 1] && !clicked[id + 1] && !running
+                        //       ? 'pointer'
+                        //       : '',
+                        // }}
+                        // onClick={e => {
+                        //   if (id === 1) return;
+                        //   if (running) return;
+
+                        //   if (!clicked[id - 1]) return;
+                        //   if (clicked[id + 1]) return;
+
+                        //   setManualClick(true);
+                        //   setCurrentImage(id);
+
+                        //   setClicked(prev => ({
+                        //     ...prev,
+                        //     [id]: !prev[id],
+                        //   }));
+                        // }}
+                      >
+                        <div className="">
+                          <Tick fill={clicked[id] && true} />
+                        </div>
+                        <div>
+                          <h1 className="text-xl opacity-80 ">{title}</h1>
+                          {/* <motion.p
+                            variants={variantsText}
+                            animate={clicked[id] ? "show" : "hide"}
+                            // className={`my-2 text-[#757575]  ${
+                            //   id !== 1 ? 'opacity-0' : 'opacity-100'
+                            // }`}
+                            className={`my-2 text-[#757575]`}
+                            // style={{
+                            //   opacity: clicked[id] ? '100%' : '0',
+                            // }}
+                          >
+                            {description}
+                          </motion.p> */}
+                        </div>
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              <div className="flex-1 ml-[-50px] justify-end xl:justify-center flex">
+                <div className="relative">
                   <svg
                     className="w-[400px] h-[400px] xl:w-[474px] xl:h-[474px]"
                     viewBox="0 0 474 474"
@@ -314,87 +390,6 @@ const ManageBusiness = () => {
                   </div>
                 </div>
               </div>
-              {/* end Image content */}
-             
-              {/* start of test content */}
-              <div className="flex-[1.5] xl:flex-1  ml-20">
-                <h1 className="text-[40px] text-primaryColor font-medium mb-24  ">
-                  Manage your business at <br /> your finger tips
-                </h1>
-                <div className="relative  flex flex-col gap-4 h-full mt-10">
-                  <div
-                    className="w-[2px]  h-full bg-[#D9D9D9] absolute left-3 z-[-1]"
-                    style={{
-                      height: `calc(100% - 35px)`,
-                    }}
-                  ></div>
-                  <div
-                    id="progressBarManage"
-                    className="w-[2px] progressLine transition-all   bg-[#6A5B40] absolute left-3 z-[-1]"
-                  ></div>
-
-                  {steps.map((step) => {
-                    const { id, description, title } = step;
-                    return (
-                      <motion.div
-                        key={id}
-                        variants={variantsHeight}
-                        animate={clicked[id] ? "show" : "hide"}
-                        // className={`flex gap-5 step_${id}  ${
-                        //   id !== 1 ? 'h-[28px]' : 'h-[140px]'
-                        // } transition-all`}
-                        className={`flex gap-5 step_${id} !text-right `}
-                        // style={{
-                        //   // height: clicked[id] ? '100%' : '20px',
-                        //   cursor:
-                        //     clicked[id - 1] && !clicked[id + 1] && !running
-                        //       ? 'pointer'
-                        //       : '',
-                        // }}
-                        // onClick={e => {
-                        //   if (id === 1) return;
-                        //   if (running) return;
-
-                        //   if (!clicked[id - 1]) return;
-                        //   if (clicked[id + 1]) return;
-
-                        //   setManualClick(true);
-                        //   setCurrentImage(id);
-
-                        //   setClicked(prev => ({
-                        //     ...prev,
-                        //     [id]: !prev[id],
-                        //   }));
-                        // }}
-                      >
-                        <div>
-                          <Tick fill={clicked[id] && true} />
-                        </div>
-                        <div>
-                          <h1 className="text-xl opacity-80">{title}</h1>
-                          {/* <motion.p
-                            variants={variantsText}
-                            animate={clicked[id] ? 'show' : 'hide'}
-                            // className={`my-2 text-[#757575]  ${
-                            //   id !== 1 ? 'opacity-0' : 'opacity-100'
-                            // }`}
-                            className={`my-2 text-[#757575]`}
-                            // style={{
-                            //   opacity: clicked[id] ? '100%' : '0',
-                            // }}
-                          >
-                            {description}
-                          </motion.p> */}
-                        </div>
-                      </motion.div>
-                    );
-                  })}
-                </div>
-              </div>
-              {/* end text content */}
-
-              
-
             </div>
           </div>
         </div>
@@ -403,4 +398,4 @@ const ManageBusiness = () => {
   );
 };
 
-export default ManageBusiness;
+export default CustomizedStore;
