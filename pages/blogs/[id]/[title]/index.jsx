@@ -22,7 +22,7 @@ const Blogs = () => {
       setReload(false);
       return;
     }
-    await fetch(`https://api.cdcs.lesoft.io/api/blog/${id}`, { method: "POST" })
+    await fetch(`https://api.lynktown.in/api/blog/${id}`, { method: "POST" })
       .then((res) => res.json())
       .then((data) => {
         setBlog(data.data);
@@ -34,7 +34,7 @@ const Blogs = () => {
       .then((res) => res.json())
       .then((data) => {
         fetch(
-          `https://api.cdcs.lesoft.io/api/blogread/${id}/${data.ipAddress}`,
+          `https://api.lynktown.in/api/blogread/${id}/${data.ipAddress}`,
           {
             method: "POST",
             body: JSON.stringify({
@@ -69,7 +69,7 @@ const Blogs = () => {
         >
           <img
             style={{ height: 300 }}
-            src="https://api.cdcs.lesoft.io/public/blogs/output-onlinegiftools.gif"
+            src="https://api.lynktown.in/public/blogs/output-onlinegiftools.gif"
           />
         </div>
       ) : (

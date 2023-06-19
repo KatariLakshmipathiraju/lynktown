@@ -16,18 +16,18 @@ const BodySection = (props) => {
   };
 
   const fetchPost = () => {
-    // fetch("https://api.cdcs.lesoft.io/api/blog", { method: "POST" })
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     setPost(data.data.slice(0, 30));
-    //   });
+    fetch("https://api.lynktown.in/api/blogs", { method: "POST" })
+      .then((res) => res.json())
+      .then((data) => {
+        setPost(data.data.slice(0, 30));
+      });
   };
   const fetchcategories = () => {
-    // fetch("https://api.cdcs.lesoft.io/api/blog_category", { method: "POST" })
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     setCategories(data.data);
-    //   });
+    fetch("https://api.lynktown.in/api/blog_category", { method: "POST" })
+      .then((res) => res.json())
+      .then((data) => {
+        setCategories(data.data);
+      });
   };
   useEffect(() => {
     fetchPost();

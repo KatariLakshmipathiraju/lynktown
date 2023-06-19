@@ -96,7 +96,7 @@ export default function Blogs() {
         }
         onConfirm={() => {
           if (name && email && password) {
-            fetch("https://api.cdcs.lesoft.io/api/subscribe", {
+            fetch("https://api.lynktown.in/api/subscribe", {
               method: "post",
               headers: { "content-type": "application/json" },
               body: JSON.stringify({
@@ -222,7 +222,7 @@ export default function Blogs() {
         >
           <img
             style={{ height: 300 }}
-            src="https://api.cdcs.lesoft.io/public/blogs/output-onlinegiftools.gif"
+            src="https://api.lynktown.in/public/blogs/output-onlinegiftools.gif"
           />
         </div>
       ) : (
