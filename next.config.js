@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["localhost", "api.lynktown.in"],
+    domains: ["lynktown.in", "api.lynktown.in"],
+    loader: "akamai",
+    path: "",
   },
   remotePatterns: [
     {
@@ -13,10 +15,6 @@ const nextConfig = {
 ],
   reactStrictMode: true,
   swcMinify: true,
-  images: {
-    loader: "akamai",
-    path: "",
-  },
 };
 
 module.exports = nextConfig;
