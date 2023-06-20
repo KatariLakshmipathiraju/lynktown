@@ -3,15 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ["localhost", "api.lynktown.in", 'api.lynktown.in'],
+    unoptimized: true,
   },
-  remotePatterns: [
-    {
-      protocol: 'https',
-      hostname: 'api.lynktown.in',
-      port: '',
-      pathname: '/**',
-    },
-],
 };
 
 module.exports = nextConfig;
