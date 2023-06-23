@@ -54,7 +54,9 @@ const BlogsComponent = ({ data, posts, modalHandler, linkHandler }) => {
 
             <div className="px-2 h-[60px]">
               <h1 className="w-[300px] mr-[20px] text-[18px] font-medium">
-                {post?.title}
+              {post?.title && post.title.length > 40
+              ? `${post.title.slice(0, 40)}...` // Limit the title to 20 characters and add ellipsis
+              : post.title}
               </h1>
               <p className="text-lg text-gray-400">
                 by <span className="font-bold">Admin</span>
