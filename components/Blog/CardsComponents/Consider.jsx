@@ -57,7 +57,7 @@ const Consider = ({ data, posts, modalHandler, linkHandler }) => {
           </div>
 
           <div className="px-2 h-[60px]">
-            <h1 className="w-[300px] mr-[20p] text-[15px] font-medium">
+            <h1 className="w-[350px] mr-[10px] text-[15px] font-medium">
               {post?.title}
             </h1>
             <p className="text-lg text-gray-400">by {post?.user_name ? post?.user_name : 'Admin' }</p>
@@ -69,7 +69,7 @@ const Consider = ({ data, posts, modalHandler, linkHandler }) => {
                 <p className="py-1">
                   <AiFillEye />
                 </p>
-                <p className="text-[14px]">{post?.viewers ? post.viewers.length : 0}</p>
+                <p>{post?.viewers ? post.viewers.length : 0}</p>
               </div>
             </div>
 

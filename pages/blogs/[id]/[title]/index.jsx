@@ -151,9 +151,16 @@ const Blogs = () => {
                 ""
               )}
             </div>
-            <h1 className="text-[#000000] font-inter leading-[50.83px] w-[271px] h-[51px] font-bold m-12 text-[42px] ">
+            <div className="container px-5 py-6 mx-auto">
+                <div style={{ justifyContent: 'center' }} className="px-2 flex flex-wrap grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 py-4  -m-4">
+                  <h1 className="text-[#000000] font-inter leading-[50.83px] w-[400px] h-[51px] font-bold m-12 text-[42px] text-center ml-3">
+                    Recent Posts
+                  </h1>
+                </div>
+            </div>
+            {/* <h1 className="text-[#000000] font-inter leading-[50.83px] w-[271px] h-[51px] font-bold m-12 text-[42px] ">
               Recent Posts
-            </h1>
+            </h1> */}
             <div className="w-[100%]">
               <ViewCard
                 clickHandler={clickHandler}

@@ -5,10 +5,10 @@ import { GiPlayButton } from "react-icons/gi";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import styles from './styles.module.css';
 
 const ViewCard = ({ blogs, clickHandler }) => {
   const router = useRouter();
-
   return (
     <>
       <section className="text-gray-600 body-font bg-[#E5E5E5] md:h-[1550px] lg:h-full">
@@ -25,15 +25,14 @@ const ViewCard = ({ blogs, clickHandler }) => {
               return (
                 <div key={index} className="w-full md:w-[650px] lg:w-full ">
                   <div className="bg-white p-4 border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                    <div className="bg-red-300">
+                    <div className="bg-white">
                       <Image
                         src={post.cover}
                         alt=""
                         srcSet=""
-                        className="object-cover w-full"
+                        className={styles.myComponent}
                         width={400}
                         height={200}
-                        style={{ height: 200 }}
                         priority
                       />
                     </div>
@@ -41,10 +40,10 @@ const ViewCard = ({ blogs, clickHandler }) => {
                       <div className="flex justify-between items-center px-2 mt-6">
                         <div className="flex gap-4">
                           <div className="flex gap-2">
-                            <p className="py- mt-2 md:mt-1 lg:mt-1 text-[20px]  md:text-[14px]">
+                            <p className="py-1">
                               <AiFillEye />
                             </p>
-                            <p className="text-[20px]  md:text-[14px] ">
+                            <p>
                               {post?.viewers ? post?.viewers.length : 0}
                             </p>
                           </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Consider from "./CardsComponents/Consider";
+import VideoSection from "./VideoSection";
 
 const BodySection = (props) => {
   const [posts, setPost] = useState([]);
@@ -90,6 +91,7 @@ const BodySection = (props) => {
   };
   return (
     <div>
+      <VideoSection />
       <header className="text-gray-600 body-font" style={{ marginTop: 20 }}>
         <div className="container mx-aut flex flex-wra md:flex-row   ">
           <div className="md:ml-auto w-ful flex px-4">
