@@ -1,4 +1,5 @@
 import YouTube from 'react-youtube';
+import styles from './YouTubePlayer.module.css'; 
 
 const YouTubePlayer = ({ videoUrl }) => {
   const getVideoIdFromUrl = (url) => {
@@ -7,8 +8,6 @@ const YouTubePlayer = ({ videoUrl }) => {
   };
 
   const opts = {
-    height: '315',
-    width: '560',
     playerVars: {
       autoplay: 0,
     },
@@ -16,7 +15,11 @@ const YouTubePlayer = ({ videoUrl }) => {
 
   const videoId = getVideoIdFromUrl(videoUrl);
 
-  return <YouTube videoId={videoId} opts={opts} />;
+  return (
+    <div className={styles.youtubeContainer}>
+      <YouTube videoId={videoId} opts={opts} />
+    </div>
+  );
 };
 
 export default YouTubePlayer;

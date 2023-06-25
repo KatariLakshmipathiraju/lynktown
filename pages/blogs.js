@@ -204,7 +204,7 @@ export default function Blogs() {
     );
   };
   return (
-    <div className=" mr-4 md:ml-0 md:mr-0">
+    <div className="md:ml-0 md:mr-0">
       {reload ? (
         <div
           style={{
