@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { AiFillEye, AiFillHeart } from "react-icons/ai";
-import { IoIosShareAlt } from "react-icons/io";
+import { IoIosShareAlt, IoLogoFacebook, IoLogoInstagram, IoLogoWhatsapp, IoLogoTwitter } from 'react-icons/io';
 import Image from "next/image";
 import Link from "next/link";
 import Modal from "../Modal";
+import styles from "./BlogComponent.module.css";
 
 const BlogsComponent = ({ data, posts, modalHandler, linkHandler }) => {
   const router = useRouter();
@@ -15,6 +16,53 @@ const BlogsComponent = ({ data, posts, modalHandler, linkHandler }) => {
   const [name, setName] = useState("");
   const [show_subscriber, setShowSubscriber] = useState("");
   const [blog_view_count, setBlogViewCount] = useState("");
+  const [showIcons, setShowIcons] = useState(false);
+  let url = 'https://www.lynktown.in/blogs/5/7-ways-fashion-entrepreneurs-can-create-long-lasting-customer-relationships';
+
+  const shareToFacebook = () => {
+    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+    window.open(facebookShareUrl, '_blank');
+  };
+
+  const shareToInstagram = () => {
+    const instagramShareUrl = `https://www.instagram.com/sharer.php?u=${encodeURIComponent(url)}`;
+    window.open(instagramShareUrl, '_blank');
+  };
+
+  const shareToWhatsApp = () => {
+    const whatsappShareUrl = `https://wa.me/?text=${encodeURIComponent(url)}`;
+    window.open(whatsappShareUrl, '_blank');
+  };
+
+  const shareToTwitter = () => {
+    const twitterShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}`;
+    window.open(twitterShareUrl, '_blank');
+  };
+
+  const handleShare = (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    setShowIcons(true);
+  };
+
+  const handleIconClick = (platform) => {
+    switch (platform) {
+      case 'facebook':
+        shareToFacebook();
+        break;
+      case 'instagram':
+        shareToInstagram();
+        break;
+      case 'whatsapp':
+        shareToWhatsApp();
+        break;
+      case 'twitter':
+        shareToTwitter();
+        break;
+      default:
+        break;
+    }
+  };
 
   useEffect(() => {
     var _blog_view_count = localStorage.getItem("blog_view");
@@ -23,9 +71,10 @@ const BlogsComponent = ({ data, posts, modalHandler, linkHandler }) => {
     setShowSubscriber(_show_subscriber);
   }, []);
 
-  const openLink = (href) => {
+  const openLink = (e) => {
+    e.stopPropagation();
     linkHandler.call();
-    router.push(href, undefined, { shallow: true });
+    router.push(e.currentTarget.getAttribute('data-href'), undefined, { shallow: true });
   };
 
   return (
@@ -38,9 +87,8 @@ const BlogsComponent = ({ data, posts, modalHandler, linkHandler }) => {
 
         return (
           <div
-            onClick={() => {
-              openLink(href);
-            }}
+            onClick={openLink}
+            data-href={href}
             key={post.id}
             className="mx-auto w-full md:w-[340px] lg:w-[300px] xl:w-[380px] shadow-md space-y-8 pb-5 rounded-md overflow-hidden hover:border border-[#4F597B] cursor-pointer"
           >
@@ -54,9 +102,9 @@ const BlogsComponent = ({ data, posts, modalHandler, linkHandler }) => {
 
             <div className="px-2 h-[60px]">
               <h1 className="w-[350px] mr-[10px] text-[18px] font-medium">
-              {post?.title && post.title.length > 40
-              ? `${post.title.slice(0, 40)}...` // Limit the title to 20 characters and add ellipsis
-              : post.title}
+                {post?.title && post.title.length > 40
+                  ? `${post.title.slice(0, 40)}...` // Limit the title to 20 characters and add ellipsis
+                  : post.title}
               </h1>
               <p className="text-lg text-gray-400">
                 by <span className="font-bold">Admin</span>
@@ -73,9 +121,45 @@ const BlogsComponent = ({ data, posts, modalHandler, linkHandler }) => {
                     {post?.viewers ? post.viewers.length : 0}
                   </p>
                 </div>
+                <div className={`ml-4 flex items-center ${showIcons ? styles.showIcons : ""}`}>
+  <IoIosShareAlt size={23} onClick={handleShare} />
+  {showIcons && (
+    <div className={styles.sharePopup}>
+      <div className={styles.shareIcon} onClick={() => handleIconClick('facebook')}>
+        <IoLogoFacebook size={20} />
+      </div>
+      <div className={styles.shareIcon} onClick={() => handleIconClick('instagram')}>
+        <IoLogoInstagram size={20} />
+      </div>
+      <div className={styles.shareIcon} onClick={() => handleIconClick('whatsapp')}>
+        <IoLogoWhatsapp size={20} />
+      </div>
+      <div className={styles.shareIcon} onClick={() => handleIconClick('twitter')}>
+        <IoLogoTwitter size={20} />
+      </div>
+    </div>
+  )}
+</div>
+{/* 
                 <div className="ml-4 flex items-center">
-                  <IoIosShareAlt size={23} />
-                </div>
+                  <IoIosShareAlt size={23} onClick={handleShare} />
+                  {showIcons && (
+                    <div className={styles.sharePopup}>
+                      <div className={styles.shareIcon} data-platform="facebook" onClick={handleIconClick}>
+                        <IoLogoFacebook size={20} />
+                      </div>
+                      <div className={styles.shareIcon} data-platform="instagram" onClick={handleIconClick}>
+                        <IoLogoInstagram size={20} />
+                      </div>
+                      <div className={styles.shareIcon} data-platform="whatsapp" onClick={handleIconClick}>
+                        <IoLogoWhatsapp size={20} />
+                      </div>
+                      <div className={styles.shareIcon} data-platform="twitter" onClick={handleIconClick}>
+                        <IoLogoTwitter size={20} />
+                      </div>
+                    </div>
+                  )}
+                </div> */}
               </div>
 
               <div className="w-[94px] h-[37px] flex justify-center items-center rounded-[5px] border border-[#DADADA] cursor-pointer">

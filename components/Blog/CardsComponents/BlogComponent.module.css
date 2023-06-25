@@ -1,0 +1,33 @@
+.showIcons {
+  position: relative;
+}
+
+.sharePopup {
+  position: absolute;
+  top: -20px;
+  left: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+.shareIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.shareIcon:hover {
+  background-color: #f2f2f2;
+  border-radius: 50%;
+}
