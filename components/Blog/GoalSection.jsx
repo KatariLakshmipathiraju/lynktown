@@ -29,7 +29,7 @@ const GoalSection = () => {
                 height={403.12}
                 priority
               /> */}
-              <img src="/bannerImage.jpeg" alt="undraw_working" />
+              <img src="bannerImage.jpeg" alt="undraw_working" />
             </div>
           </div>
         </section>
