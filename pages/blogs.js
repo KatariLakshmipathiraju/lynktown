@@ -232,7 +232,7 @@ export default function Blogs() {
       {isSuccessOpen ? openThank() : ""}
       {isErrorOpen ? openError() : ""}
       <div
-        style={{ overflow: "hidden" }}
+        style={{ overflow: "hidden", height: 'auto', paddingBottom: '45px'}}
         className="bg-[#EDEDED] md:py-10 w-[417px] h-[450px] md:h-[550px] lg:w-full md:w-full"
       >
         <HeaderSection />

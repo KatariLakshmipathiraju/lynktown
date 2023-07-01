@@ -82,14 +82,14 @@ const HeaderSection = () => {
 
           <div className="mt-4 mr-2.5 md:mt-0">
             <div>
-              <Link href="/contact-us" legacyBehavior>
+              {/* <Link href="/contact-us" legacyBehavior>
                 <a
                   className="m-3 md:m-0 md:mr-20  md:w-48 bg-[#857250] hover:bg-[#857250] text-white font-bold py-2 px-4 rounded"
                   // onClick={openModal}
                 >
                   Subscribe
                 </a>
-              </Link>
+              </Link> */}
 
               {/* {isOpen && (
                 <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-75">

@@ -5,6 +5,7 @@ import { RxDividerVertical } from "react-icons/rx";
 import ViewCard from "/components/Blog/ViewCard";
 import HeaderSection from "/components/Blog/HeaderSection";
 
+
 const Blogs = () => {
   const router = useRouter();
   const [blog, setBlog] = useState();
@@ -12,18 +13,15 @@ const Blogs = () => {
   const [reload, setReload] = useState(true);
   const [previousId, setPreviousId] = useState({ id: null });
   const [blogId, setBlogId] = useState();
-
   const clickHandler = (id) => {
     setReload(true);
     setBlogId(id);
   };
-
   async function getBlogsId(id) {
-    if (blogId === previousId.id && id !== undefined) {
+    if (blogId == previousId.id && id != undefined) {
       setReload(false);
       return;
     }
-
     await fetch(`https://api.lynktown.in/api/blog/${id}`, { method: "POST" })
       .then((res) => res.json())
       .then((data) => {
@@ -32,28 +30,28 @@ const Blogs = () => {
         setReload(false);
         window.scrollTo({ top: 0, behavior: "smooth" });
       });
-
     fetch(`https://api.db-ip.com/v2/free/self`, { method: "get" })
       .then((res) => res.json())
       .then((data) => {
-        fetch(`https://api.lynktown.in/api/blogread/${id}/${data.ipAddress}`, {
-          method: "POST",
-          body: JSON.stringify({
-            ip: data.ipAddress,
-            blog_id: id,
-          }),
-        });
+        fetch(
+          `https://api.lynktown.in/api/blogread/${id}/${data.ipAddress}`,
+          {
+            method: "POST",
+            body: JSON.stringify({
+              ip: data.ipAddress,
+              blog_id: id,
+            }),
+          }
+        );
       });
   }
-
   useEffect(() => {
     const id = router.query.id;
     getBlogsId(id);
     setPreviousId(JSON.parse(JSON.stringify({ id: router.query.id })));
   }, [router.query.id, blogId, reload]);
-
   return (
-    <div>
+    <>
       {reload ? (
         <div
           style={{
@@ -83,14 +81,10 @@ const Blogs = () => {
             <HeaderSection />
           </div>
           <div style={{ maxHeight: 700, overflow: "hidden" }}>
-            <img
-              src={blog.cover}
-              style={{ width: "100%", height: "auto" }}
-              alt="Blog Cover"
-            />
+            <img src={blog.cover} style={{ width: "100%", height: "auto" }} />
           </div>
 
-          <div className="flex flex-col px-4 lg:px-10">
+          <div className="flex flex-col ">
             <div
               style={{
                 width: "100%",
@@ -101,11 +95,7 @@ const Blogs = () => {
             >
               <h2
                 className="md:w-[70%] w-[85%]"
-                style={{
-                  fontSize: 25,
-                  fontWeight: "bold",
-                  marginBottom: 20,
-                }}
+                style={{ fontSize: 25, fontWeight: "bold", marginBottom: 20 }}
               >
                 {blog ? blog.title : "Blog Expired"}
               </h2>
@@ -120,29 +110,27 @@ const Blogs = () => {
                   width: "100%",
                 }}
               >
-                {blog.file_type === "image" ? (
+                {blog.file_type == "image" ? (
                   <img
                     style={{ width: "60%", borderRadius: 10 }}
                     src={blog.src}
-                    alt="Blog Image"
                   ></img>
-                ) : blog.file_type === "video" ? (
+                ) : blog.file_type == "video" ? (
                   <iframe
                     className="w-[80%] h-[200px] md:w-[50%] md:h-[550px]"
                     style={{ borderRadius: 10, allowTransparency: true }}
                     src={blog.src}
-                    title="Blog Video"
                   ></iframe>
                 ) : (
                   <p></p>
                 )}
               </div>
+              {/* <iframe src="https://docs.google.com/gview?url=https://scholar.harvard.edu/files/torman_personal/files/samplepptx.pptx&embedded=true" style={{ height: 600, width: '40%' }}></iframe> */}
               {blog.ppt_url ? (
                 <embed
                   className="h-[200px] md:h-[600px]"
                   style={{ width: "70%" }}
                   src={blog.ppt_url}
-                  title="Blog PPT"
                 ></embed>
               ) : (
                 ""
@@ -157,32 +145,75 @@ const Blogs = () => {
                     width: "70%",
                     borderColor: "red",
                   }}
-                  title="Blog PDF"
                 />
               ) : (
                 ""
               )}
             </div>
-          </div>
-          <div className="container">
-              <div className="px-2 flex flex-wrap grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 py-4  -m-4">
-                <h1 className="text-[#000000] font-inter leading-[50.83px] h-[51px] font-bold m-12 text-[42px] text-left ml-3 textRecent">
-                  Recent Posts
-                </h1>
-              </div>
+            <div className="container">
+                <div className="px-2 flex flex-wrap grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 py-4  -m-4">
+                  <h1 className="text-[#000000] font-inter leading-[50.83px] h-[51px] font-bold m-12 text-[42px] text-center ml-3 textRecent">
+                    Recent Posts
+                  </h1>
+                </div>
             </div>
+            {/* <h1 className="text-[#000000] font-inter leading-[50.83px] w-[271px] h-[51px] font-bold m-12 text-[42px] ">
+              Recent Posts
+            </h1> */}
             <div className="w-[100%]">
               <ViewCard
                 clickHandler={clickHandler}
                 blogs={recent_blogs ? recent_blogs : []}
               />
             </div>
+          </div>
         </section>
       ) : (
         <p></p>
       )}
-    </div>
+
+      {/* <section className="text-gray-600 body-font">
+        <div className="lg:ml-5 mt-10 py-10 md:py-0">
+          <HeaderSection />
+        </div>
+        <div className="container px-5  mx-auto flex flex-wrap flex-col">
+          <h1 className="h-[120px] md:h-full lg:h-full md:px-0 text-[#313131] text-[30px] md:text-[30px]  leading:[42px] md:leading-[40px] text-left lg:px-4 font-medium	font-serif font-semibold not-italic">
+            {blog?.title}
+          </h1>
+          <div className="container  flex flex-wrap flex-col md:flex-row items-cente mb-12 md:mb-0 md:py-4">
+            <div className="md:ml-auto md:mr-auto flex flex-wrap w-[946px] text-base sm:text-1x text-1x ">
+              <p className="text-[30px] md:text-[20px] mr-1 hover:text-gray-900 ">
+                By Thomas Frank
+              </p>
+              <p className="text-[30px] md:text-[20px] mr-1 md:mt-1">
+                <GoPrimitiveDot />
+              </p>
+              <p className="text-[30px]  md:text-[20px] mr-1 hover:text-gray-900">
+                Published : a year ago
+              </p>
+              <p className="text-[30px] md:text-[20px] mr-1 md:mt-1">
+                <RxDividerVertical />
+              </p>
+              <p className="text-[30px] md:text-[20px] mr-1 hover:text-gray-900">
+                Update : a year ago
+              </p>
+            </div>
+          </div>
+
+          <div className="w-[946px] h-[700px] md:h-full block mx-auto  object-cover object-center mb-">
+            <StudyCard />
+          </div>
+          <p className="py-10 md:px-0 mt- w-[946px] block mx-auto text-[30px] md:text-[20px]  object-cover object-center">
+            {blog?.body}
+          </p>
+
+          <div className="">
+            <ViewCard />
+          </div>
+        </div>
+        <div></div>
+      </section> */}
+    </>
   );
 };
-
 export default Blogs;
