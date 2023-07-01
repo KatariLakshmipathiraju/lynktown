@@ -166,7 +166,7 @@ const Blogs = () => {
           </div>
           <div className="container">
               <div className="px-2 flex flex-wrap grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 py-4  -m-4">
-                <h1 className="text-[#000000] font-inter leading-[50.83px] h-[51px] font-bold m-12 text-[42px] text-left ml-3 textRecent">
+                <h1 className="text-[#000000] font-inter leading-[50.83px] h-[51px] font-bold m-12 text-[42px] text-left ml-6 pl-2 textRecent">
                   Recent Posts
                 </h1>
               </div>
