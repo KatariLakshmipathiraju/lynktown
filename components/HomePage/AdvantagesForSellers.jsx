@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BsDownload } from "react-icons/bs";
 
 export default function AdvantagesForSellers() {
   return (
@@ -8,7 +9,7 @@ export default function AdvantagesForSellers() {
       </h1>
       <section className="flex flex-col-reverse lg:flex-row gap-6 lg:justify-between lg:items-center mt-6 lg:mt-2">
         {/* Content  */}
-        <section className="lg:w-[65%] xl:w-[60%]">
+        <section className="lg:w-[65%] xl:w-[60%] flex flex-col gap-6">
           <div className="flex flex-col gap-3 sm:grid sm:grid-cols-2 sm:gap-4 sm:mt-7">
             {/* first Cards  */}
             <div className="bg-[#EEECE7] px-5 py-6 rounded">
@@ -80,6 +81,18 @@ export default function AdvantagesForSellers() {
                 <p className="text-base">Create an ecommerce store for free</p>
               </div>
             </div>
+          </div>
+
+          <div className="flex flex-wrap gap-4">
+            <button className="bg-[#6A5B40] text-white font-medium text-lg px-5 py-2 rounded">
+              Learn more
+            </button>
+            <button className="bg-[#6A5B40] text-white font-medium text-lg px-4 py-2 rounded flex items-center gap-3">
+              <span>Download App</span>{" "}
+              <span>
+                <BsDownload size={19}/>
+              </span>
+            </button>
           </div>
         </section>
         {/* Image  */}

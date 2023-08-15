@@ -162,7 +162,7 @@ const Footer = () => {
             className="underline flex items-center gap-3"
             onClick={() =>
               window.open(
-                "https://api.whatsapp.com/send?phone=919663524882",
+                "https://api.whatsapp.com/send?phone=919663989996",
                 "_blank"
               )
             }
@@ -236,7 +236,7 @@ const Footer = () => {
               className="underline flex items-center gap-3"
               onClick={() =>
                 window.open(
-                  "https://api.whatsapp.com/send?phone=919663524882",
+                  "https://api.whatsapp.com/send?phone=919663989996",
                   "_blank"
                 )
               }

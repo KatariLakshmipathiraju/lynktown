@@ -8,9 +8,10 @@ export default function Home() {
   return (
     <Layout>
       <Hero />
-      <AdvantagesForSellers />
-      <WhyChooseUs />
       <AdvantagesForCustomers />
+      <WhyChooseUs />
+      <AdvantagesForSellers />
+      
     </Layout>
   );
 }

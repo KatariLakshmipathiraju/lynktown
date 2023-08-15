@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AdvantagesForSellers() {
   return (
-    <main className="px-5 sm:px-8 md:px-10 xl:px-16 mt-14 xl:mt-16 mb-8 xl:mb-12">
+    <main className="px-5 sm:px-8 md:px-10 xl:px-16 mt-14 xl:mt-16 mb-8">
       <h1 className="text-2xl sm:text-3xl lg:text-[32px] xl:text-4xl font-semibold text-center lg:text-right lg:mr- xl:mr- text-[#6A5B40]">
         LynkTown advantages for Customers
       </h1>
@@ -28,7 +28,7 @@ export default function AdvantagesForSellers() {
         </section>
 
         {/* Content  */}
-        <section className="lg:w-[65%] xl:w-[60%]">
+        <section className="lg:w-[65%] xl:w-[60%] flex flex-col gap-4 items-start lg:items-end">
           <div className="flex flex-col gap-3 sm:grid sm:grid-cols-2 sm:gap-4 sm:mt-7">
             {/* first Cards  */}
             <div className="bg-[#EEECE7] px-5 py-6 rounded">
@@ -105,6 +105,11 @@ export default function AdvantagesForSellers() {
               </div>
             </div>
           </div>
+       
+            <button className="bg-[#6A5B40] text-white text-lg font-medium  border border-[#6A5B40] px-8 py-1.5 rounded">
+              Explore
+            </button>
+      
         </section>
       </section>
     </main>
