@@ -3,7 +3,9 @@ import "../styles/globals.css";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Component {...pageProps} />
+      <div className="max-w-[1440px] mx-auto">
+        <Component {...pageProps} />
+      </div>
     </>
   );
 }

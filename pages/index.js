@@ -1,31 +1,16 @@
-import Image from "next/image";
-import Community from "../components/Community/Community";
-import Faq from "../components/Faq";
-import Features from "../components/Features/Features";
-import Hero from "../components/Hero/Hero";
 import Layout from "../components/Layout/Layout";
-import MadeFor from "../components/MadeFor";
-import ManageBusiness from "../components/ManageBusiness/ManageBusiness";
-import SellingSteps from "../components/SellingSteps/SellingSteps";
-import SpecialCollection from "../components/SpecialCollection/SpecialCollection";
-import Testimonial from "../components/Testimonial/Testimonial";
-import CustomizedStore from "../components/CustomizedStore/CustomizedStore";
-import BlogSection from "../components/Blog/BlogSection";
+import Hero from "../components/HomePage/Hero";
+import AdvantagesForSellers from "../components/HomePage/AdvantagesForSellers";
+import AdvantagesForCustomers from "../components/HomePage/AdvantagesForCustomers";
+import WhyChooseUs from "../components/HomePage/WhyChooswUs";
 
 export default function Home() {
   return (
     <Layout>
       <Hero />
-      <SellingSteps />
-      <CustomizedStore />
-      <ManageBusiness />
-      <Community />
-      <Features />
-      {/* <SpecialCollection /> */}
-      <Testimonial />
-      <MadeFor />
-      <BlogSection />
-      <Faq />
+      <AdvantagesForSellers />
+      <WhyChooseUs />
+      <AdvantagesForCustomers />
     </Layout>
   );
 }
