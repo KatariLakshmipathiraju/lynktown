@@ -3,7 +3,7 @@ import Link from "next/link";
 import BlogsComponent from "./CardsComponents/BlogsComponent";
 
 const BlogSection = (props) => {
-// export default function BlogSection(props) {
+  // export default function BlogSection(props) {
   const [posts, setPost] = useState([]);
   const modalHandler = () => {
     props.modalHandler;
@@ -52,6 +52,6 @@ const BlogSection = (props) => {
       </section>
     </>
   );
-}
+};
 
 export default BlogSection;
