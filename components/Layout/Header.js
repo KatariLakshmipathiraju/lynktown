@@ -107,7 +107,7 @@ const Header = () => {
             <div className="md:flex gap-8 items-center">
               <div className="hidden md:flex gap-8 justify-between">
                 <div className=" text-center text-primaryColor font-semibold text-lg md:text-2xl">
-                  <Link href="/pricing">Pricing</Link>
+                  {/* <Link href="/pricing">Pricing</Link> */}
                 </div>
                 <div className=" text-center text-primaryColor font-semibold text-lg md:text-2xl">
                   <Link href="/blogs">Blogs</Link>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { BsDownload } from "react-icons/bs";
 
 export default function AdvantagesForSellers() {
@@ -84,13 +85,15 @@ export default function AdvantagesForSellers() {
           </div>
 
           <div className="flex flex-wrap gap-4">
-            <button className="bg-[#6A5B40] text-white font-medium text-lg px-5 py-2 rounded">
-              Learn more
-            </button>
+            <Link href="/vendor">
+              <button className="bg-[#6A5B40] text-white font-medium text-lg px-5 py-2 rounded">
+                Learn more
+              </button>
+            </Link>
             <button className="bg-[#6A5B40] text-white font-medium text-lg px-4 py-2 rounded flex items-center gap-3">
               <span>Download App</span>{" "}
               <span>
-                <BsDownload size={19}/>
+                <BsDownload size={19} />
               </span>
             </button>
           </div>

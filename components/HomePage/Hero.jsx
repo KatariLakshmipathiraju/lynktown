@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="bg-[#6A5B40] lg:h-[625px]  pt-6 sm:pt-10 lg:pt-12 xl:pt-16 text-white flex flex-col items-center justify-center gap-32 lg:flex-row lg:justify-between lg:items-center lg:gap-3 relative px-4 sm:px-8 md:px-10 xl:px-12">
-      <div>
+      <div className="flex flex-col gap-2 sm:block">
         <h1 className="md:text-4xl text-[28px] lg:text-5xl xl:text-[53px]  text-left leading-normal lg:leading-[70.2px] font-medium lg:max-w-[640px] xl:max-w-[680px]">
           Don&#39;t buy from LynkTown, buy directly from sellers on LynkTown.
         </h1>
@@ -12,7 +12,7 @@ export default function Hero() {
           <br className="hidden sm:block" /> business owners
         </p>
 
-        <button className="lg:text-xl font-medium border px-4 py-1.5 rounded w-full lg:w-auto">
+        <button className="lg:text-xl font-medium border px-5 py-1.5 rounded w-full lg:w-auto">
           Explore Designers
         </button>
       </div>

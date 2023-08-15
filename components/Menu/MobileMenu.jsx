@@ -23,7 +23,7 @@ const MobileMenu = ({ showCatMenu, setshowCatMenu, setMobileMenu }) => {
           <div className="md:flex gap-8 items-center">
             <div>
               <div className="pb-3 text-[#6D5C41] cursor-pointer text-xl leading-[21px] font-bold ">
-                <Link href="/pricing">Pricing</Link>
+                {/* <Link href="/pricing">Pricing</Link> */}
               </div>
             </div>
             <div>
