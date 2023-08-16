@@ -31,7 +31,7 @@ export default function AdvantagesForSellers() {
         <section className="lg:w-[65%] xl:w-[60%] flex flex-col gap-4 items-start lg:items-end">
           <div className="flex flex-col gap-3 sm:grid sm:grid-cols-2 sm:gap-4 sm:mt-7">
             {/* first Cards  */}
-            <div className="bg-[#EEECE7] px-5 py-6 rounded">
+            <div className="bg-[#EEECE7] px-5 py-6 rounded hover:bg-[#857250] hover:text-white">
               <div className="flex flex-col items-start justify-center gap-4">
                 <div className="bg-[#FFF4E2] px-3 py-3 rounded">
                   <Image src="/7.svg" alt="icon" width={25} height={27} />
@@ -44,7 +44,7 @@ export default function AdvantagesForSellers() {
             </div>
 
             {/* second Cards  */}
-            <div className="bg-[#EEECE7] px-5 py-6 rounded">
+            <div className="bg-[#EEECE7] px-5 py-6 rounded hover:bg-[#857250] hover:text-white">
               <div className="flex flex-col items-start justify-center gap-4">
                 <div className="bg-[#C8C4E9] px-3 py-3 rounded">
                   <Image src="/8.svg" alt="icon" width={24} height={28} />
@@ -58,7 +58,7 @@ export default function AdvantagesForSellers() {
             </div>
 
             {/* third Cards  */}
-            <div className="bg-[#EEECE7] px-5 py-6 rounded">
+            <div className="bg-[#EEECE7] px-5 py-6 rounded hover:bg-[#857250] hover:text-white">
               <div className="flex flex-col items-start justify-center gap-4">
                 <div className="bg-[#E7FBF9] px-3 py-3 rounded">
                   <Image src="/9.svg" alt="icon" width={23} height={23} />
@@ -70,7 +70,7 @@ export default function AdvantagesForSellers() {
             </div>
 
             {/* fourth Cards  */}
-            <div className="bg-[#EEECE7] px-5 py-6 rounded">
+            <div className="bg-[#EEECE7] px-5 py-6 rounded hover:bg-[#857250] hover:text-white">
               <div className="flex flex-col items-start justify-center gap-4">
                 <div className="bg-[#C8C4E9] px-3 py-3 rounded">
                   <Image src="/10.svg" alt="icon" width={24} height={28} />
@@ -82,7 +82,7 @@ export default function AdvantagesForSellers() {
             </div>
 
             {/* fivth Cards  */}
-            <div className="bg-[#EEECE7] px-5 py-6 rounded">
+            <div className="bg-[#EEECE7] px-5 py-6 rounded hover:bg-[#857250] hover:text-white">
               <div className="flex flex-col items-start justify-center gap-4">
                 <div className="bg-[#E0C1F4] px-3 py-3 rounded">
                   <Image src="/11.svg" alt="icon" width={26} height={28} />
@@ -94,7 +94,7 @@ export default function AdvantagesForSellers() {
             </div>
 
             {/* sixth Cards  */}
-            <div className="bg-[#EEECE7] px-5 py-6 rounded">
+            <div className="bg-[#EEECE7] px-5 py-6 rounded hover:bg-[#857250] hover:text-white">
               <div className="flex flex-col items-start justify-center gap-4">
                 <div className="bg-[#FDE0F6] px-3 py-3 rounded">
                   <Image src="/12.svg" alt="icon" width={27} height={28} />
@@ -105,11 +105,10 @@ export default function AdvantagesForSellers() {
               </div>
             </div>
           </div>
-       
-            <button className="bg-[#6A5B40] text-white text-lg font-medium  border border-[#6A5B40] px-8 py-1.5 rounded">
-              Explore
-            </button>
-      
+
+          <button className="bg-[#6A5B40] text-white text-lg font-medium  border border-[#6A5B40] px-8 py-1.5 rounded">
+            Explore
+          </button>
         </section>
       </section>
     </main>
