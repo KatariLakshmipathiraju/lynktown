@@ -6,7 +6,7 @@ export default function WhyChooseUs() {
       <h1 className="xl:text-[40px] font-light  text-center text-[#6D5C41]">
         Why choose us <br />
         {""}
-        <span className="text-[#1F1F1F] font-semibold text-2xl xl:text-[38px]">
+        <span className="font-semibold text-2xl xl:text-[38px]">
           Why purchase from sellers on LynkTown
         </span>
       </h1>
