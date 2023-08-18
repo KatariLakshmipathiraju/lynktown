@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="flex flex-col gap-2 sm:block">
         <h1 className="md:text-4xl text-[28px] lg:text-5xl xl:text-[53px]  text-left leading-normal lg:leading-[70.2px] font-medium lg:max-w-[640px] xl:max-w-[680px]">
           Don&#39;t buy from LynkTown, buy directly from{" "}
-          <span className="text-[#3B3B3B]">Fashion Designers</span> on LynkTown.
+          <span className="text-[#9D8E73]">Fashion Designers</span> on LynkTown.
         </h1>
         <p className="my-3 sm:my-8 mx-auto text-left">
           LynkTown is trusted by 5000+ fashion designers, artists &{" "}
