@@ -22,7 +22,7 @@ const Header = () => {
     setOpenModal((openModal) => !openModal);
   };
   return (
-    <header className="bg-whit pt-5 pb-4 sm:pt-0 sm:pb-0 sm:h-24">
+    <header className="bg-whit pt-4 pb-4 sm:pt-0 sm:pb-0 sm:h-24">
       <DemoVideo open={openModal} toggleModal={toggleModal} />
 
       <div className="container mx-auto flex h-full items-center justify-center md:justify-between">

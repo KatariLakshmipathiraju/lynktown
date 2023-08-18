@@ -13,7 +13,7 @@ const MobileMenu = ({ showCatMenu, setshowCatMenu, setMobileMenu }) => {
       <Wrapper className="flex flex-col md:hidden font-bold absolute  top-[102px] px-8 left-0 w-full h-[calc(100-50px)] bg-white z-50 text-black ">
         {pathname === "/" && (
           <div className="md:flex gap-8 items-center">
-            <h3 className="pb-2 text-[#6D5C41] cursor-pointer text-xl leading-[21px] font-bold ">
+            <h3 className="pb-5 text-[#6D5C41] cursor-pointer text-xl leading-[21px] font-bold ">
               <Link href="/vendor">Vendor</Link>
             </h3>
           </div>
@@ -27,7 +27,7 @@ const MobileMenu = ({ showCatMenu, setshowCatMenu, setMobileMenu }) => {
               </div>
             </div>
             <div>
-              <div className="pb-4 text-[#6D5C41] cursor-pointer  text-xl leading-[21px] font-bold ">
+              <div className="pb-5 text-[#6D5C41] cursor-pointer  text-xl leading-[21px] font-bold ">
                 <Link href="#">Blogs</Link>
               </div>
             </div>
