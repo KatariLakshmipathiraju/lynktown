@@ -11,7 +11,7 @@ export default function WhyChooseUs() {
         </span>
       </h1>
       <section className="flex flex-col items-center lg:flex-row lg:justify-between lg:items-center gap-6 xl:gap-6 mt-10">
-        <div className="flex flex-col items-start lg:items-end lg:justify-between gap-6 xl:gap-20">
+        <div className="flex flex-col items-start lg:items-end lg:justify-between gap-6 xl:gap-20 max-lg:order-2">
           <div className="flex flex-row-reverse lg:flex-row items-center gap-3 lg:gap-4">
             <p className="font-normal text-lg flex-wrap lg:text-right">
               Be a part of the economy growth of the Country
@@ -28,8 +28,9 @@ export default function WhyChooseUs() {
           alt="Why Choose Us"
           width={348}
           height={493}
+          className=" max-lg:order-1"
         />
-        <div className="flex flex-col items-start lg:items-start lg:justify-between gap-6 xl:gap-20">
+        <div className="flex flex-col items-start lg:items-start lg:justify-between gap-6 xl:gap-20 max-lg:order-3">
           <div className="flex flex-row-reverse lg:flex-row-reverse items-center gap-4">
             <p className="font-normal text-lg flex-wrap">
               Buy from SMBs who are creative & provide quality products.
