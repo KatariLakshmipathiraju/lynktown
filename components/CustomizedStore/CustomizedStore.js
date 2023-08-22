@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap, { Bounce, Power3 } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import step1 from "/public/assets/images/customizedStore/1.png";
-import step2 from "/public/assets/images/manageBusiness/2.png";
-import step3 from "/public/assets/images/manageBusiness/3.png";
+import step1 from "/public/assets/images/customizedStore/1.mp4";
+import step2 from "/public/assets/images/customizedStore/2.m4v";
+import step3 from "/public/assets/images/customizedStore/3.m4v";
 import Tick from "./Tick";
 import { IconButton, useMediaQuery } from "@mui/material";
 import { AnimatePresence, motion, useInView } from "framer-motion";
@@ -203,6 +203,7 @@ const CustomizedStore = () => {
         >
           <div className="selling-steps xl:container   mx-auto h-full   ">
             <div className="flex lg:grid-cols-2  item-container items-center justify-center  ">
+              {/* Content  */}
               <div className="flex-[1.5] xl:flex-1  ml-20">
                 <h1 className="text-[40px] text-primaryColor font-medium mb-24  ">
                   Create and manage your <br /> customized store
@@ -278,6 +279,7 @@ const CustomizedStore = () => {
                 </div>
               </div>
 
+              {/* Images  */}
               <div className="flex-1 ml-[-50px] justify-end xl:justify-center flex">
                 <div className="relative">
                   <svg
@@ -319,7 +321,7 @@ const CustomizedStore = () => {
                   <div className="absolute top-2/4 left-2/4  h-[637.5px] w-[340px] -translate-x-2/4 -translate-y-2/4 ">
                     <AnimatePresence>
                       {clicked[1] && !clicked[2] && (
-                        <motion.img
+                        <motion.video
                           initial={{
                             opacity: 0,
                             scale: 0,
@@ -333,41 +335,50 @@ const CustomizedStore = () => {
                             scale: 0,
                           }}
                           transition={{ type: "spring", bounce: 0.35 }}
-                          src={step1.src}
-                          alt=""
-                          className="h-full w-full  step_img--1 origin-bottom"
-                        />
+                          autoPlay
+                          loop
+                          muted
+                          className="h-full w-full step_img--1 origin-bottom"
+                        >
+                          <source src={step1} type="video/mp4" className="aspect-square"/>
+                          Your browser does not support the video tag.
+                        </motion.video>
                       )}
                     </AnimatePresence>
-                  </div>
-                  <div className="absolute top-2/4 left-2/4  h-[637.5px] w-[340px] -translate-x-2/4 -translate-y-2/4 ">
-                    <AnimatePresence>
-                      {clicked[2] && !clicked[3] && (
-                        <motion.img
-                          initial={{
-                            opacity: 0,
-                            scale: 0,
-                          }}
-                          animate={{
-                            opacity: 1,
-                            scale: 1,
-                          }}
-                          exit={{
-                            opacity: 0,
-                            scale: 0,
-                          }}
-                          transition={{ type: "spring", bounce: 0.35 }}
-                          src={step2.src}
-                          alt=""
-                          className="h-full w-full  step_img--2 origin-bottom"
-                        />
-                      )}
-                    </AnimatePresence>
+
+                    <div className="absolute top-2/4 left-2/4  h-[637.5px] w-[340px] -translate-x-2/4 -translate-y-2/4 ">
+                      <AnimatePresence>
+                        {clicked[2] && !clicked[3] && (
+                          <motion.video
+                            initial={{
+                              opacity: 0,
+                              scale: 0,
+                            }}
+                            animate={{
+                              opacity: 1,
+                              scale: 1,
+                            }}
+                            exit={{
+                              opacity: 0,
+                              scale: 0,
+                            }}
+                            transition={{ type: "spring", bounce: 0.35 }}
+                            autoPlay
+                            loop
+                            muted
+                            className="h-full w-full step_img--1 origin-bottom"
+                          >
+                            <source src={step2} type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </motion.video>
+                        )}
+                      </AnimatePresence>
+                    </div>
                   </div>
                   <div className="absolute top-2/4 left-2/4  h-[637.5px] w-[340px] -translate-x-2/4 -translate-y-2/4 ">
                     <AnimatePresence>
                       {clicked[3] && !clicked[4] && (
-                        <motion.img
+                        <motion.video
                           initial={{
                             opacity: 0,
                             scale: 0,
@@ -381,10 +392,14 @@ const CustomizedStore = () => {
                             scale: 0,
                           }}
                           transition={{ type: "spring", bounce: 0.35 }}
-                          src={step3.src}
-                          alt=""
-                          className="h-full w-full  step_img--1 origin-bottom"
-                        />
+                          autoPlay
+                          loop
+                          muted
+                          className="h-full w-full step_img--1 origin-bottom"
+                        >
+                          <source src={step3} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </motion.video>
                       )}
                     </AnimatePresence>
                   </div>
