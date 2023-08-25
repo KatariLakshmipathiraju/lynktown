@@ -111,38 +111,6 @@ const CustomizedStore = () => {
     once: true,
   });
 
-  // useEffect(() => {
-  //   if (manualClick || largeScreen || !isInView) return setRunning(false);
-  //   const progressBar = document.querySelector('#progressBarManage');
-  //   const id = setInterval(frame, 60);
-  //   // let height = 0;
-
-  //   function frame() {
-  //     if (manualClick || !progressBar) return;
-
-  //     if (height >= 170) {
-  //       clearInterval(id);
-  //       setRunning(false);
-  //     } else {
-  //       setRunning(true);
-  //       height++;
-  //       progressBar.style.height = height + 'px';
-  //       if (height === 80) {
-  //         setClicked(prev => ({
-  //           ...prev,
-  //           2: true,
-  //         }));
-  //       }
-  //       if (height === 160) {
-  //         setClicked(prev => ({
-  //           ...prev,
-  //           3: true,
-  //         }));
-  //       }
-  //     }
-  //   }
-  // }, [manualClick, largeScreen, isInView]);
-
   const [currentImg, setCurrentImage] = useState(1);
 
   useEffect(() => {
@@ -372,7 +340,7 @@ const CustomizedStore = () => {
                         </defs>
                       </svg>
 
-                      <div className="absolute top-2/4 left-2/4  h-[555px] w-[326px] -translate-x-2/4 -translate-y-2/4 ">
+                      <div className="absolute top-2/4 left-2/4  h-[553px] w-[326px] -translate-x-2/4 -translate-y-2/4 ">
                         <AnimatePresence>
                           {clicked[1] && !clicked[2] && (
                             <motion.video
@@ -392,13 +360,10 @@ const CustomizedStore = () => {
                               autoPlay
                               loop
                               muted
-                              className="h-full w-full step_img--1 origin-bottom rounded-[100px]"
+                              playbackRate={2}
+                              className="h-full w-full step_img--1 origin-bottom rounded-t-[80px] rounded-b-[60px]"
                             >
-                              <source
-                                src={step1}
-                                type="video/mp4"
-                                className="aspect-squar"
-                              />
+                              <source src={step1} type="video/mp4" />
                               Your browser does not support the video tag.
                             </motion.video>
                           )}
@@ -425,6 +390,7 @@ const CustomizedStore = () => {
                               autoPlay
                               loop
                               muted
+                              playbackRate={2}
                               className="h-full w-full step_img--1 origin-bottom rounded-[100px]"
                             >
                               <source src={step2} type="video/mp4" />
@@ -454,6 +420,7 @@ const CustomizedStore = () => {
                               autoPlay
                               loop
                               muted
+                              playbackRate={2}
                               className="h-full w-full step_img--1 origin-bottom rounded-[86px]"
                             >
                               <source src={step3} type="video/mp4" />
@@ -464,96 +431,6 @@ const CustomizedStore = () => {
                       </div>
                     </div>
                   </div>
-
-                  {/* <div className="absolute top-2/4 left-2/4  h-[560px] w-[340px] -translate-x-2/4 -translate-y-2/4 ">
-                    <AnimatePresence>
-                      {clicked[1] && !clicked[2] && (
-                        <motion.video
-                          initial={{
-                            opacity: 0,
-                            scale: 0,
-                          }}
-                          animate={{
-                            opacity: 1,
-                            scale: 1,
-                          }}
-                          exit={{
-                            opacity: 0,
-                            scale: 0,
-                          }}
-                          transition={{ type: "spring", bounce: 0.35 }}
-                          autoPlay
-                          loop
-                          muted
-                          className="h-full w-full step_img--1 origin-bottom"
-                        >
-                          <source
-                            src={step1}
-                            type="video/mp4"
-                            className="aspect-squar"
-                          />
-                          Your browser does not support the video tag.
-                        </motion.video>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                  <div className="absolute top-2/4 left-2/4  h-[560px] w-[340px] -translate-x-2/4 -translate-y-2/4 ">
-                    <AnimatePresence>
-                      {clicked[2] && !clicked[3] && (
-                        <motion.video
-                          initial={{
-                            opacity: 0,
-                            scale: 0,
-                          }}
-                          animate={{
-                            opacity: 1,
-                            scale: 1,
-                          }}
-                          exit={{
-                            opacity: 0,
-                            scale: 0,
-                          }}
-                          transition={{ type: "spring", bounce: 0.35 }}
-                          autoPlay
-                          loop
-                          muted
-                          className="h-full w-full step_img--1 origin-bottom"
-                        >
-                          <source src={step2} type="video/mp4" />
-                          Your browser does not support the video tag.
-                        </motion.video>
-                      )}
-                    </AnimatePresence>
-                  </div>
-
-                  <div className="absolute top-2/4 left-2/4  h-[560px] w-[340px] -translate-x-2/4 -translate-y-2/4">
-                    <AnimatePresence>
-                      {clicked[3] && !clicked[4] && (
-                        <motion.video
-                          initial={{
-                            opacity: 0,
-                            scale: 0,
-                          }}
-                          animate={{
-                            opacity: 1,
-                            scale: 1,
-                          }}
-                          exit={{
-                            opacity: 0,
-                            scale: 0,
-                          }}
-                          transition={{ type: "spring", bounce: 0.35 }}
-                          autoPlay
-                          loop
-                          muted
-                          className="h-full w-full step_img--1 origin-bottom"
-                        >
-                          <source src={step3} type="video/mp4" />
-                          Your browser does not support the video tag.
-                        </motion.video>
-                      )}
-                    </AnimatePresence>
-                  </div> */}
                 </div>
               </div>
             </div>

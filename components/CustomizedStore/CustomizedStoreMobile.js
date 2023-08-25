@@ -1,13 +1,14 @@
-import React from "react";
-import step1 from "/public/assets/images/customizedStore/1.png";
-import step2 from "/public/assets/images/manageBusiness/2.png";
-import step3 from "/public/assets/images/manageBusiness/3.png";
+import step1 from "/public/assets/images/customizedStore/1.m4v";
+import step2 from "/public/assets/images/customizedStore/2.mp4";
+import step3 from "/public/assets/images/customizedStore/3.m4v";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay, Navigation } from "swiper";
 import { IconButton } from "@mui/material";
 import { MdArrowForwardIos, MdOutlineArrowBackIos } from "react-icons/md";
+import React from "react";
+import { useEffect, useRef } from "react";
 
 const steps = [
   {
@@ -52,6 +53,16 @@ function move(idx) {
   }
 }
 const CustomizedStoreMobile = () => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.addEventListener("loadedmetadata", () => {
+        videoRef.current.play();
+      });
+    }
+  }, []);
+
   return (
     <div className="container mx-auto overflow-hidden py-10 sm:py-16 px-4">
       <h1 className="text-2xl text-primaryColor font-medium text-center md:text-4xl">
@@ -127,13 +138,76 @@ const CustomizedStoreMobile = () => {
             return (
               <SwiperSlide key={id}>
                 <div className="max-w-[767px] mx-auto flex justify-center flex-col items-center">
-                  <img
-                    src={image.src}
-                    alt=""
-                    className="max-h-[420.65px] sm:max-h-[600px]"
-                  />
+                  <div className="relative">
+                    <svg
+                      className="max-h-[420px] sm:max-h-[600px]"
+                      width="325"
+                      height="580"
+                      viewBox="0 0 325 669"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        x="7.71995"
+                        y="7.71995"
+                        width="309.56"
+                        height="653.56"
+                        rx="40.28"
+                        stroke="#6A5B40"
+                        stroke-width="14.5601"
+                      />
+                      <rect
+                        x="10"
+                        y="12"
+                        width="299"
+                        height="642.773"
+                        rx="31.8933"
+                        fill="white"
+                      />
+                      <g clip-path="url(#clip0_1205_2138)">
+                        <path
+                          d="M79 13.0001H240V13.0001C238.452 13.442 237.366 14.8326 237.313 16.4415L237.292 17.0787V17.0787C237.292 26.9764 229.268 35.0001 219.371 35.0001H99.6293C89.7316 35.0001 81.708 26.9764 81.708 17.0787V17.0787L81.6869 16.4415C81.6337 14.8326 80.548 13.442 79 13.0001V13.0001Z"
+                          fill="#9D8E73"
+                        />
+                      </g>
+                      <rect
+                        x="10"
+                        y="12"
+                        width="299"
+                        height="642.773"
+                        rx="31.8933"
+                        stroke="#9D8E73"
+                        stroke-width="4"
+                      />
+                      <defs>
+                        <clipPath id="clip0_1205_2138">
+                          <rect
+                            width="295"
+                            height="34.6133"
+                            fill="white"
+                            transform="translate(12 14)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
 
-                  <h3 className="text-base text-black font-semibold opacity-80 md:text-2xl text-center">
+                    <div className="absolute bottom-0 left-0 right-0 top-2">
+                      <video
+                        autoplay
+                        loop
+                        muted
+                        onLoadedMetadata={(e) => {
+                          e.target.play();
+                          e.target.playbackRate = 1.2;
+                        }}
+                        className="w-full h-[402px] rounded-[110px]"
+                      >
+                        <source src={image} type="video/mp4" />
+                      </video>
+                    </div>
+                  </div>
+
+                  <h3 className="text-base text-black font-semibold opacity-80 md:text-2xl text-center mt-8">
                     {title}
                   </h3>
                   <div className="py-4 text-sm md:text-base text-center text-[#757575]">
