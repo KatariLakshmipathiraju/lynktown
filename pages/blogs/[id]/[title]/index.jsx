@@ -24,7 +24,7 @@ const Blogs = () => {
       return;
     }
 
-    await fetch(`https://api.lynktown.in/api/blog/${id}`, { method: "POST" })
+    await fetch(`http://43.204.71.117/api/blog/${id}`, { method: "POST" })
       .then((res) => res.json())
       .then((data) => {
         setBlog(data.data);
@@ -36,7 +36,7 @@ const Blogs = () => {
     fetch(`https://api.db-ip.com/v2/free/self`, { method: "get" })
       .then((res) => res.json())
       .then((data) => {
-        fetch(`https://api.lynktown.in/api/blogread/${id}/${data.ipAddress}`, {
+        fetch(`http://43.204.71.117/api/blogread/${id}/${data.ipAddress}`, {
           method: "POST",
           body: JSON.stringify({
             ip: data.ipAddress,
@@ -54,6 +54,77 @@ const Blogs = () => {
 
   return (
     <div>
+            <style jsx>
+        {`
+
+              .paddingTop{
+                padding-top : 2rem !important
+              }
+              .bannerImage{
+                margin : 10px
+              }
+              ul {
+                list-style-type: disc !important
+              }
+              .blogContentMain{
+                padding-left : 20px
+              }
+              .blogContent {
+                margin-left: 20px;
+                padding: 20px;
+              }
+              .blogContent ul {
+                list-style-type: disc !important
+              }
+              .blogContent li {
+                list-style-type: inherit; 
+              }
+              .bannerTitle{
+                font-size: 40px;
+                font-weight: bold;
+                margin-bottom: 20px;
+                padding-right : 50px;
+                margin-left : 25px
+            }
+            .adminSection{
+              align-items: "left";
+              font-weight: bold;
+              margin-left: 15px
+            }
+            .mainImage{
+              margin-right: 45px
+            }
+              @media only screen and (max-width: 600px) and (min-width: 300px)  {
+                .mainImage{
+                  margin-right: 0px
+                }
+                .bannerImage{
+                  margin : 2px
+                }
+                .bannerTitle{
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin-bottom: 20px;
+                    padding-right : 0;
+                    margin-left: -10px;
+                }
+                .blogContent{
+                  margin-left: 0;
+                  padding-right: 16px!important;
+                  padding-left: 0 !important;
+                }
+                .blogContentMain{
+                  padding-left : 20px
+                }
+                .adminSection{
+                  margin-left: -6px
+                }
+                .textRecent{
+                  margin-left: 20px
+                }
+              }
+          `}
+      </style>
       {reload ? (
         <div
           style={{
@@ -71,7 +142,7 @@ const Blogs = () => {
         >
           <img
             style={{ height: 300 }}
-            src="https://api.lynktown.in/public/blogs/output-onlinegiftools.gif"
+            src="http://43.204.71.117/public/blogs/output-onlinegiftools.gif"
           />
         </div>
       ) : (
@@ -82,101 +153,70 @@ const Blogs = () => {
           <div className="md:py-10 lg:w-full md:w-full">
             <HeaderSection />
           </div>
-          <div style={{ maxHeight: 700, overflow: "hidden" }}>
-            <img
-              src={blog.cover}
-              style={{ width: "100%", height: "auto" }}
-              alt="Blog Cover"
-            />
-          </div>
-
-          <div className="flex flex-col px-4 lg:px-10">
-            <div
-              style={{
-                width: "100%",
-                display: "flex",
-                flexDirection: "column",
-                marginTop: 40,
-              }}
-            >
-              <h2
-                className="md:w-[70%] w-[85%]"
-                style={{
-                  fontSize: 25,
-                  fontWeight: "bold",
-                  marginBottom: 20,
-                }}
-              >
-                {blog ? blog.title : "Blog Expired"}
-              </h2>
-              <div
-                className="md:w-[100%] w-[100%]"
-                dangerouslySetInnerHTML={{ __html: blog ? blog.data : "" }}
-              ></div>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  width: "100%",
-                }}
-              >
-                {blog.file_type === "image" ? (
-                  <img
-                    style={{ width: "60%", borderRadius: 10 }}
-                    src={blog.src}
-                    alt="Blog Image"
-                  ></img>
-                ) : blog.file_type === "video" ? (
-                  <iframe
-                    className="w-[80%] h-[200px] md:w-[50%] md:h-[550px]"
-                    style={{ borderRadius: 10, allowTransparency: true }}
-                    src={blog.src}
-                    title="Blog Video"
-                  ></iframe>
-                ) : (
-                  <p></p>
-                )}
+          <div className="container px-5 py-6 mx-auto">
+            <div style={{ justifyContent: 'center', alignItems: 'center' }} className="px-2 flex flex-wrap grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 py-4  -m-4 bannerImage">
+              <div className="w-[100%] md:w-[650px] pl-2">
+                <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                  <h2
+                    className="md:w-[100%] w-[100%] bannerTitle"
+                  >
+                    {blog ? blog.title : "Blog Expired"}
+                  </h2>
+                </div>
+                <div style={{ display: "flex", flexDirection: "column", alignItems: "start" }}>
+                  <p className="adminSection" style={{ }}>By Admin, <span>{blog.created_by}</span></p>
+                </div>
               </div>
-              {blog.ppt_url ? (
-                <embed
-                  className="h-[200px] md:h-[600px]"
-                  style={{ width: "70%" }}
-                  src={blog.ppt_url}
-                  title="Blog PPT"
-                ></embed>
-              ) : (
-                ""
-              )}
-              {blog.pdf_url ? (
-                <iframe
-                  className="h-[200px] md:h-[500px]"
-                  src={blog.pdf_url + "#toolbar=0"}
-                  style={{
-                    border: 0,
-                    marginTop: 30,
-                    width: "70%",
-                    borderColor: "red",
-                  }}
-                  title="Blog PDF"
-                />
-              ) : (
-                ""
-              )}
+              <div className="w-[100%] md:w-[650px]">
+                <div className="mainImage" style={{ maxHeight: 700, overflow: 'hidden' }}>
+                  <img src={blog.cover} style={{ width: '100%', height: 'auto' }} />
+                </div>
+              </div>
             </div>
+
+            <div style={{ paddingLeft: '10px' }} className="px-2 flex flex-wrap grid py-4  -m-4">
+              <div className="w-full md:w-[650px] lg:w-full ">
+                <div className="blogContentMain" style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", marginTop: 40, }}>
+                  <div
+                    className="md:w-[100%] w-[100%] blogContent"
+                    dangerouslySetInnerHTML={{ __html: blog ? blog.data : "" }}
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col" style={{ justifyContent: 'center', alignItems: 'center', marginTop: '20px' }}>
+                {blog.ppt_url ? <embed className="h-[200px] md:h-[600px]" style={{ width: '70%', marginBottom: '5px', marginTop: '15px' }} src={blog.ppt_url}></embed> : ''}
+                {blog.pdf_url ? (
+                  <iframe
+                    className="h-[600px] md:h-[500px]"
+                    src={blog.pdf_url + "#toolbar=0"}
+                    style={{
+                      border: 0,
+                      marginTop: 30,
+                      width: "70%",
+                      borderColor: "red",
+                      marginBottom: '15px',
+                    }}
+                    title="Blog PDF"
+                  />
+                ) : (
+                  ""
+                )}          
           </div>
           <div className="container">
-              <div className="px-2 flex flex-wrap grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 py-4  -m-4">
-                <h1 className="text-[#000000] font-inter leading-[50.83px] h-[51px] font-bold m-12 text-[42px] text-left ml-6 pl-2 textRecent">
-                  Recent Posts
-                </h1>
-              </div>
+            <div className="px-2 flex flex-wrap grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 py-4  -m-4">
+              <h1 className="text-[#000000] font-inter leading-[50.83px] h-[51px] font-bold m-12 text-[42px] text-left ml-6 pl-2 textRecent">
+                Recent Posts
+              </h1>
             </div>
-            <div className="w-[100%]">
-              <ViewCard
-                clickHandler={clickHandler}
-                blogs={recent_blogs ? recent_blogs : []}
-              />
-            </div>
+          </div>
+          <div className="w-[100%]">
+            <ViewCard
+              clickHandler={clickHandler}
+              blogs={recent_blogs ? recent_blogs : []}
+            />
+          </div>
         </section>
       ) : (
         <p></p>
