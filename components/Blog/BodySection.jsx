@@ -17,14 +17,14 @@ const BodySection = (props) => {
   };
 
   const fetchPost = () => {
-    fetch("http://43.204.71.117/api/blogs", { method: "POST" })
+    fetch("https://api.lynktown.in/api/blogs", { method: "POST" })
       .then((res) => res.json())
       .then((data) => {
         setPost(data.data.slice(0, 30));
       });
   };
   const fetchcategories = () => {
-    fetch("http://43.204.71.117/api/blog_category", { method: "POST" })
+    fetch("https://api.lynktown.in/api/blog_category", { method: "POST" })
       .then((res) => res.json())
       .then((data) => {
         setCategories(data.data);

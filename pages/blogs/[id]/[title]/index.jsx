@@ -24,7 +24,7 @@ const Blogs = () => {
       return;
     }
 
-    await fetch(`http://43.204.71.117/api/blog/${id}`, { method: "POST" })
+    await fetch(`https://api.lynktown.in/api/blog/${id}`, { method: "POST" })
       .then((res) => res.json())
       .then((data) => {
         setBlog(data.data);
@@ -36,7 +36,7 @@ const Blogs = () => {
     fetch(`https://api.db-ip.com/v2/free/self`, { method: "get" })
       .then((res) => res.json())
       .then((data) => {
-        fetch(`http://43.204.71.117/api/blogread/${id}/${data.ipAddress}`, {
+        fetch(`https://api.lynktown.in/api/blogread/${id}/${data.ipAddress}`, {
           method: "POST",
           body: JSON.stringify({
             ip: data.ipAddress,

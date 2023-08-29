@@ -13,7 +13,7 @@ const BlogSection = (props) => {
     props.linkHandler;
   };
   const fetchPost = () => {
-    fetch("http://43.204.71.117/api/blogs", { method: "POST" })
+    fetch("https://api.lynktown.in/api/blogs", { method: "POST" })
       .then((res) => res.json())
       .then((data) => {
         setPost(data.data.slice(0, 3));
