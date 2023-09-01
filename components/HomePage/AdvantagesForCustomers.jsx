@@ -72,7 +72,7 @@ export default function AdvantagesForCustomers() {
             <div className="bg-[#EEECE7] px-5 py-6 rounded hover:bg-[#857250] hover:text-white">
               <div className="flex flex-col items-start justify-center gap-4">
                 <div className="bg-[#C8C4E9] px-3 py-3 rounded">
-                  <Image src="/10.svg" alt="icon" width={22} height={28} />
+                  <Image src="/10.svg" alt="icon" width={18} height={28} />
                 </div>
                 <p className="text-base">
                   Buy products from designers who worked for celebrities and
