@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function AdvantagesForSellers() {
+export default function AdvantagesForCustomers() {
   return (
     <main className="px-5 sm:px-8 md:px-10 xl:px-16 mt-14 xl:mt-16 mb-8">
       <h1 className="text-2xl sm:text-3xl lg:text-[32px] xl:text-4xl font-semibold text-center lg:text-right lg:mr- xl:mr- text-[#6A5B40]">
@@ -34,7 +34,7 @@ export default function AdvantagesForSellers() {
             <div className="bg-[#EEECE7] px-5 py-6 rounded hover:bg-[#857250] hover:text-white">
               <div className="flex flex-col items-start justify-center gap-4">
                 <div className="bg-[#FFF4E2] px-3 py-3 rounded">
-                  <Image src="/7.svg" alt="icon" width={25} height={27} />
+                  <Image src="/7.svg" alt="icon" width={24} height={28} />
                 </div>
                 <p className="text-base">
                   1000s of new styles everyday from fashion designers across the
@@ -49,10 +49,9 @@ export default function AdvantagesForSellers() {
                 <div className="bg-[#C8C4E9] px-3 py-3 rounded">
                   <Image src="/8.svg" alt="icon" width={24} height={28} />
                 </div>
-                <p className="text-sm">
+                <p className="text-base">
                   Buy exclusive and limited editions from well known and
-                  creative designers. Buy products from designers who worked for
-                  celebrities and for people like us
+                  creative designers.
                 </p>
               </div>
             </div>
@@ -61,7 +60,7 @@ export default function AdvantagesForSellers() {
             <div className="bg-[#EEECE7] px-5 py-6 rounded hover:bg-[#857250] hover:text-white">
               <div className="flex flex-col items-start justify-center gap-4">
                 <div className="bg-[#E7FBF9] px-3 py-3 rounded">
-                  <Image src="/9.svg" alt="icon" width={23} height={23} />
+                  <Image src="/9.svg" alt="icon" width={24} height={28} />
                 </div>
                 <p className="text-base">
                   Get your products stitched for your body type.
@@ -73,10 +72,11 @@ export default function AdvantagesForSellers() {
             <div className="bg-[#EEECE7] px-5 py-6 rounded hover:bg-[#857250] hover:text-white">
               <div className="flex flex-col items-start justify-center gap-4">
                 <div className="bg-[#C8C4E9] px-3 py-3 rounded">
-                  <Image src="/10.svg" alt="icon" width={24} height={28} />
+                  <Image src="/10.svg" alt="icon" width={22} height={28} />
                 </div>
                 <p className="text-base">
-                  Buy any product you like/want from any social seller.
+                  Buy products from designers who worked for celebrities and
+                  artists.
                 </p>
               </div>
             </div>
@@ -85,7 +85,7 @@ export default function AdvantagesForSellers() {
             <div className="bg-[#EEECE7] px-5 py-6 rounded hover:bg-[#857250] hover:text-white">
               <div className="flex flex-col items-start justify-center gap-4">
                 <div className="bg-[#E0C1F4] px-3 py-3 rounded">
-                  <Image src="/11.svg" alt="icon" width={26} height={28} />
+                  <Image src="/11.svg" alt="icon" width={24} height={28} />
                 </div>
                 <p className="text-base">
                   Safe payment and shipment through our ESCROW model.
@@ -97,7 +97,7 @@ export default function AdvantagesForSellers() {
             <div className="bg-[#EEECE7] px-5 py-6 rounded hover:bg-[#857250] hover:text-white">
               <div className="flex flex-col items-start justify-center gap-4">
                 <div className="bg-[#FDE0F6] px-3 py-3 rounded">
-                  <Image src="/12.svg" alt="icon" width={27} height={28} />
+                  <Image src="/12.svg" alt="icon" width={24} height={28} />
                 </div>
                 <p className="text-base">
                   Manage all your orders with LynkTown.
@@ -105,10 +105,6 @@ export default function AdvantagesForSellers() {
               </div>
             </div>
           </div>
-
-          <button className="bg-[#6A5B40] text-white text-lg font-medium  border border-[#6A5B40] px-8 py-1.5 rounded">
-            Explore
-          </button>
         </section>
       </section>
     </main>

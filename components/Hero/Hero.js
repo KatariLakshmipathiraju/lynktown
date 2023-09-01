@@ -3,6 +3,7 @@ import person from "/public/assets/images/person.png";
 import { Chart, Facebook, Instagram, WhatsApp } from "./Icons";
 import { Button } from "@mui/material";
 import Link from "next/link";
+import Image from "next/image";
 import DemoVideo from "../DemoVideo";
 
 const Hero = () => {
@@ -25,12 +26,24 @@ const Hero = () => {
             <br className="hidden md:block" />
             business owners.
           </p>
-          <div>
-            <Link href="/contact-us">
+          <div className="flex gap-4">
+            <Image
+              src="/assets/images/playStore.png"
+              alt="play store"
+              width={180}
+              height={64}
+            />
+            <Image
+              src="/assets/images/appStore.png"
+              alt="play store"
+              width={180}
+              height={64}
+            />
+            {/* <Link href="/contact-us">
               <button className="bg-white rounded-lg font-medium max-w-[200px]  w-full text-primaryColor md:text-lg p-3.5 px-5">
                 Contact Us
               </button>
-            </Link>
+            </Link> */}
           </div>
         </div>
 

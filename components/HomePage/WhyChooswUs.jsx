@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function WhyChooseUs() {
   return (
-    <main className="px-6 sm:px-8 md:px-10 xl:px-16 py-8 xl:py-10 mt-12 xl:mt-16 bg-[#EEECE7]">
+    <main className="px-6 sm:px-8 md:px-10 xl:px-16 py-8 xl:py-10 mt-12 xl:mt-20 bg-[#EEECE7]">
       <h1 className="xl:text-[40px] font-light  text-center text-[#6D5C41]">
         Why choose us <br />
         {""}
@@ -14,12 +14,14 @@ export default function WhyChooseUs() {
         <div className="flex flex-col items-start lg:items-end lg:justify-between gap-6 xl:gap-20 max-lg:order-2">
           <div className="flex flex-row-reverse lg:flex-row items-center gap-3 lg:gap-4">
             <p className="font-normal text-lg flex-wrap lg:text-right">
-              Be a part of the economy growth of the Country
+              Empower local talent for economic growth and innovation
             </p>
             <Image src="/13.svg" alt="economy growth" width={60} height={60} />
           </div>
           <div className="flex flex-row-reverse lg:flex-row items-center gap-3 lg:gap-4">
-            <p className="font-normal text-lg flex-wrap">Be a concious buyer</p>
+            <p className="font-normal text-lg flex-wrap lg:text-right">
+              Support new designers for one-of-a-kind, sustainable fashion
+            </p>
             <Image src="/14.svg" alt="economy growth" width={60} height={60} />
           </div>
         </div>
@@ -33,13 +35,13 @@ export default function WhyChooseUs() {
         <div className="flex flex-col items-start lg:items-start lg:justify-between gap-6 xl:gap-20 max-lg:order-3">
           <div className="flex flex-row-reverse lg:flex-row-reverse items-center gap-4">
             <p className="font-normal text-lg flex-wrap">
-              Buy from SMBs who are creative & provide quality products.
+              Contribute to responsible, small-scale manufacturing practices.
             </p>
             <Image src="/15.svg" alt="economy growth" width={60} height={60} />
           </div>
           <div className="flex flex-row-reverse lg:flex-row-reverse items-center gap-4">
             <p className="font-normal text-lg flex-wrap">
-              Buy sustainable products{" "}
+              Stay ahead in trends with emerging designer collections.
             </p>
             <Image src="/16.svg" alt="economy growth" width={60} height={60} />
           </div>

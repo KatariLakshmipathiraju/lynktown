@@ -78,7 +78,7 @@ export default function Join() {
             type="email"
             id="email"
             placeholder="Your Email Address"
-            className="w-[60%] md:w-[70%] text-sm md:text-lg outline-none border border-primaryColor p-1.5 md:p-2.5 rounded-l-md"
+            className="w-[55%] text-sm md:text-lg outline-none border border-primaryColor p-1.5 md:p-2.5 rounded-l-md"
             value={email}
             onChange={handleChange}
           />

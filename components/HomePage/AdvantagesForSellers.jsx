@@ -16,7 +16,7 @@ export default function AdvantagesForSellers() {
             <div className="bg-[#EEECE7] px-5 py-6 rounded hover:bg-[#857250] hover:text-white">
               <div className="flex flex-col items-start justify-center gap-4">
                 <div className="bg-[#FFF4E2] px-3 py-3 rounded">
-                  <Image src="/1.svg" alt="icon" width={25} height={27} />
+                  <Image src="/1.svg" alt="icon" width={24} height={28} />
                 </div>
                 <p className="text-base">
                   Manage enquiries and sell products on social platforms at ZERO
@@ -41,7 +41,7 @@ export default function AdvantagesForSellers() {
             <div className="bg-[#EEECE7] px-5 py-6 rounded hover:bg-[#857250] hover:text-white">
               <div className="flex flex-col items-start justify-center gap-4">
                 <div className="bg-[#E7FBF9] px-3 py-3 rounded">
-                  <Image src="/3.svg" alt="icon" width={23} height={23} />
+                  <Image src="/3.svg" alt="icon" width={24} height={28} />
                 </div>
                 <p className="text-base">
                   Reach new customers on LynkTown to sell your products
@@ -53,7 +53,7 @@ export default function AdvantagesForSellers() {
             <div className="bg-[#EEECE7] px-5 py-6 rounded hover:bg-[#857250] hover:text-white">
               <div className="flex flex-col items-start justify-center gap-4">
                 <div className="bg-[#C8C4E9] px-3 py-3 rounded">
-                  <Image src="/4.svg" alt="icon" width={24} height={28} />
+                  <Image src="/4.svg" alt="icon" width={22} height={28} />
                 </div>
                 <p className="text-base">
                   Notify your existing and new customers about your new arrivals
@@ -65,7 +65,7 @@ export default function AdvantagesForSellers() {
             <div className="bg-[#EEECE7] px-5 py-6 rounded hover:bg-[#857250] hover:text-white">
               <div className="flex flex-col items-start justify-center gap-4">
                 <div className="bg-[#E0C1F4] px-3 py-3 rounded">
-                  <Image src="/5.svg" alt="icon" width={26} height={28} />
+                  <Image src="/5.svg" alt="icon" width={24} height={28} />
                 </div>
                 <p className="text-base">
                   Collab with influencers to increase sales
@@ -77,9 +77,9 @@ export default function AdvantagesForSellers() {
             <div className="bg-[#EEECE7] px-5 py-6 rounded hover:bg-[#857250] hover:text-white">
               <div className="flex flex-col items-start justify-center gap-4">
                 <div className="bg-[#FDE0F6] px-3 py-3 rounded">
-                  <Image src="/6.svg" alt="icon" width={27} height={28} />
+                  <Image src="/6.svg" alt="icon" width={24} height={28} />
                 </div>
-                <p className="text-base">Create an ecommerce store for free</p>
+                <p className="text-base">Curate your free store</p>
               </div>
             </div>
           </div>
@@ -90,12 +90,12 @@ export default function AdvantagesForSellers() {
                 Learn more
               </button>
             </Link>
-            <button className="bg-[#6A5B40] text-white font-medium text-lg px-4 py-2 rounded flex items-center gap-3">
+            {/* <button className="bg-[#6A5B40] text-white font-medium text-lg px-4 py-2 rounded flex items-center gap-3">
               <span>Download App</span>{" "}
               <span>
                 <BsDownload size={19} />
               </span>
-            </button>
+            </button> */}
           </div>
         </section>
         {/* Image  */}

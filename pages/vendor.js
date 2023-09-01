@@ -17,7 +17,7 @@ export default function Vendor() {
     <Layout>
       <Hero />
       <SellingSteps />
-      <CustomizedStore />
+      {/* <CustomizedStore /> */}
       <ManageBusiness />
       <Community />
       <Features />

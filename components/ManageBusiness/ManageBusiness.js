@@ -111,38 +111,6 @@ const ManageBusiness = () => {
     once: true,
   });
 
-  // useEffect(() => {
-  //   if (manualClick || largeScreen || !isInView) return setRunning(false);
-  //   const progressBar = document.querySelector('#progressBarManage');
-  //   const id = setInterval(frame, 60);
-  //   // let height = 0;
-
-  //   function frame() {
-  //     if (manualClick || !progressBar) return;
-
-  //     if (height >= 170) {
-  //       clearInterval(id);
-  //       setRunning(false);
-  //     } else {
-  //       setRunning(true);
-  //       height++;
-  //       progressBar.style.height = height + 'px';
-  //       if (height === 80) {
-  //         setClicked(prev => ({
-  //           ...prev,
-  //           2: true,
-  //         }));
-  //       }
-  //       if (height === 160) {
-  //         setClicked(prev => ({
-  //           ...prev,
-  //           3: true,
-  //         }));
-  //       }
-  //     }
-  //   }
-  // }, [manualClick, largeScreen, isInView]);
-
   const [currentImg, setCurrentImage] = useState(1);
 
   useEffect(() => {
@@ -199,10 +167,86 @@ const ManageBusiness = () => {
       ) : (
         <div ref={ref} className="wrapper relative pt-36  pb-28 px-4">
           <div className="selling-steps xl:container   mx-auto h-full   ">
-            <div className="flex lg:grid-cols-2  item-container items-center justify-center ">
-             
-             {/* start of Image content    */}
-             <div className="flex-1 ml-[40px] justify-end xl:justify-center flex mt-">
+            <div className="flex lg:grid-cols-2  item-container items-center justify-center mt-12">
+              {/* start of test content */}
+              <div className="flex-[1.5] xl:flex-1  ml-20">
+                <h1 className="text-[40px] text-primaryColor font-medium mb-24  ">
+                  Manage your business at <br /> your finger tips
+                </h1>
+                <div className="relative  flex flex-col gap-4 h-full mt-10">
+                  <div
+                    className="w-[2px]  h-full bg-[#D9D9D9] absolute left-3 z-[-1]"
+                    style={{
+                      height: `calc(100% - 35px)`,
+                    }}
+                  ></div>
+                  <div
+                    id="progressBarManage"
+                    className="w-[2px] progressLine transition-all   bg-[#6A5B40] absolute left-3 z-[-1]"
+                  ></div>
+
+                  {steps.map((step) => {
+                    const { id, description, title } = step;
+                    return (
+                      <motion.div
+                        key={id}
+                        variants={variantsHeight}
+                        animate={clicked[id] ? "show" : "hide"}
+                        // className={`flex gap-5 step_${id}  ${
+                        //   id !== 1 ? 'h-[28px]' : 'h-[140px]'
+                        // } transition-all`}
+                        className={`flex gap-5 step_${id} !text-right `}
+                        // style={{
+                        //   // height: clicked[id] ? '100%' : '20px',
+                        //   cursor:
+                        //     clicked[id - 1] && !clicked[id + 1] && !running
+                        //       ? 'pointer'
+                        //       : '',
+                        // }}
+                        // onClick={e => {
+                        //   if (id === 1) return;
+                        //   if (running) return;
+
+                        //   if (!clicked[id - 1]) return;
+                        //   if (clicked[id + 1]) return;
+
+                        //   setManualClick(true);
+                        //   setCurrentImage(id);
+
+                        //   setClicked(prev => ({
+                        //     ...prev,
+                        //     [id]: !prev[id],
+                        //   }));
+                        // }}
+                      >
+                        <div>
+                          <Tick fill={clicked[id] && true} />
+                        </div>
+                        <div>
+                          <h1 className="text-xl opacity-80">{title}</h1>
+                          {/* <motion.p
+                            variants={variantsText}
+                            animate={clicked[id] ? 'show' : 'hide'}
+                            // className={`my-2 text-[#757575]  ${
+                            //   id !== 1 ? 'opacity-0' : 'opacity-100'
+                            // }`}
+                            className={`my-2 text-[#757575]`}
+                            // style={{
+                            //   opacity: clicked[id] ? '100%' : '0',
+                            // }}
+                          >
+                            {description}
+                          </motion.p> */}
+                        </div>
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              </div>
+              {/* end text content */}
+
+              {/* start of Image content    */}
+              <div className="flex-1 ml-[40px] justify-end xl:justify-center flex mt-">
                 <div className="relative mt-">
                   <svg
                     className="w-[400px] h-[400px] xl:w-[474px] xl:h-[474px]"
@@ -315,86 +359,6 @@ const ManageBusiness = () => {
                 </div>
               </div>
               {/* end Image content */}
-             
-              {/* start of test content */}
-              <div className="flex-[1.5] xl:flex-1  ml-20">
-                <h1 className="text-[40px] text-primaryColor font-medium mb-24  ">
-                  Manage your business at <br /> your finger tips
-                </h1>
-                <div className="relative  flex flex-col gap-4 h-full mt-10">
-                  <div
-                    className="w-[2px]  h-full bg-[#D9D9D9] absolute left-3 z-[-1]"
-                    style={{
-                      height: `calc(100% - 35px)`,
-                    }}
-                  ></div>
-                  <div
-                    id="progressBarManage"
-                    className="w-[2px] progressLine transition-all   bg-[#6A5B40] absolute left-3 z-[-1]"
-                  ></div>
-
-                  {steps.map((step) => {
-                    const { id, description, title } = step;
-                    return (
-                      <motion.div
-                        key={id}
-                        variants={variantsHeight}
-                        animate={clicked[id] ? "show" : "hide"}
-                        // className={`flex gap-5 step_${id}  ${
-                        //   id !== 1 ? 'h-[28px]' : 'h-[140px]'
-                        // } transition-all`}
-                        className={`flex gap-5 step_${id} !text-right `}
-                        // style={{
-                        //   // height: clicked[id] ? '100%' : '20px',
-                        //   cursor:
-                        //     clicked[id - 1] && !clicked[id + 1] && !running
-                        //       ? 'pointer'
-                        //       : '',
-                        // }}
-                        // onClick={e => {
-                        //   if (id === 1) return;
-                        //   if (running) return;
-
-                        //   if (!clicked[id - 1]) return;
-                        //   if (clicked[id + 1]) return;
-
-                        //   setManualClick(true);
-                        //   setCurrentImage(id);
-
-                        //   setClicked(prev => ({
-                        //     ...prev,
-                        //     [id]: !prev[id],
-                        //   }));
-                        // }}
-                      >
-                        <div>
-                          <Tick fill={clicked[id] && true} />
-                        </div>
-                        <div>
-                          <h1 className="text-xl opacity-80">{title}</h1>
-                          {/* <motion.p
-                            variants={variantsText}
-                            animate={clicked[id] ? 'show' : 'hide'}
-                            // className={`my-2 text-[#757575]  ${
-                            //   id !== 1 ? 'opacity-0' : 'opacity-100'
-                            // }`}
-                            className={`my-2 text-[#757575]`}
-                            // style={{
-                            //   opacity: clicked[id] ? '100%' : '0',
-                            // }}
-                          >
-                            {description}
-                          </motion.p> */}
-                        </div>
-                      </motion.div>
-                    );
-                  })}
-                </div>
-              </div>
-              {/* end text content */}
-
-              
-
             </div>
           </div>
         </div>
