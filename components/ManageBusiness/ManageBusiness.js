@@ -111,6 +111,38 @@ const ManageBusiness = () => {
     once: true,
   });
 
+  // useEffect(() => {
+  //   if (manualClick || largeScreen || !isInView) return setRunning(false);
+  //   const progressBar = document.querySelector('#progressBarManage');
+  //   const id = setInterval(frame, 60);
+  //   // let height = 0;
+
+  //   function frame() {
+  //     if (manualClick || !progressBar) return;
+
+  //     if (height >= 170) {
+  //       clearInterval(id);
+  //       setRunning(false);
+  //     } else {
+  //       setRunning(true);
+  //       height++;
+  //       progressBar.style.height = height + 'px';
+  //       if (height === 80) {
+  //         setClicked(prev => ({
+  //           ...prev,
+  //           2: true,
+  //         }));
+  //       }
+  //       if (height === 160) {
+  //         setClicked(prev => ({
+  //           ...prev,
+  //           3: true,
+  //         }));
+  //       }
+  //     }
+  //   }
+  // }, [manualClick, largeScreen, isInView]);
+
   const [currentImg, setCurrentImage] = useState(1);
 
   useEffect(() => {

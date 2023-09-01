@@ -17,7 +17,7 @@ export default function Hero() {
           <br className="hidden sm:block" />
         </p>
 
-        <Link href="https://app.lynktown.com/designers">
+        <Link href="https://app.lynktown.com/designers" target="_blank">
           <button className="bg-white rounded-lg font-medium max-w-[200px]  w-full text-primaryColor md:text-lg p-3.5 px-5 relative z-10">
             Explore Designers
           </button>

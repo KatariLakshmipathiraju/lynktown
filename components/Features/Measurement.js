@@ -9,7 +9,7 @@ const Measurement = ({ currentTab }) => {
         <motion.div
           key='measurement'
           transition={{ duration: 0.2, ease: 'easeInOut' }}
-          className='grid lg:grid-cols-[65%_35%] gap-8 lg:gap-10 items-center h-[900px] lg:h-[500px] xl:h-[560px] '
+          className='grid lg:grid-cols-[65%_35%] gap-8 lg:gap-10 items-center h-[650px] lg:h-[500px] xl:h-[560px] '
         >
           <div className='order-2 lg:order-[-1]'>
             <motion.h1

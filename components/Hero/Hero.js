@@ -32,12 +32,14 @@ const Hero = () => {
               alt="play store"
               width={180}
               height={64}
+              className="w-[140px] lg:w-[180px] object-contain"
             />
             <Image
               src="/assets/images/appStore.png"
               alt="play store"
               width={180}
               height={64}
+              className="w-[140px] lg:w-[180px] object-contain"
             />
             {/* <Link href="/contact-us">
               <button className="bg-white rounded-lg font-medium max-w-[200px]  w-full text-primaryColor md:text-lg p-3.5 px-5">
