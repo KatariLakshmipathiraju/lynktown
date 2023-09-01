@@ -6,8 +6,6 @@ import { Modal } from "react-responsive-modal";
 import TextField from "@mui/material/TextField";
 import Image from "next/image";
 import success from "../../public/assets/images/pricing/success.svg";
-import google from "../../public/assets/images/google.png";
-import apple from "../../public/assets/images/apple.png";
 
 export default function PriceList() {
   const [choose, setChoose] = useState(false);
