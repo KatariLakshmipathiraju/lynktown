@@ -9,8 +9,8 @@ export default function ExploreDesigners() {
         Explore Designers on LynkTown
       </h1>
 
-      <section className="my-6 overflow-x-auto max-w-full">
-        <div className="flex gap-3 flex-nowrap">
+      <section className="mb-4 mt-10 overflow-x-auto">
+        <div className="flex gap-5">
           {/* first card  */}
           <div className="rounded-2xl flex flex-col gap-1 bg-[#FFF4E2] border border-[#6D5C41] min-w-[250px] h-64 text-center px-6 py-4">
             <Image
