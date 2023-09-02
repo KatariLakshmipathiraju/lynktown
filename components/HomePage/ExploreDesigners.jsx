@@ -28,8 +28,8 @@ export default function ExploreDesigners() {
               <span className="text-sm"> Kalyan nagar, Bangalore</span>
             </p>
             <Link
-              href="#"
-              className="text-[#6D5C41] underline font-bold text-lg"
+              href="https://app.lynktown.com/designers"
+              className="text-[#6D5C41] underline font-semibold mt-2"
             >
               Explore Lynks
             </Link>
@@ -52,8 +52,8 @@ export default function ExploreDesigners() {
               <span> Mumbai, Maharashtra</span>
             </p>
             <Link
-              href="#"
-              className="text-[#6D5C41] underline font-bold text-lg"
+              href="https://app.lynktown.com/designers"
+              className="text-[#6D5C41] underline font-semibold mt-2"
             >
               Explore Lynks
             </Link>
@@ -76,8 +76,8 @@ export default function ExploreDesigners() {
               <span> Chamrajpeth, Bangalore</span>
             </p>
             <Link
-              href="#"
-              className="text-[#6D5C41] underline font-bold text-lg"
+              href="https://app.lynktown.com/designers"
+              className="text-[#6D5C41] underline font-semibold mt-2"
             >
               Explore Lynks
             </Link>
@@ -100,8 +100,8 @@ export default function ExploreDesigners() {
               <span> Jaipur, Rajasthan</span>
             </p>
             <Link
-              href="#"
-              className="text-[#6D5C41] underline font-bold text-lg"
+              href="https://app.lynktown.com/designers"
+              className="text-[#6D5C41] underline font-semibold mt-2"
             >
               Explore Lynks
             </Link>
@@ -124,8 +124,8 @@ export default function ExploreDesigners() {
               <span> Kalyan nagar, Bangalore</span>
             </p>
             <Link
-              href="#"
-              className="text-[#6D5C41] underline font-bold text-lg"
+              href="https://app.lynktown.com/designers"
+              className="text-[#6D5C41] underline font-semibold mt-2"
             >
               Explore Lynks
             </Link>
@@ -148,8 +148,8 @@ export default function ExploreDesigners() {
               <span> Jaipur, Rajasthan </span>
             </p>
             <Link
-              href="#"
-              className="text-[#6D5C41] underline font-bold text-lg"
+              href="https://app.lynktown.com/designers"
+              className="text-[#6D5C41] underline font-semibold mt-2"
             >
               Explore Lynks
             </Link>
@@ -158,7 +158,7 @@ export default function ExploreDesigners() {
       </section>
 
       <Link
-        href="#"
+        href="https://app.lynktown.com/designers"
         target="_blank"
         className="flex justify-center items-center"
       >
