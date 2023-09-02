@@ -28,7 +28,7 @@ const MobileMenu = ({ showCatMenu, setshowCatMenu, setMobileMenu }) => {
             </div>
             <div>
               <div className="pb-5 text-[#6D5C41] cursor-pointer  text-xl leading-[21px] font-bold ">
-                <Link href="#">Blogs</Link>
+                <Link href="/blogs">Blogs</Link>
               </div>
             </div>
           </div>
