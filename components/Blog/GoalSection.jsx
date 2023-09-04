@@ -15,7 +15,7 @@ const GoalSection = () => {
                 Join Our Tribe: Subscribe for Exciting Content!
               </h1>
               <button className="mt-4 md:mt-40 w-64 h-10 rounded bg-[#857250]">
-                <Link href="/subscribe" className="">
+                <Link href="/contact-us" className="">
                   <h4 className="text-white ">Subscribe</h4>
                 </Link>
               </button>

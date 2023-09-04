@@ -5,7 +5,10 @@ const Document = () => {
   return (
     <Html>
       <Head>
-        <meta name="google-site-verification" content="" />
+        <meta
+          name="google-site-verification"
+          content="2yo2OS7PnxSDhBmhGnE54wC83Lsl4doztBNsbMaxpds"
+        />
       </Head>
       <body>
         <Main />
