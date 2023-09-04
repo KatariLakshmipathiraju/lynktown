@@ -15,10 +15,11 @@ const GoalSection = () => {
                 Join Our Tribe: Subscribe for Exciting Content!
               </h1>
               <button className="mt-4 md:mt-40 w-64 h-10 rounded bg-[#857250]">
-              <Link href="/" className="" >
-                <h4 className="text-white ">Subscribe</h4></Link>
+                <Link href="/subscribe" className="">
+                  <h4 className="text-white ">Subscribe</h4>
+                </Link>
               </button>
-            </div> 
+            </div>
 
             <div className="lg:max-w-lg lg:w-full md:w-1/2 w-full md:mt-0 mt-4">
               {/* <Image
