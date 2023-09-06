@@ -32,12 +32,12 @@ const Designers = [
 
 export default function ExploreDesigners() {
   return (
-    <main className="px-5 sm:px-8 md:px-10 xl:px-16 mt-14 xl:mt-20 flex flex-col gap-4">
+    <main className="px-5 sm:px-8 md:px-10 xl:px-16 mt-14 sm:mt-20 flex flex-col gap-4">
       <h1 className="text-2xl lg:text-[38px] font-semibold text-[#6A5B40] text-center">
         Explore Designers on LynkTown
       </h1>
 
-      <section className="mb-4 mt-10 overflow-x-auto">
+      <section className="mb-4 mt-6 sm:mt-8 overflow-x-auto">
         <div className="flex gap-5">
           {Designers.map((designer, index) => (
             <div
@@ -71,7 +71,7 @@ export default function ExploreDesigners() {
       <Link
         href="https://app.lynktown.com/designers"
         target="_blank"
-        className="flex justify-center items-center"
+        className="flex justify-center items-center max-w-fit mx-auto"
       >
         <button className="text-lg font-medium bg-[#6A5B40] text-white rounded px-6 py-2">
           Explore Designers{" "}
