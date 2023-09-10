@@ -27,13 +27,15 @@ const Hero = () => {
             business owners.
           </p>
           <div className="flex gap-4">
+            <Link href='https://play.google.com/store/apps/details?id=com.lynktownseller.app'>
             <Image
               src="/assets/images/playStore.png"
               alt="play store"
               width={180}
               height={64}
               className="w-[140px] lg:w-[180px] object-contain"
-            />
+            /></Link>
+             <Link href='https://apps.apple.com/app/id6463203581'>
             <Image
               src="/assets/images/appStore.png"
               alt="play store"
@@ -41,6 +43,7 @@ const Hero = () => {
               height={64}
               className="w-[140px] lg:w-[180px] object-contain"
             />
+            </Link>
             {/* <Link href="/contact-us">
               <button className="bg-white rounded-lg font-medium max-w-[200px]  w-full text-primaryColor md:text-lg p-3.5 px-5">
                 Contact Us
