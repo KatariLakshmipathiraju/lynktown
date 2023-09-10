@@ -79,13 +79,11 @@ const GoalSection = () => {
             })
             .catch(error => {
               setReload(false);
-              setIsErrorOpen(true);
               setIsOpen(false);
               openError('An error occurred');
             });
           } else {
             setReload(false)
-            setIsErrorOpen(true);
             setIsOpen(false);
             openError('Email is required');
           }
@@ -128,17 +126,18 @@ const GoalSection = () => {
           zIndex: 1001,
         }}
         onDiscard={() => {
-          isSuccessOpen(false);
+          setIsSuccessOpen(false);
           document.documentElement.style.overflow = "auto";
         }}
         buttons={[
           {
-            role: "Cancel",
+            role: "Cancel Q",
             toClose: true,
             classes:
               "bg-zinc-500/20 px-4 py-2 rounded-lg hover:bg-zinc-500/30 transition-all duration-200",
-            label: "Cancel",
-          }]}
+            label: "Close",
+          },
+        ]}
         _isOpen={isSuccessOpen}
         content={<p style={{ padding: 25 }}>Thank you very much for subscription.</p>}></Modal>
     );
@@ -169,9 +168,8 @@ const GoalSection = () => {
             classes:
               "bg-zinc-500/20 px-4 py-2 rounded-lg hover:bg-zinc-500/30 transition-all duration-200",
             label: "Close",
-          },
-        ]}
-        content={<p style={{ padding: 25 }}>Some information was missing. <br></br> Check your credentials and re-try</p>}></Modal>
+          }]}
+        content={<p style={{ padding: 25 }}>Some information was missing <br></br> Check your credentials and re-try</p>}></Modal>
     );
   }
   return (
@@ -179,7 +177,7 @@ const GoalSection = () => {
       <div className="px-2.5 md:px-4 bg-[#EDEDED]">
       {reload ?
         <div style={{ overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', height: '100%', width: '100%', position: 'fixed', zIndex: 10000, backgroundColor: '#ffffff91' }}>
-          <img style={{ height: 300 }} src="https://api.lynktown.in/api/public/blogs/output-onlinegiftools.gif" />
+          <img style={{ height: 300 }} src="https://api.lynktown.in/public/blogs/output-onlinegiftools.gif" />
         </div>
         : <p></p>
       }
