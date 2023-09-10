@@ -4,7 +4,7 @@ import { GoPrimitiveDot } from "react-icons/go";
 import { RxDividerVertical } from "react-icons/rx";
 import ViewCard from "/components/Blog/ViewCard";
 import HeaderSection from "/components/Blog/HeaderSection";
-import SEO from "../../seo";
+import SEO from "../../../seo";
 
 const Blogs = () => {
   const router = useRouter();
