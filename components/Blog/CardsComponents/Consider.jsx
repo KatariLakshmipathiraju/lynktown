@@ -32,16 +32,17 @@ const Consider = ({ data, posts, modalHandler, linkHandler }) => {
   return (
     <>
       {(data.length != 0 ? data : posts).map((post) => {
-        
-        const title = post.title.replace(/ /g,"-");
-        const href = `/blogs/${encodeURIComponent(post.id)}/${encodeURIComponent(title.toLowerCase())}`;
+        const title = post.blog_slug_url;
+        const href = `/blogs/${encodeURIComponent(title)}`;
+        // const title = post.title.replace(/ /g,"-");
+        // const href = `/blogs/${encodeURIComponent(post.id)}/${encodeURIComponent(title.toLowerCase())}`;
         return (
         
         <div
           onClick={()=> { (localStorage.getItem("blog_view") > 6 && localStorage.getItem("show_subscriber")) ? modalHandler.call() : openLink(href) } }
           // href={(blog_view_count > 10 && show_subscriber) ? '#' : `/blogs/${post.id}/${title}`}
           key={post.id}
-          className="mx-auto w-[416px]  md:w-[340px] lg:w-[300px] xl:w-[380px] md:h-[396px] shadow-md space-y-8 pb-5 rounded-md overflow-hidden hover:border border-[#4F597B] cursor-pointer  "
+          className="mx-auto w-[100%]  md:w-[340px] lg:w-[300px] xl:w-[380px] md:h-[396px] shadow-md space-y-8 pb-5 rounded-md overflow-hidden hover:border border-[#4F597B] cursor-pointer  "
         >
           <div className="bg-white p-2">
             <Image

@@ -18,7 +18,7 @@ export default function Home({
         if(!isOpen) {
             document.documentElement.style.overflow = "auto";
         } else {
-            // document.documentElement.style.overflow = "hidden";
+            document.documentElement.style.overflow = "hidden";
         }
     }, [isOpen]);
     const HandleChange = () => {

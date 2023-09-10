@@ -4,6 +4,7 @@ import { GoPrimitiveDot } from "react-icons/go";
 import { RxDividerVertical } from "react-icons/rx";
 import ViewCard from "/components/Blog/ViewCard";
 import HeaderSection from "/components/Blog/HeaderSection";
+import SEO from "../../seo";
 
 const Blogs = () => {
   const router = useRouter();
@@ -13,20 +14,22 @@ const Blogs = () => {
   const [previousId, setPreviousId] = useState({ id: null });
   const [blogId, setBlogId] = useState();
 
-  const clickHandler = (id) => {
+  const clickHandler = (title) => {
     setReload(true);
-    setBlogId(id);
+    setBlogId(title);
   };
 
-  async function getBlogsId(id) {
-    if (blogId === previousId.id && id !== undefined) {
+  async function getBlogsId(title) {
+    console.log(title)
+    if (blogId === previousId.title && title !== undefined) {
       setReload(false);
       return;
     }
 
-    await fetch(`https://api.lynktown.in/api/blog/${id}`, { method: "POST" })
+    await fetch(`https://api.lynktown.in/api/blog/${title}`, { method: "GET" })
       .then((res) => res.json())
       .then((data) => {
+        console.log(data)
         setBlog(data.data);
         setRecentBlogs(data.recent_blogs);
         setReload(false);
@@ -36,25 +39,25 @@ const Blogs = () => {
     fetch(`https://api.db-ip.com/v2/free/self`, { method: "get" })
       .then((res) => res.json())
       .then((data) => {
-        fetch(`https://api.lynktown.in/api/blogread/${id}/${data.ipAddress}`, {
+        fetch(`https://api.lynktown.in/api/blogreads/${title}/${data.ipAddress}`, {
           method: "POST",
           body: JSON.stringify({
             ip: data.ipAddress,
-            blog_id: id,
+            title: title,
           }),
         });
       });
   }
 
   useEffect(() => {
-    const id = router.query.id;
-    getBlogsId(id);
-    setPreviousId(JSON.parse(JSON.stringify({ id: router.query.id })));
-  }, [router.query.id, blogId, reload]);
+    const title = router.query.title;
+    getBlogsId(title);
+    setPreviousId(JSON.parse(JSON.stringify({ title: router.query.title })));
+  }, [router.query.title, blogId, reload]);
 
   return (
     <div>
-            <style jsx>
+      <style jsx>
         {`
 
               .paddingTop{
@@ -88,7 +91,6 @@ const Blogs = () => {
             }
             .adminSection{
               align-items: "left";
-              font-weight: bold;
               margin-left: 15px
             }
             .mainImage{
@@ -142,7 +144,7 @@ const Blogs = () => {
         >
           <img
             style={{ height: 300 }}
-            src="http://43.204.71.117/public/blogs/output-onlinegiftools.gif"
+            src="https://api.lynktown.in/public/blogs/output-onlinegiftools.gif"
           />
         </div>
       ) : (
@@ -150,6 +152,7 @@ const Blogs = () => {
       )}
       {blog ? (
         <section className="text-gray-600 body-font lg:overflow-x-hidden">
+          <SEO title={blog.title} description={blog.meta_desc} />
           <div className="md:py-10 lg:w-full md:w-full">
             <HeaderSection />
           </div>
@@ -164,7 +167,7 @@ const Blogs = () => {
                   </h2>
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "start" }}>
-                  <p className="adminSection" style={{ }}>By Admin, <span>{blog.created_by}</span></p>
+                  <p className="adminSection">By Admin, <span>{blog.created_by}</span></p>
                 </div>
               </div>
               <div className="w-[100%] md:w-[650px]">

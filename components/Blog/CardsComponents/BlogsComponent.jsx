@@ -19,51 +19,6 @@ const BlogsComponent = ({ data, posts, modalHandler, linkHandler }) => {
   const [showIcons, setShowIcons] = useState(false);
   let url = 'https://www.lynktown.in/blogs/5/7-ways-fashion-entrepreneurs-can-create-long-lasting-customer-relationships';
 
-  const shareToFacebook = () => {
-    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
-    window.open(facebookShareUrl, '_blank');
-  };
-
-  const shareToInstagram = () => {
-    const instagramShareUrl = `https://www.instagram.com/sharer.php?u=${encodeURIComponent(url)}`;
-    window.open(instagramShareUrl, '_blank');
-  };
-
-  const shareToWhatsApp = () => {
-    const whatsappShareUrl = `https://wa.me/?text=${encodeURIComponent(url)}`;
-    window.open(whatsappShareUrl, '_blank');
-  };
-
-  const shareToTwitter = () => {
-    const twitterShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}`;
-    window.open(twitterShareUrl, '_blank');
-  };
-
-  const handleShare = (e) => {
-    e.stopPropagation();
-    e.preventDefault();
-    setShowIcons(true);
-  };
-
-  const handleIconClick = (platform) => {
-    switch (platform) {
-      case 'facebook':
-        shareToFacebook();
-        break;
-      case 'instagram':
-        shareToInstagram();
-        break;
-      case 'whatsapp':
-        shareToWhatsApp();
-        break;
-      case 'twitter':
-        shareToTwitter();
-        break;
-      default:
-        break;
-    }
-  };
-
   useEffect(() => {
     var _blog_view_count = localStorage.getItem("blog_view");
     setBlogViewCount(_blog_view_count);
@@ -80,10 +35,9 @@ const BlogsComponent = ({ data, posts, modalHandler, linkHandler }) => {
   return (
     <>
       {(data.length !== 0 ? data : posts).map((post) => {
-        const title = post.title.replace(/ /g, "-");
-        const href = `/blogs/${encodeURIComponent(
-          post.id
-        )}/${encodeURIComponent(title.toLowerCase())}`;
+        console.log(post);
+        const title = post.blog_slug_url;
+        const href = `/blogs/${encodeURIComponent(title)}`;
 
         return (
           <div
@@ -93,11 +47,7 @@ const BlogsComponent = ({ data, posts, modalHandler, linkHandler }) => {
             className="mx-auto w-full md:w-[340px] lg:w-[300px] xl:w-[380px] shadow-md space-y-8 pb-5 rounded-md overflow-hidden hover:border border-[#4F597B] cursor-pointer"
           >
             <div className="bg-white p-2">
-              <img
-                src={post.cover}
-                alt=""
-                className="object-cover w-full h-48"
-              />
+              <img src={post.cover} alt="" className="object-cover w-full h-48" />
             </div>
 
             <div className="px-2 h-[60px]">
@@ -107,7 +57,7 @@ const BlogsComponent = ({ data, posts, modalHandler, linkHandler }) => {
                   : post.title}
               </h1>
               <p className="text-lg text-gray-400">
-                by <span className="font-bold">Admin</span>
+                by <span>Admin</span>
               </p>
             </div>
 
@@ -115,51 +65,12 @@ const BlogsComponent = ({ data, posts, modalHandler, linkHandler }) => {
               <div className="flex gap-4">
                 <div className="flex gap-2">
                   <p className="py-1">
-                    <AiFillHeart />
+                    <AiFillEye />
                   </p>
                   <p className="text-[14px] flex items-center font-medium">
                     {post?.viewers ? post.viewers.length : 0}
                   </p>
                 </div>
-                <div className={`ml-4 flex items-center ${showIcons ? styles.showIcons : ""}`}>
-  <IoIosShareAlt size={23} onClick={handleShare} />
-  {showIcons && (
-    <div className={styles.sharePopup}>
-      <div className={styles.shareIcon} onClick={() => handleIconClick('facebook')}>
-        <IoLogoFacebook size={20} />
-      </div>
-      <div className={styles.shareIcon} onClick={() => handleIconClick('instagram')}>
-        <IoLogoInstagram size={20} />
-      </div>
-      <div className={styles.shareIcon} onClick={() => handleIconClick('whatsapp')}>
-        <IoLogoWhatsapp size={20} />
-      </div>
-      <div className={styles.shareIcon} onClick={() => handleIconClick('twitter')}>
-        <IoLogoTwitter size={20} />
-      </div>
-    </div>
-  )}
-</div>
-{/* 
-                <div className="ml-4 flex items-center">
-                  <IoIosShareAlt size={23} onClick={handleShare} />
-                  {showIcons && (
-                    <div className={styles.sharePopup}>
-                      <div className={styles.shareIcon} data-platform="facebook" onClick={handleIconClick}>
-                        <IoLogoFacebook size={20} />
-                      </div>
-                      <div className={styles.shareIcon} data-platform="instagram" onClick={handleIconClick}>
-                        <IoLogoInstagram size={20} />
-                      </div>
-                      <div className={styles.shareIcon} data-platform="whatsapp" onClick={handleIconClick}>
-                        <IoLogoWhatsapp size={20} />
-                      </div>
-                      <div className={styles.shareIcon} data-platform="twitter" onClick={handleIconClick}>
-                        <IoLogoTwitter size={20} />
-                      </div>
-                    </div>
-                  )}
-                </div> */}
               </div>
 
               <div className="w-[94px] h-[37px] flex justify-center items-center rounded-[5px] border border-[#DADADA] cursor-pointer">

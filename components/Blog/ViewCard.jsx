@@ -11,6 +11,18 @@ const ViewCard = ({ blogs, clickHandler }) => {
   const router = useRouter();
   return (
     <>
+              <style jsx>
+        {`   
+           .imageSize{
+              height : 200
+           }
+            @media (min-width: 1024px) {
+              .imageSize{
+                height: auto
+              }
+            }
+        `}
+      </style>
       <section className="text-gray-600 body-font bg-[#E5E5E5] md:h-[1550px] lg:h-full">
         <div className="container px-5 py-6 mx-aut ">
           <div
@@ -18,10 +30,10 @@ const ViewCard = ({ blogs, clickHandler }) => {
             className="px-2 flex flex-wrap grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-4  -m-4"
           >
             {(blogs != undefined ? blogs : []).map((post, index) => {
-              const title = post.title.replace(/ /g, "-");
-              const href = `/blogs/${encodeURIComponent(
-                post.id
-              )}/${encodeURIComponent(title.toLowerCase())}`;
+              // const title = post.title.replace(/ /g, "-");
+              console.log(post)
+              const title = post.blog_slug_url;
+              const href = `/blogs/${encodeURIComponent(title)}`;
               return (
                 <div key={index} className="w-full md:w-[650px] lg:w-full ">
                   <div className="bg-white p-4 border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
@@ -30,7 +42,7 @@ const ViewCard = ({ blogs, clickHandler }) => {
                         src={post.cover}
                         alt=""
                         srcSet=""
-                        className={styles.myComponent}
+                        className="imageSize"
                         width={400}
                         height={200}
                         priority
