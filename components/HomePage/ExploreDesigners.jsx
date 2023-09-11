@@ -2,9 +2,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { CiLocationOn } from 'react-icons/ci';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper';
+import { Autoplay, Navigation } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 const Designers = [
   {
@@ -41,13 +42,13 @@ export default function ExploreDesigners() {
         Explore Designers on LynkTown
       </h1>
 
-      <section className='mb-4 mt-6 sm:mt-8 overflow-x-auto'>
+      <div className='container overflow-x-hidden my-5'>
         <Swiper
           slidesPerView={1.2}
-          modules={[Autoplay]}
+          modules={[Autoplay, Navigation]}
+          loop={true}
           autoplay={{
-            delay: 1500,
-            disableOnInteraction: false,
+            delay: 1000,
           }}
           breakpoints={{
             400: {
@@ -57,14 +58,14 @@ export default function ExploreDesigners() {
               slidesPerView: 2.5,
             },
             1000: {
-              slidesPerView: 4,
+              slidesPerView: Designers.length / 2,
             },
           }}
           spaceBetween={25}
         >
           {Designers.map((designer, index) => (
             <SwiperSlide key={index}>
-              <div className='rounded-2xl flex flex-col gap-1 bg-[#FFF4E2] border border-[#6D5C41] min-w-[250px] h-64 text-center px-6 py-4'>
+              <div className='rounded-2xl flex flex-col gap-1 bg-[#FFF4E2] border border-[#6D5C41] min-w-[250px] h-64 text-center max-w-md px-6 py-4'>
                 <Image
                   src={designer.image}
                   alt={`Image of ${designer.designerName}`}
@@ -89,7 +90,7 @@ export default function ExploreDesigners() {
             </SwiperSlide>
           ))}
         </Swiper>
-      </section>
+      </div>
       <Link
         href='https://app.lynktown.com/designers'
         target='_blank'
