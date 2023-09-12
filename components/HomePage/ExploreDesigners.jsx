@@ -33,6 +33,21 @@ const Designers = [
     image: '/assets/exploreDesigners.svg',
     location: 'Mumbai, Maharashtra',
   },
+  {
+    designerName: 'Fulki Designer Studio',
+    image: '/assets/exploreDesigners.svg',
+    location: 'Mumbai, Maharashtra',
+  },
+  {
+    designerName: 'Fulki Designer Studio',
+    image: '/assets/exploreDesigners.svg',
+    location: 'Mumbai, Maharashtra',
+  },
+  {
+    designerName: 'Fulki Designer Studio',
+    image: '/assets/exploreDesigners.svg',
+    location: 'Mumbai, Maharashtra',
+  },
 ];
 
 export default function ExploreDesigners() {
