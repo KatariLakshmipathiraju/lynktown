@@ -59,24 +59,24 @@ export default function ExploreDesigners() {
 
       <div className='container overflow-x-hidden my-5'>
         <Swiper
-          slidesPerView={1.2}
+          slidesPerView={1}
           modules={[Autoplay, Navigation]}
           loop={true}
           autoplay={{
-            delay: 1000,
+            delay: 1250,
           }}
           breakpoints={{
             400: {
               slidesPerView: 1.5,
             },
-            750: {
+            800: {
               slidesPerView: 2.5,
             },
-            1000: {
+            1200: {
               slidesPerView: Designers.length / 2,
             },
           }}
-          spaceBetween={25}
+          spaceBetween={50}
         >
           {Designers.map((designer, index) => (
             <SwiperSlide key={index}>

@@ -4,7 +4,7 @@ import Layout from '../components/Layout/Layout';
 
 const ThankYou = () => {
   return (
-    <Layout>
+    <Layout noJoin={true}>
       <div
         className='flex justify-center '
         style={{
@@ -423,13 +423,12 @@ const ThankYou = () => {
                 </p>
                 <div className='my-10'>
                   <Link
-                    
                     href='/'
-                    className='text-base font-medium text-indigo-600 hover:text-indigo-500'
+                    className='text-base font-medium bg-primaryColor text-white px-6 py-4 rounded-full'
                   >
-                    <a className='text-base font-medium bg-primaryColor text-white px-6 py-4 rounded-full'>
-                      <span aria-hidden='true'> ←</span> &nbsp; Back to Homepage
-                    </a>
+                    {/* <a className='text-base font-medium bg-primaryColor text-white px-6 py-4 rounded-full'> */}
+                    <span aria-hidden='true'> ←</span> &nbsp; Back to Homepage
+                    {/* </a> */}
                   </Link>
                 </div>
               </div>

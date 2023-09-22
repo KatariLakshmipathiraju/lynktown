@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
-import Footer from "./Footer";
-import Header from "./Header";
-import Head from "next/head";
-import Join from "../Join";
+import React, { useEffect } from 'react';
+import Footer from './Footer';
+import Header from './Header';
+import Head from 'next/head';
+import Join from '../Join';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, noJoin }) => {
   return (
     <>
       <Head>
@@ -14,14 +14,14 @@ const Layout = ({ children }) => {
         </title>
 
         <meta
-          name="description"
-          content="LynkTown is an easy-to-use Social Commerce Platform for buying and selling. Create one link for multiple products. Stay organized & easily manage your orders."
+          name='description'
+          content='LynkTown is an easy-to-use Social Commerce Platform for buying and selling. Create one link for multiple products. Stay organized & easily manage your orders.'
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
       <Header />
       <main>{children}</main>
-      <Join />
+      {!noJoin && <Join />}
       <Footer />
     </>
   );
