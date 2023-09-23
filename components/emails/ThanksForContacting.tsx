@@ -58,7 +58,10 @@ export const ThanksForContacting = ({
   return (
     <Html>
       <Head />
-      <Preview>Thank you for contacting LynkTown</Preview>
+      <Preview>
+        Thank you for reaching out to us at LynkTown. We appreciate your
+        interest in our social commerce platform and are thrilled to assist you
+      </Preview>
       <Font
         fontFamily='DM Serif Display'
         fallbackFontFamily='Verdana'

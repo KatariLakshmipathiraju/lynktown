@@ -65,7 +65,7 @@ export const CustomerSubscription = ({ username = `[Customer's Name]` }) => {
   return (
     <Html>
       <Head />
-      <Preview>LynkTown Customer Subscription</Preview>
+      <Preview>You have successfully subscribed to LynkTown</Preview>
 
       <Font
         fontFamily='DM Serif Display'

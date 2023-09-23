@@ -8,9 +8,9 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     try {
       const emailRes = await resend.emails.send({
-        from: 'support@lynktown.com',
+        from: 'LynkTown Support <support@lynktown.com>',
         to: req.body.email,
-        subject: 'Hello World',
+        subject: 'Confirmation - LynkTown Newsletter Subscription',
         react:
           req.body.users === 'customer' ? (
             <CustomerSubscription username={req.body.email.split('@')[0]} />
