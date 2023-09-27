@@ -1,13 +1,14 @@
 import { Resend } from 'resend';
 import CustomerSubscription from '../../../components/emails/CustomerSubscription';
 import SellerSubscription from '../../../components/emails/SellerSubscription';
+import FromSubmit from '../../../components/emails/FormSubmit';
 
 const resend = new Resend('re_NesBsUUz_EQmrSYWn1WoCL5h279X1Z6na');
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     try {
-      const emailRes = await resend.emails.send({
+      await resend.emails.send({
         from: 'LynkTown Support <support@lynktown.com>',
         to: req.body.email,
         subject: 'Confirmation - LynkTown Newsletter Subscription',
@@ -17,6 +18,27 @@ export default async function handler(req, res) {
           ) : (
             <SellerSubscription username={req.body.email.split('@')[0]} />
           ),
+      });
+
+      await resend.emails.send({
+        from: 'LynkTown Support <support@lynktown.com>',
+        to: 'support@lynktown.com',
+        subject: 'New LynkTown Newsletter Subscription',
+        react: (
+          <FromSubmit
+            submitFrom='LynkTown Newsletter Subscription'
+            formInfo={[
+              {
+                title: 'role',
+                value: req.body.users,
+              },
+              {
+                title: 'email',
+                value: req.body.email,
+              },
+            ]}
+          />
+        ),
       });
       res.status(200).json({ message: 'Email sent successfully' });
     } catch (error) {
