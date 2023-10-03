@@ -1,8 +1,12 @@
 import Link from 'next/link';
 import React from 'react';
 import Layout from '../components/Layout/Layout';
+import { useRouter } from 'next/router';
 
 const ThankYou = () => {
+  const { query } = useRouter();
+
+  const { subscription, role } = query;
   return (
     <Layout noJoin={true}>
       <div
@@ -415,16 +419,37 @@ const ThankYou = () => {
                 {/* <p className='text-sm font-semibold text-indigo-600 uppercase tracking-wide'>
               Thank You
             </p> */}
-                <h1 className='mt-2 md:text-3xl text-2xl  lg:text-4xl font-extrabold text-gray-900 tracking-tight sm:text-4xl'>
-                  Thank you for contacting us!
+                <h1 className='mt-2 md:text-3xl text-xl sm:text-2xl  lg:text-4xl font-extrabold text-gray-900 tracking-tight '>
+                  {subscription ? (
+                    <>Thank you for Subscribing to LynkTown Newsletter!</>
+                  ) : (
+                    <>Thank you for contacting us!</>
+                  )}
                 </h1>
-                <p className='my-4 text-bold text-smclipPath  md:text-base text-[#667085]'>
-                  we have received your message, and we’ll reach you out soon
-                </p>
+                {subscription ? (
+                  <p className='my-2 sm:my-4 text-bold text-smclipPath  text-sm sm:text-base text-[#667085]'>
+                    {role === 'customer' ? (
+                      <>
+                        You will receive latest updates and offers from LynkTown
+                        straight to your mail box.{' '}
+                      </>
+                    ) : (
+                      <>
+                        You will receive latest updates on product enhancements,
+                        industry insights, offers and more from LynkTown
+                        straight to your mail box.
+                      </>
+                    )}
+                  </p>
+                ) : (
+                  <p className='my-2 sm:my-4 text-bold text-smclipPath  text-sm sm:text-base text-[#667085]'>
+                    we have received your message, and we’ll reach you out soon
+                  </p>
+                )}
                 <div className='my-10'>
                   <Link
                     href='/'
-                    className='text-base font-medium bg-primaryColor text-white px-6 py-4 rounded-full'
+                    className='text-sm sm:text-base font-medium bg-primaryColor text-white px-6 py-4 rounded-full'
                   >
                     {/* <a className='text-base font-medium bg-primaryColor text-white px-6 py-4 rounded-full'> */}
                     <span aria-hidden='true'> ←</span> &nbsp; Back to Homepage

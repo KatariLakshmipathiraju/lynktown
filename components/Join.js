@@ -35,7 +35,7 @@ export default function Join() {
       // Reset the form
       setEmail('');
       setError('');
-      router.push('/thankyou');
+      router.push(`/thankyou?subscription=true&role=${users}`);
     } catch (error) {
       alert('Form submission failed. Please try again later.');
     } finally {

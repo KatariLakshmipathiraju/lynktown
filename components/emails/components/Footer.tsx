@@ -20,10 +20,10 @@ const baseUrl = process.env.VERCEL_URL
   : '';
 
 const socialLinks = [
-  { id: 1, name: 'Instagram', href: 'https://www.instagram.com' },
-  { id: 2, name: 'Linkedin', href: 'https://www.linkedin.com' },
-  { id: 3, name: 'Facebook', href: 'https://www.facebook.com' },
-  { id: 4, name: 'Pinterest', href: 'https://www.pinterest.com' },
+  { id: 1, name: 'Instagram', href: 'https://www.instagram.com/lynktown' },
+  { id: 2, name: 'Linkedin', href: 'https://in.linkedin.com/company/lynktown' },
+  { id: 3, name: 'Facebook', href: 'https://www.facebook.com/lynktown' },
+  { id: 4, name: 'Pinterest', href: 'https://in.pinterest.com/lynktown/' },
 ];
 const infoLinks = [
   {
