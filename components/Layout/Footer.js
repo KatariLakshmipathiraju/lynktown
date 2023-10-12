@@ -126,7 +126,7 @@ const Footer = () => {
                 <RiFacebookFill className="text-xl" />
               </a>
               <a
-                href="https://www.youtube.com/@lynktown1012"
+                href="https://www.youtube.com/@lynktown"
                 target="_blank"
                 rel="noreferrer"
               >

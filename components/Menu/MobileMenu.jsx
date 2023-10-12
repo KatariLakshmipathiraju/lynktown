@@ -14,12 +14,12 @@ const MobileMenu = ({ showCatMenu, setshowCatMenu, setMobileMenu }) => {
         {pathname === "/" && (
           <div className="md:flex gap-8 items-center">
             <h3 className="pb-5 text-[#6D5C41] cursor-pointer text-xl leading-[21px] font-bold ">
-              <Link href="/vendor">Vendor</Link>
+              <Link href="/for-fashion-designers">For Fashion Designers</Link>
             </h3>
           </div>
         )}
 
-        {pathname === "/vendor" && (
+        {pathname === "/for-fashion-designers" && (
           <div className="md:flex gap-8 items-center">
             <div>
               <div className="pb-3 text-[#6D5C41] cursor-pointer text-xl leading-[21px] font-bold ">

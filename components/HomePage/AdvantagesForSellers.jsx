@@ -85,7 +85,7 @@ export default function AdvantagesForSellers() {
           </div>
 
           <div className="flex flex-wrap gap-4">
-            <Link href="/vendor">
+            <Link href="/for-fashion-designers">
               <button className="bg-[#6A5B40] text-white font-medium text-lg px-5 py-2 rounded">
                 Learn more
               </button>
