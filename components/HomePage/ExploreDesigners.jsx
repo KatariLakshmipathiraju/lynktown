@@ -10,39 +10,39 @@ import "swiper/css/navigation";
 const Designers = [
   {
     designerName: "Minibelle",
-    image: "/assets/exploreDesigners.svg",
-    location: "Kalyan nagar, Bangalore",
+    image: "/assets/MiniBelle.jpg",
+    location: "Bangalore Division Karnataka",
   },
   {
     designerName: "Sanvi Designer Studio",
-    image: "/assets/exploreDesigners.svg",
-    location: "Mumbai, Maharashtra",
+    image: "/assets/SanviDesignerStudio.jpg",
+    location: "Hyderabad Telangana",
   },
   {
     designerName: "Shashi's Design House",
-    image: "/assets/exploreDesigners.svg",
-    location: "Chamrajpeth, Bangalore",
+    image: "/assets/Shashisdesignhouse.jpg",
+    location: "Bengaluru Karnataka",
   },
   {
     designerName: "Bratt-hew",
-    image: "/assets/exploreDesigners.svg",
-    location: "Jaipur, Rajasthan",
+    image: "/assets/Bratt-hew.jpg",
+    location: "Bangalore Division Karnataka",
   },
   {
     designerName: "Chandini's Designer studio",
-    image: "/assets/exploreDesigners.svg",
-    location: "Mumbai, Maharashtra",
+    image: "/assets/ChandinisDesignerStudio.jpg",
+    location: "Bangalore Karnataka",
   },
-  
+
   {
     designerName: "Minibelle",
-    image: "/assets/exploreDesigners.svg",
-    location: "Kalyan nagar, Bangalore",
+    image: "/assets/MiniBelle.jpg",
+    location: "Bangalore Division Karnataka",
   },
   {
     designerName: "Sanvi Designer Studio",
-    image: "/assets/exploreDesigners.svg",
-    location: "Mumbai, Maharashtra",
+    image: "/assets/SanviDesignerStudio.jpg",
+    location: "Hyderabad Telangana",
   },
 ];
 
@@ -84,7 +84,9 @@ export default function ExploreDesigners() {
                   height={118}
                   className="rounded-full border-2 border-[#6D5C41] object-contain mx-auto"
                 />
-                <h1 className=" font-bold text-primaryColor mt-1">{designer.designerName}</h1>
+                <h1 className=" font-bold text-primaryColor mt-1">
+                  {designer.designerName}
+                </h1>
                 <p className="flex gap-1 justify-center items-center opacity-80 whitespace-nowrap">
                   <span className="inline-block">
                     <CiLocationOn size={18} />
