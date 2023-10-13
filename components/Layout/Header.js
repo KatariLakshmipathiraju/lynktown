@@ -110,7 +110,7 @@ const Header = () => {
                   {/* <Link href="/pricing">Pricing</Link> */}
                 </div>
                 <div className=" text-center text-primaryColor font-semibold text-lg md:text-2xl">
-                  <Link href="/contact-us">Schedule Demo</Link>
+                  <Link href="/schedule-demo">Schedule Demo</Link>
                 </div>
                 <div className=" text-center text-primaryColor font-semibold text-lg md:text-2xl">
                   <Link href="/blogs">Blogs</Link>
