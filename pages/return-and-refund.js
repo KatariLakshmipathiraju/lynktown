@@ -9,22 +9,11 @@ export const returnNRefundData = [
     question: 'How do I return or refund my order?',
     answer: (
       <>
-        You may request returns for most items you buy listed on LynkTown .
-        However, you can only return items explicitly identified as returnable
-        on the product detail page within the given period of 14 days.
-        <p>
-          Items are returnable if you have received them in a condition that is
-          -
-        </p>
-        <ul className='list-disc'>
-          <li>· Physically damaged</li>
-          <li>Has missing parts or accessories</li>
-          <li>Defective</li>
-          <li>
-            Different from its description on the product detail page on
-            LynkTown
-          </li>
-        </ul>
+        Customers can request returns for most items purchased on LynkTown
+        within the return timelines specified by the vendor. Items are
+        returnable if they are physically damaged, have missing parts or
+        accessories, are defective, or if they are different from the
+        description on the product detail page.
       </>
     ),
   },
@@ -33,18 +22,12 @@ export const returnNRefundData = [
     question: 'How do I return items?',
     answer: (
       <>
+        First check whether return or exchange window is still open
         <ol className='list-decimal'>
           <li>Go to Your Orders.</li>
-          <li>Choose an item that you want to return or replace.</li>
+          <li>Choose an item that you want to return or exchange.</li>
           <li>Select a reason from the menu and continue.</li>
         </ol>
-        <b>Note:</b> The above process is applicable only if the product is
-        returnable and the return window is still active.
-        <br />
-        If you need to contact the seller, this must be done in line with our
-        return policy mentioned in LynkTown Returns Policy. If a seller fails to
-        address your query in three business days, the LynkTown is available to
-        you.
       </>
     ),
   },
@@ -53,73 +36,68 @@ export const returnNRefundData = [
     question: 'What are the return guidelines?',
     answer: (
       <>
-        Following are the return guidelines:
         <ol className='list-decimal'>
           <li>
-            Your address and the product that you wish to return must be
-            eligible for a refund.
+            Vendors specify a certain period during which returns / exchanges
+            are accepted.
           </li>
           <li>
-            Once the return is received, you will, in accordance with LynkTown
-            Refund Policy, be issued a refund to your original payment method.
+            Vendors define which items are eligible for return. These are
+            usually products that are physically damaged, have missing parts or
+            accessories, are defective, or are different from the description on
+            the product detail page.
           </li>
           <li>
-            When trying on products by designers, please ensure that you are not
-            wearing perfume/aftershave or deodorant that may leave a scent or
-            marks on the item.
+            The item should typically be in its original condition, including
+            the packaging. Some vendors may have specific requirements for how
+            the item should be returned.
           </li>
           <li>
-            All labels must be attached and intact when returning any items to
-            us. We will not accept the order return of products where it is
-            evident that these instructions are not being followed.
+            nce the vendor receives the returned item, they will inspect it to
+            ensure it meets the return guidelines. Processing the return,
+            including issuing refunds or replacements, may take some time.
           </li>
-          <li>
-            The returned product must be in its original packaging with any
-            enclosed returns/exchange documentation.
-          </li>
-          <li>Faulty returns must be sent back for inspection.</li>
         </ol>
       </>
     ),
   },
   {
     id: 4,
-    question: 'Categories not eligible for return if:',
+    question: 'Categories not eligible for return',
     answer: (
       <>
         <ul className='list-disc'>
-          <li>Products damaged due to misuse/overuse</li>
           <li>
-            The original packaging including price tags, labels, original
-            packing, freebies, and other accessories, is damaged.
+            Items that have been customised with specific designs, monograms, or
+            alterations to fit your measurements are usually non-returnable.
           </li>
+          <li>
+            Clothing marked as "clearance" or "final sale" is often
+            non-returnable, as these items are sold at a reduced price to clear
+            inventory.
+          </li>
+          <li>
+            If you have damaged or altered the clothing in any way, it may not
+            be eligible for return.
+          </li>
+          <li>
+            Clothing that has been worn, washed, or altered from its original
+            condition is often not returnable.
+          </li>
+          <li>
+            If the buyer incurs shipping charges and duties while returning a
+            damaged product, these costs will not be refunded.
+          </li>
+          <li>Free product provided by the brand</li>
+
           <li>Serial Number has been tampered.</li>
-          <li>
-            Defective products that have not been covered under
-            Seller/Manufacturer’s warranty
-          </li>
-          <li>Product is used or altered</li>
-          <li>
-            If the request is initiated after 15 business days of order delivery
-          </li>
-          <li>Free product provided by the brand.</li>
-          <li>
-            The original shipping charges and duties will not be refunded if the
-            product is damaged while returning.{' '}
-          </li>
-          <li>
-            Customized products are not returnable for size or fitting related
-            issues, as it is customized for the user body measurements.
-          </li>
         </ul>
-        You must write or call customer care as suggested for the return of the
-        product.
       </>
     ),
   },
 ];
 
-const Cancellation = () => {
+const ReturnAndRefund = () => {
   return (
     <Layout>
       <div className=' pb-24 relative '>
@@ -175,4 +153,4 @@ const Cancellation = () => {
   );
 };
 
-export default Cancellation;
+export default ReturnAndRefund;

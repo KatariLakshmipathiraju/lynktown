@@ -6,8 +6,10 @@ const TermsNConditionPoints = [
     id: 1,
     point: (
       <>
-        Our <b>Promotion partners</b> and third parties who operate promotions
-        with us or on our behalf - will be named in the Specific Rules.
+        To access our services, you must create an account. Ensure that the
+        information you provide is accurate and up-to-date. You are responsible
+        for maintaining the security of your account information and will be
+        liable for any actions taken through your account.
       </>
     ),
   },
@@ -15,9 +17,9 @@ const TermsNConditionPoints = [
     id: 2,
     point: (
       <>
-        By entering a Promotion, you agree to be bound by these terms and
-        conditions along with any other Specific Rules which relate to a
-        Promotion.
+        LynkTown collects and processes personal data as described in our
+        Privacy Policy. By using our services, you consent to our data
+        practices.
       </>
     ),
   },
@@ -25,9 +27,9 @@ const TermsNConditionPoints = [
     id: 3,
     point: (
       <>
-        By using or attempting to use the redemption code for an offer, you
-        agree to accept and be bound by the terms and conditions offered by
-        LynkTown.
+        We strive to provide accurate shipping information, but delivery times
+        may vary. LynkTown is not responsible for any shipping delays or issues
+        caused by third-party delivery services.
       </>
     ),
   },
@@ -35,10 +37,8 @@ const TermsNConditionPoints = [
     id: 4,
     point: (
       <>
-        Promotions will start immediately after the first announcement unless a
-        later start date/time is specified. The closing date/time for a
-        promotion will be made clear in the specific rules or the relevant
-        promotional materials.
+        Refer to our Returns and Refunds Policy for details on how to return
+        products and seek refunds.
       </>
     ),
   },
@@ -46,10 +46,11 @@ const TermsNConditionPoints = [
     id: 5,
     point: (
       <>
-        Each promotion will be open to individuals who are residents of India
-        and aged 18 and above unless the Specific Rules. Certain promotional
-        materials or announcements might specify a different geographic region
-        or a different minimum age.
+        The purchase of products through the platform is governed by specific
+        sale policies, including cancellation, exchange, and return policies.
+        Users must confirm that the returned product is unused with original
+        tags intact. LynkTown assumes no liability for used, damaged, or
+        tag-less products.
       </>
     ),
   },
@@ -58,10 +59,9 @@ const TermsNConditionPoints = [
     id: 6,
     point: (
       <>
-        <b>Offer Period.</b> Promotions are only available for a limited time
-        during occasions and special hours, and has the right to cancel or
-        change any promotion at any time without notice and at its sole
-        discretion.
+        LynkTown does not guarantee the accuracy, completeness, reliability, or
+        error-free nature of product descriptions or other content on the
+        platform. We assume no liability in this regard.
       </>
     ),
   },
@@ -69,10 +69,9 @@ const TermsNConditionPoints = [
     id: 7,
     point: (
       <>
-        <b>Conditions.</b> Promotions are not valid for cash or equivalent.
-        Promotions/offers do not apply to any previous purchases made by the
-        customers nor combine with any other offers or discounts including price
-        matching of any other retailer.
+        LynkTown is not responsible for any non-performance or breach of
+        contracts between buyers and sellers. Our platform serves as a
+        marketplace for users to buy and sell products or services.
       </>
     ),
   },
@@ -80,8 +79,8 @@ const TermsNConditionPoints = [
     id: 8,
     point: (
       <>
-        <b>Offers are non-transferable.</b> All monetary amounts specified in
-        these terms and conditions are in Indian Rupees [INR].
+        Pricing displayed on the platform may be subject to technical issues or
+        typographical errors. Sellers may cancel orders in such cases.
       </>
     ),
   },
@@ -89,22 +88,27 @@ const TermsNConditionPoints = [
     id: 9,
     point: (
       <>
-        Returns and exchanges are subject to return policy. If you return or
-        seek a refund on any item purchased using a promotional offer, there
-        will be no refund based on the value of the discount.
+        All commercial terms, including price, shipping cost, date, period,
+        warranties, and after-sales services, are agreed upon solely between the
+        buyer and seller. LynkTown does not control or influence these terms.
       </>
     ),
   },
   {
     id: 10,
-    point: <>Gift Cards or clearance items are not eligible for a refund.</>,
-  },
-  {
-    id: 11,
     point: (
       <>
-        LynkTown reserves the right to vary the terms and conditions of the
-        offer by the company&apos;s discretion.
+        Products can be purchased through the platform using the escrow payment
+        method. The sale/purchase of products is additionally governed by
+        specific sale policies, including cancellation, exchange, and return
+        policies, which can be found in the FAQ section on the platform. It is
+        essential for users to confirm that the product being returned is unused
+        and has its original tags intact when creating a return request. If the
+        product is used, damaged, or missing original tags, the return request
+        will be declined, and the product will be re-shipped to the customer.
+        LynkTown assumes no liability in such cases. These terms and conditions
+        may also be supplemented by product-specific conditions displayed with
+        the product.
       </>
     ),
   },
@@ -128,13 +132,10 @@ const TermsNCondition = () => {
           >
             <div>
               <h4 className=' text-sm md:text-base'>
-                These are the terms and conditions which apply to any
-                competition, prize draw, or promotion that our partners and we
-                may run, whether on our websites or theirs, social media
-                platforms, and more. In these terms and conditions,
-                &apos;we&apos;, &apos; us&apos;, &apos;our&apos; and
-                &apos;Promoter &apos; all mean LynkTown team. Our registered
-                address is:
+                Before using LynkTown, please carefully review and understand
+                the following terms and conditions. Your use of our services
+                signifies your agreement to abide by these terms. If you do not
+                agree with these terms, kindly refrain from using our services.
               </h4>
             </div>
             <div className='mt-6'>
