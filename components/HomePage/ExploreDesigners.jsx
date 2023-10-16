@@ -35,8 +35,8 @@ const Designers = [
   },
 
   {
-    designerName: "Minibelle",
-    image: "/assets/MiniBelle.jpg",
+    designerName: "Surbhi's designer label",
+    image: "/assets/Surbhisdesignerlabel.jpg",
     location: "Bangalore Division Karnataka",
   },
   {
