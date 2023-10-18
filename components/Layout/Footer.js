@@ -1,14 +1,14 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react';
+import Image from 'next/image';
 
 import {
   HiOutlineMail,
   HiOutlinePhone,
   HiOutlineLocationMarker,
-} from "react-icons/hi";
-import { RiFacebookFill, RiYoutubeFill, RiInstagramFill } from "react-icons/ri";
-import { ImLinkedin2, ImYoutube } from "react-icons/im";
-import Link from "next/link";
+} from 'react-icons/hi';
+import { RiFacebookFill, RiYoutubeFill, RiInstagramFill } from 'react-icons/ri';
+import { ImLinkedin2, ImYoutube } from 'react-icons/im';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -71,7 +71,7 @@ const Footer = () => {
               <h1 className='text-center md:text-left text-lg md:text-2xl text-primaryColor'>
                 About LynkTown
               </h1>
-              <p className='text-left py-4 text-base text-[#3B3B3B] leading-[30px]'>
+              <p className='text-left py-4 text-[15px] text-[#3B3B3B] leading-[30px]'>
                 Welcome to LynkTown, where we're dedicated to providing you with
                 a customised shopping experience for your cherished designer
                 clothing ensembles. We offer an extensive range of designer
