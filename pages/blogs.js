@@ -1,17 +1,17 @@
-import GoalSection from "../components/Blog/GoalSection";
-import BodySection from "../components/Blog/BodySection";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import HeaderSection from "../components/Blog/HeaderSection";
-import { useState, useEffect } from "react";
-import Modal from "../components/Blog/Modal";
+import GoalSection from '../components/Blog/GoalSection';
+import BodySection from '../components/Blog/BodySection';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import HeaderSection from '../components/Blog/HeaderSection';
+import { useState, useEffect } from 'react';
+import Modal from '../components/Blog/Modal';
 
 export default function Blogs() {
   const [isOpen, setIsOpen] = useState(false);
   const [isErrorOpen, setIsErrorOpen] = useState(false);
   const [isSuccessOpen, setIsSuccessOpen] = useState(false);
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
+  const [password, setPassword] = useState('');
   const [reload, setReload] = useState(false);
   const modalHandler = () => {
     setIsOpen(true);
@@ -20,28 +20,28 @@ export default function Blogs() {
     setReload(true);
   };
   useEffect(() => {
-    var blog_view = localStorage.getItem("blog_view");
+    var blog_view = localStorage.getItem('blog_view');
     console.log(blog_view, 123);
     if (blog_view > 6) {
       setTimeout(() => {
         if (!isOpen) setIsOpen(true);
       }, 3000);
-      localStorage.setItem("show_subscriber", 1);
+      localStorage.setItem('show_subscriber', 1);
     }
   }, [isOpen]);
 
   const modal = () => {
     return (
       <Modal
-        title={"Subscribe"}
+        title={'Subscribe'}
         _isOpen={isOpen}
         content={
           <div
             style={{
               padding: 35,
-              flexDirection: "column",
-              display: "flex",
-              justifyContent: "space-between",
+              flexDirection: 'column',
+              display: 'flex',
+              justifyContent: 'space-between',
               width: 400,
             }}
           >
@@ -49,43 +49,43 @@ export default function Blogs() {
               style={{
                 borderRadius: 5,
                 border: 1,
-                borderStyle: "solid",
-                borderColor: "black",
+                borderStyle: 'solid',
+                borderColor: 'black',
                 marginBottom: 15,
                 height: 40,
                 padding: 10,
                 fontSize: 12,
               }}
-              onChange={(text) => setName(text.target.value)}
-              placeholder="Enter Name"
+              onChange={text => setName(text.target.value)}
+              placeholder='Enter Name'
             />
             <input
               style={{
                 borderRadius: 5,
                 border: 1,
-                borderStyle: "solid",
-                borderColor: "black",
+                borderStyle: 'solid',
+                borderColor: 'black',
                 marginBottom: 15,
                 height: 40,
                 padding: 10,
                 fontSize: 12,
               }}
-              onChange={(text) => setEmail(text.target.value)}
-              placeholder="Enter Email"
+              onChange={text => setEmail(text.target.value)}
+              placeholder='Enter Email'
             />
             <input
               style={{
                 borderRadius: 5,
                 border: 1,
-                borderStyle: "solid",
-                borderColor: "black",
+                borderStyle: 'solid',
+                borderColor: 'black',
                 height: 40,
                 padding: 10,
                 fontSize: 12,
               }}
-              type="password"
-              onChange={(text) => setPassword(text.target.value)}
-              placeholder="Enter Password"
+              type='password'
+              onChange={text => setPassword(text.target.value)}
+              placeholder='Enter Password'
             />
             <p style={{ fontSize: 11, marginTop: 12 }}>
               Note: The password added here will be useful when accessing our
@@ -96,23 +96,23 @@ export default function Blogs() {
         }
         onConfirm={() => {
           if (name && email && password) {
-            fetch("https://api.lynktown.in/api/subscribe", {
-              method: "post",
-              headers: { "content-type": "application/json" },
+            fetch('https://api.lynktown.in/api/subscribe', {
+              method: 'post',
+              headers: { 'content-type': 'application/json' },
               body: JSON.stringify({
                 name,
                 email,
                 password,
               }),
             })
-              .then((res) => res.json())
-              .then((data) => {
+              .then(res => res.json())
+              .then(data => {
                 if (data.code == 1) {
                   setIsOpen(false);
                   openThank();
                   setIsSuccessOpen(true);
-                  localStorage.setItem("show_subscriber", 0);
-                  localStorage.setItem("blog_view", 0);
+                  localStorage.setItem('show_subscriber', 0);
+                  localStorage.setItem('blog_view', 0);
 
                   // const Razorpay = require('razorpay');
 
@@ -139,27 +139,27 @@ export default function Blogs() {
           } else {
             setIsErrorOpen(true);
             setIsOpen(false);
-            openError(!name ? "Email is required" : "Password is required");
+            openError(!name ? 'Email is required' : 'Password is required');
           }
         }}
         onDiscard={() => {
           setIsOpen(false);
-          document.documentElement.style.overflow = "auto";
+          document.documentElement.style.overflow = 'auto';
         }}
         buttons={[
           {
-            role: "Cancel Q",
+            role: 'Cancel Q',
             toClose: true,
             classes:
-              "bg-zinc-500/20 px-4 py-2 rounded-lg hover:bg-zinc-500/30 transition-all duration-200",
-            label: "Cancel",
+              'bg-zinc-500/20 px-4 py-2 rounded-lg hover:bg-zinc-500/30 transition-all duration-200',
+            label: 'Cancel',
           },
           {
-            role: "confirm",
+            role: 'confirm',
             toClose: false,
             classes:
-              "bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-600 transition-all duration-200 text-white",
-            label: "Confirm",
+              'bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-600 transition-all duration-200 text-white',
+            label: 'Confirm',
           },
         ]}
       ></Modal>
@@ -168,14 +168,14 @@ export default function Blogs() {
   const openThank = () => {
     return (
       <Modal
-        title={"Thank You"}
+        title={'Thank You'}
         buttons={[
           {
-            role: "Cancel",
+            role: 'Cancel',
             toClose: true,
             classes:
-              "bg-zinc-500/20 px-4 py-2 rounded-lg hover:bg-zinc-500/30 transition-all duration-200",
-            label: "Cancel",
+              'bg-zinc-500/20 px-4 py-2 rounded-lg hover:bg-zinc-500/30 transition-all duration-200',
+            label: 'Cancel',
           },
         ]}
         _isOpen={isSuccessOpen}
@@ -185,18 +185,18 @@ export default function Blogs() {
       ></Modal>
     );
   };
-  const openError = (error) => {
+  const openError = error => {
     return (
       <Modal
         title={"Try again :'("}
         _isOpen={isErrorOpen}
         buttons={[
           {
-            role: "Close",
+            role: 'Close',
             toClose: true,
             classes:
-              "bg-zinc-500/20 px-4 py-2 rounded-lg hover:bg-zinc-500/30 transition-all duration-200",
-            label: "Close",
+              'bg-zinc-500/20 px-4 py-2 rounded-lg hover:bg-zinc-500/30 transition-all duration-200',
+            label: 'Close',
           },
         ]}
         content={<p style={{ padding: 25 }}>Some information was missing</p>}
@@ -204,36 +204,36 @@ export default function Blogs() {
     );
   };
   return (
-    <div className="md:ml-0 md:mr-0">
+    <div className='md:ml-0 md:mr-0'>
       {reload ? (
         <div
           style={{
-            overflow: "hidden",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            flexDirection: "column",
-            height: "100%",
-            width: "100%",
-            position: "fixed",
+            overflow: 'hidden',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexDirection: 'column',
+            height: '100%',
+            width: '100%',
+            position: 'fixed',
             zIndex: 10000,
-            backgroundColor: "#ffffff91",
+            backgroundColor: '#ffffff91',
           }}
         >
           <img
             style={{ height: 300 }}
-            src="https://api.lynktown.in/public/blogs/output-onlinegiftools.gif"
+            src='https://api.lynktown.in/public/blogs/output-onlinegiftools.gif'
           />
         </div>
       ) : (
         <p></p>
       )}
       {isOpen ? modal() : <p></p>}
-      {isSuccessOpen ? openThank() : ""}
-      {isErrorOpen ? openError() : ""}
+      {isSuccessOpen ? openThank() : ''}
+      {isErrorOpen ? openError() : ''}
       <div
-        style={{ overflow: "hidden", height: 'auto', paddingBottom: '45px'}}
-        className="bg-[#EDEDED] md:py-10 w-[417px] h-[450px] md:h-[550px] lg:w-full md:w-full"
+        style={{ overflow: 'hidden', height: 'auto', paddingBottom: '45px' }}
+        className='bg-[#EDEDED] md:py-10 w-[417px] h-[450px] md:h-[550px] lg:w-full md:w-full'
       >
         <HeaderSection />
         {/* <Carousel

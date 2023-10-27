@@ -20,7 +20,7 @@ export default async function handler(req, res) {
           ),
       });
 
-      await resend.emails.send({
+      const email = await resend.emails.send({
         from: 'LynkTown Support <support@lynktown.com>',
         to: 'support@lynktown.com',
         subject: 'New LynkTown Newsletter Subscription',
@@ -40,8 +40,10 @@ export default async function handler(req, res) {
           />
         ),
       });
+      console.log('🚀 ~ file: join-now.js:45 ~ handler ~ email:', email);
       res.status(200).json({ message: 'Email sent successfully' });
     } catch (error) {
+      console.log('🚀 ~ file: join-now.js:45 ~ handler ~ error:', error);
       res
         .status(500)
         .json({ error: 'failed to sent the email try after some time' });

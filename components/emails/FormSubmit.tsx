@@ -101,7 +101,7 @@ export const FromSubmit = ({
                   <Section>
                     {formInfo.map(item => {
                       return (
-                        <Row className='flex max-w-xs w-full '>
+                        <Row key={item.value} className='flex max-w-xs w-full '>
                           <Column className='w-full capitalize text-left'>
                             {item.title}
                           </Column>
