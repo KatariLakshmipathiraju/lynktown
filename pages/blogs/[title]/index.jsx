@@ -5,6 +5,7 @@ import { RxDividerVertical } from 'react-icons/rx';
 import ViewCard from '/components/Blog/ViewCard';
 import HeaderSection from '/components/Blog/HeaderSection';
 import SEO from '../../seo';
+import BreadCrumbs from '../../../components/BreadCrumbs';
 
 const Blogs = () => {
   const router = useRouter();
@@ -158,9 +159,14 @@ const Blogs = () => {
       {blog ? (
         <section className='text-gray-600 body-font lg:overflow-x-hidden'>
           <SEO title={blog.title} description={blog.meta_desc} />
+          <BreadCrumbs
+            currentPath='Blogs'
+            paths={[{ name: 'Home', to: '/' }]}
+          />
           <div className='md:py-10 lg:w-full md:w-full'>
             <HeaderSection />
           </div>
+
           <div className='container px-5 py-6 mx-auto'>
             <div
               style={{ justifyContent: 'center', alignItems: 'center' }}
