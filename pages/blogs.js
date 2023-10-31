@@ -4,6 +4,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import HeaderSection from '../components/Blog/HeaderSection';
 import { useState, useEffect } from 'react';
 import Modal from '../components/Blog/Modal';
+import BreadCrumbs from '../components/BreadCrumbs';
 
 export default function Blogs() {
   const [isOpen, setIsOpen] = useState(false);
@@ -96,7 +97,7 @@ export default function Blogs() {
         }
         onConfirm={() => {
           if (name && email && password) {
-            fetch('https://api.lynktown.in/api/subscribe', {
+            fetch('https://www.dhaatrigroups.com/lynktown-api/api/subscribe', {
               method: 'post',
               headers: { 'content-type': 'application/json' },
               body: JSON.stringify({
@@ -222,7 +223,7 @@ export default function Blogs() {
         >
           <img
             style={{ height: 300 }}
-            src='https://api.lynktown.in/public/blogs/output-onlinegiftools.gif'
+            src='https://www.dhaatrigroups.com/lynktown-api/public/blogs/output-onlinegiftools.gif'
           />
         </div>
       ) : (
@@ -236,6 +237,12 @@ export default function Blogs() {
         className='bg-[#EDEDED] md:py-10 w-[417px] h-[450px] md:h-[550px] lg:w-full md:w-full'
       >
         <HeaderSection />
+        <div className='container px-5 py-6 mx-auto'>
+          <BreadCrumbs
+            currentPath='Blogs'
+            paths={[{ name: 'Home', to: '/' }]}
+          />
+        </div>
         {/* <Carousel
           showThumbs={false}
           showStatus={false}

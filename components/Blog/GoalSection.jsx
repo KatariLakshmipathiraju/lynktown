@@ -105,7 +105,7 @@ const GoalSection = () => {
           // if (!email) return;
           // setReload(true);
           // if (email) {
-          //   fetch('https://api.lynktown.in/api/subscribe', {
+          //   fetch('https://www.dhaatrigroups.com/lynktown-api/api/subscribe', {
           //     method: 'post',
           //     headers: { 'content-type': 'application/json' },
           //     body: JSON.stringify({
@@ -251,7 +251,7 @@ const GoalSection = () => {
           >
             <img
               style={{ height: 300 }}
-              src='https://api.lynktown.in/public/blogs/output-onlinegiftools.gif'
+              src='https://www.dhaatrigroups.com/lynktown-api/public/blogs/output-onlinegiftools.gif'
             />
           </div>
         ) : (

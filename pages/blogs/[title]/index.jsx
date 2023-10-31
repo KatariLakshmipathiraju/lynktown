@@ -28,7 +28,10 @@ const Blogs = () => {
       return;
     }
 
-    await fetch(`https://api.lynktown.in/api/blog/${title}`, { method: 'GET' })
+    await fetch(
+      `https://www.dhaatrigroups.com/lynktown-api/api/blog/${title}`,
+      { method: 'GET' }
+    )
       .then(res => res.json())
       .then(data => {
         console.log(data);
@@ -46,7 +49,7 @@ const Blogs = () => {
     .then(res => res.json())
     .then(data => {
       fetch(
-        `https://api.lynktown.in/api/blogreads/${blogTitle}/${data.ipAddress}`,
+        `https://www.dhaatrigroups.com/lynktown-api/api/blogreads/${blogTitle}/${data.ipAddress}`,
         {
           method: 'POST',
           body: JSON.stringify({
@@ -150,7 +153,7 @@ const Blogs = () => {
         >
           <img
             style={{ height: 300 }}
-            src='https://api.lynktown.in/public/blogs/output-onlinegiftools.gif'
+            src='https://www.dhaatrigroups.com/lynktown-api/public/blogs/output-onlinegiftools.gif'
           />
         </div>
       ) : (
@@ -159,15 +162,19 @@ const Blogs = () => {
       {blog ? (
         <section className='text-gray-600 body-font lg:overflow-x-hidden'>
           <SEO title={blog.title} description={blog.meta_desc} />
-          <BreadCrumbs
-            currentPath='Blogs'
-            paths={[{ name: 'Home', to: '/' }]}
-          />
+
           <div className='md:py-10 lg:w-full md:w-full'>
             <HeaderSection />
           </div>
 
           <div className='container px-5 py-6 mx-auto'>
+            <BreadCrumbs
+              currentPath={blog.title}
+              paths={[
+                { name: 'Home', to: '/' },
+                { name: 'Blogs', to: '/blogs' },
+              ]}
+            />
             <div
               style={{ justifyContent: 'center', alignItems: 'center' }}
               className='px-2 flex flex-wrap grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 py-4  -m-4 bannerImage'

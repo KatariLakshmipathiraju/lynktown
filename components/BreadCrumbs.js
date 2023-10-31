@@ -7,17 +7,23 @@ const BreadCrumbs = ({ paths, currentPath }) => {
   return (
     <>
       {!mobile && (
-        <div className={styles.breadCrumbs}>
+        <div className='my-4'>
           <Breadcrumbs aria-label='breadcrumb'>
             {paths.map((path, i) => {
               return (
-                <Link href={path.to} key={i}>
+                <Link
+                  className='hover:underline font-poppins !font-medium '
+                  href={path.to}
+                  key={i}
+                >
                   {path.name}
                 </Link>
               );
             })}
 
-            <Typography color='text.primary'>{currentPath}</Typography>
+            <Typography className=' !font-semibold poppins !text-primaryColor'>
+              {currentPath}
+            </Typography>
           </Breadcrumbs>
         </div>
       )}
