@@ -263,3 +263,7 @@ button {
 .swiper-button-prev:after {
   content: '' !important;
 }
+
+#redirect-modal .react-responsive-modal-closeButton {
+  display: none !important;
+}

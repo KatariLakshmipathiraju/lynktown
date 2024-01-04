@@ -33,9 +33,11 @@ const RedirectModal = ({ isModalOpen, setIsModalOpen }) => {
       // window.location.href = 'https://app.lynktown.com/';
     }
   }, [timer]);
+  if (!isModalOpen) return null;
 
   return (
     <Modal
+      modalId='redirect-modal'
       open={isModalOpen}
       onClose={() => {}}
       classNames='redirect-modal'
@@ -49,7 +51,8 @@ const RedirectModal = ({ isModalOpen, setIsModalOpen }) => {
       <section className=' w-full'>
         <div className='py-5 mt-4'>
           <h1 className='font-medium text-xl md:text-2xl'>
-            Redirecting to Hauteze... in {timer}s
+            Redirecting to Hauteze...{' '}
+            <span className='text-sm'> in {timer}s</span>
           </h1>
           <p className=' text-sm md:text-base '>
             A platform where you can buy designer clothes directly from the
@@ -66,14 +69,12 @@ const RedirectModal = ({ isModalOpen, setIsModalOpen }) => {
             className='w-full h-full hidden lg:block flex-1'
           />
           <Image
-            src={'/assets/images/redirect/mobile.svg'}
+            src={'/assets/images/redirect/mobile.png'}
             alt='Web'
             width={100}
             height={100}
-            style={{
-              boxShadow: `0px 4px 16px 0px rgba(0, 0, 0, 0.25)`,
-            }}
-            className='w-[70%] sm:w-[40%] flex items-center justify-center mx-auto lg:flex-[0.28]'
+            style={{}}
+            className='w-[70%] sm:w-[40%] flex items-center justify-center mx-auto lg:flex-[0.3]'
           />
         </div>
       </section>
