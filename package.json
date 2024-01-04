@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "email": "email dev --dir components/emails"
+    "email": "email dev --dir components/emails",
+    "deploy": "yarn build && firebase deploy --only hosting:u2_lynks"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
