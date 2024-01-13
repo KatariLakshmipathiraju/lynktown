@@ -1,8 +1,10 @@
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import Modal from 'react-responsive-modal';
 
 const RedirectModal = ({ isModalOpen, setIsModalOpen }) => {
+  const router = useRouter();
   useEffect(() => {
     if (isModalOpen) {
       document.body.style.overflow = 'hidden';
@@ -28,7 +30,8 @@ const RedirectModal = ({ isModalOpen, setIsModalOpen }) => {
 
   useEffect(() => {
     if (timer === 0) {
-      window.open('https://app.lynktown.com/', '_blank');
+      router.push('https://app.lynktown.com/');
+      // window.open('https://app.lynktown.com/', '_blank');
       setIsModalOpen(false);
       // window.location.href = 'https://app.lynktown.com/';
     }
