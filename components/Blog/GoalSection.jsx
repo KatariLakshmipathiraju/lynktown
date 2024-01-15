@@ -38,7 +38,7 @@ const GoalSection = () => {
 
     try {
       setIsLoading(true);
-      const res = await axios.post('/api/emails/join-now', {
+      const res = await axios.post('https://www.dhaatrigroups.com/lynktown-api/api/subscribe', {
         email,
         users: 'vendor',
       });
@@ -49,7 +49,8 @@ const GoalSection = () => {
       // Reset the form
       setEmail('');
       setError('');
-      router.push(`/thankyou?subscription=true&role=vendor`);
+      window.location.href="/thankyou"
+      // router.push(`/thankyou?subscription=true&role=vendor`);
     } catch (error) {
       console.log(
         '🚀 ~ file: GoalSection.jsx:54 ~ handleSubmit ~ error:',

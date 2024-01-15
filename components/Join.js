@@ -24,7 +24,7 @@ export default function Join() {
 
     try {
       setIsLoading(true);
-      const res = await axios.post('/api/emails/join-now', {
+      const res = await axios.post('https://www.dhaatrigroups.com/lynktown-api/api/subscribe', {
         email,
         users,
       });

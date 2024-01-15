@@ -40,11 +40,11 @@ const ContactUs = () => {
   const onSubmit = async (values) => {
     setLoading(true);
     try {
-      const res = await axios.post("/api/emails/contact-us", values);
+      const res = await axios.post("https://www.dhaatrigroups.com/lynktown-api/api/contact", values);
 
       // if (res.data.success === 'true') {
       setLoading(false);
-      router.push("/thankyou");
+      window.location.href = "/thankyou";
       // }
       setLoading(false);
     } catch (error) {
